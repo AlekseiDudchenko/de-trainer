@@ -14,8 +14,9 @@ build/
 *.tsbuildinfo
 
 # Our project artifacts
-public/app.js
-public/app.js.map
+public/*.js
+public/*/*.js
+public/*.js.map
 
 # Env
 .env
