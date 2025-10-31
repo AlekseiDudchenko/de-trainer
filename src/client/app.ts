@@ -15,6 +15,7 @@ type Sentence = {
   tokens: string[];
   type: "drag";
   explanation?: string;
+  translation_en: string;
   level?: string;
 };
 
@@ -82,8 +83,9 @@ async function showSentences(): Promise<void> {
 
   app.innerHTML = `
     <div class="card">
-      <h2>Собери предложение</h2>
-      <p><small>Уровень: ${sent.level ?? "-"}</small></p>
+      <h2>Make a sentence</h2>
+      <p><small>Level: ${sent.level ?? "-"}</small></p>
+      ${sent.translation_en ? `<p><small>EN: ${sent.translation_en}</small></p>` : ""}
       <div id="tokens"></div>
       <div id="drop" class="dropzone"></div>
       <button id="checkSentence">Check</button>
@@ -120,12 +122,14 @@ async function showSentences(): Promise<void> {
     const userStr = userTokens.join(" ").trim();
     const targetStr = sent.target.trim();
 
-    if (userStr === targetStr) {
+    const norm = (s: string) => s.trim().replace(/[.?!]\s*$/, "");
+
+    if (norm(userStr) === norm(targetStr)) {
       resultP.textContent = "✅ Correct!";
       drop.classList.remove("wrong");
       drop.classList.add("correct");
     } else {
-      resultP.textContent = "❌ No. Correct: " + targetStr;
+      resultP.textContent = "❌ No. Correct: " + sent.target;
       drop.classList.remove("correct");
       drop.classList.add("wrong");
     }
@@ -135,37 +139,65 @@ async function showSentences(): Promise<void> {
 }
 
 async function showGaps(): Promise<void> {
-  const res = await fetch("/api/gaps");
-  const gaps: Gap[] = await res.json();
-  const task = gaps[Math.floor(Math.random() * gaps.length)];
+  const task = await loadGap();
+  renderGap(task);
 
-  app.innerHTML = `
-    <div class="card">
-      <h2>Type missing word</h2>
-      <p>${task.sentence}</p>
-      <input id="gapInput" type="text" placeholder="type the word" />
-      <button id="checkGap">Check</button>
-      <button id="nextGapBtn">Next</button>
-      <p id="gapResult"></p>
-    </div>
-  `;
+  async function loadGap(): Promise<Gap> {
+    const res = await fetch("/api/gaps/one");
+    return (await res.json()) as Gap;
+  }
 
-  const input = document.getElementById("gapInput") as HTMLInputElement;
-  const checkBtn = document.getElementById("checkGap") as HTMLButtonElement;
-  const nextBtn = document.getElementById("nextGapBtn") as HTMLButtonElement;
-  const result = document.getElementById("gapResult") as HTMLParagraphElement;
+  async function renderGap(g: Gap) {
+    app.innerHTML = `
+      <div class="card">
+        <h2>Type missing word</h2>
+        <p>${g.sentence}</p>
+        <input id="gapInput" type="text" placeholder="type the word" />
+        <button id="checkGap">Check</button>
+        <button id="nextGapBtn">Next</button>
+        <p id="gapResult"></p>
+      </div>
+    `;
 
-  checkBtn.onclick = () => {
-    const user = input.value.trim();
-    if (user.toLowerCase() === task.answer.toLowerCase()) {
-      result.textContent = "✅ Correct!";
-      result.className = "correct";
-    } else {
-      result.textContent = `❌ Wrong. Correct: ${task.answer}`;
-      result.className = "wrong";
-    }
-  };
+    const input = document.getElementById("gapInput") as HTMLInputElement;
+    const checkBtn = document.getElementById("checkGap") as HTMLButtonElement;
+    const nextBtn = document.getElementById("nextGapBtn") as HTMLButtonElement;
+    const result = document.getElementById("gapResult") as HTMLParagraphElement;
 
-  nextBtn.onclick = () => showGaps();
-  
+    let lastCorrect = false;
+
+    const doCheck = () => {
+      const user = input.value.trim();
+      if (user.toLowerCase() === g.answer.toLowerCase()) {
+        result.textContent = "✅ Correct!";
+        result.className = "correct";
+        lastCorrect = true;
+      } else {
+        result.textContent = `❌ Wrong. Correct: ${g.answer}`;
+        result.className = "wrong";
+        lastCorrect = false;
+      }
+    };
+
+    const doNext = async () => {
+      const newTask = await loadGap();
+      renderGap(newTask);
+    };
+
+    checkBtn.onclick = doCheck;
+    nextBtn.onclick = doNext;
+
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        if (lastCorrect) {
+          nextBtn.click();
+        } else {
+          checkBtn.click();
+        }
+      }
+    });
+
+    input.focus();
+  }
 }

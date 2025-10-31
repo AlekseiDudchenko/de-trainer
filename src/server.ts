@@ -5,8 +5,33 @@ import fs from "fs";
 const app = express();
 const PORT = 3000;
 
-// статика
+
 app.use(express.static(path.join(__dirname, "..", "public")));
+
+
+const DATA_DIR = path.join(__dirname, "..", "data");
+const GAPS_FILE = path.join(DATA_DIR, "gaps.json");
+
+type Gap = {
+  id: number;
+  sentence: string;
+  answer: string;
+};
+
+function readGaps(): Gap[] {
+  const raw = fs.readFileSync(GAPS_FILE, "utf8");
+  return JSON.parse(raw) as Gap[];
+}
+
+app.get("/api/gaps/one", (_req: Request, res: Response) => {
+  const gaps = readGaps();
+  const gap = gaps[Math.floor(Math.random() * gaps.length)];
+  res.json(gap); // { id, sentence, answer }
+
+
+  console.log("call to /api/gaps/one. Gap:", gap);
+
+});
 
 app.get("/api/words", (_req: Request, res: Response) => {
   const filePath = path.join(__dirname, "..", "data", "words.json");
