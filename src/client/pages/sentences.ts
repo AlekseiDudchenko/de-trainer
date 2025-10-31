@@ -2,23 +2,35 @@ import { Sentence } from "../types.js";
 
 const app = document.getElementById("app") as HTMLElement;
 
-export async function showSentences(): Promise<void> {
-  const res = await fetch("/api/sentences");
-  const sentences: Sentence[] = await res.json();
+export async function showSentences(level?: string): Promise<void> {
+  const lvl = (level ?? "A1").toLowerCase();
+  const res = await fetch(`/api/sentences/${lvl}`);
 
+  if (!res.ok) {
+    app.innerHTML = `<div class="card"><h2>Sätze (${level ?? "A1"})</h2><p>Keine Daten.</p></div>`;
+    return;
+  }
+
+  const sentences: Sentence[] = await res.json();
   const sent = sentences[Math.floor(Math.random() * sentences.length)];
-  const shuffled = [...sent.tokens].sort(() => Math.random() - 0.5);
+
+  // 👇 нормализация токенов
+  const rawTokens = Array.isArray(sent.tokens)
+    ? sent.tokens
+    : (sent.tokens as unknown as string).split(" ");
+
+  const shuffled = [...rawTokens].sort(() => Math.random() - 0.5);
 
   app.innerHTML = `
     <div class="card">
-      <h2>Make a sentence</h2>
-      <p><small>Level: ${sent.level ?? "-"}</small></p>
+      <h2>Satz bilden</h2>
+      <p><small>Niveau: ${sent.level ?? level ?? "-"}</small></p>
       ${sent.translation_en ? `<p><small><b>${sent.translation_en}</b></small></p>` : ""}
       <div id="tokens"></div>
       <div id="drop" class="dropzone"></div>
-      <button id="checkSentence">Check</button>
-      <button id="nextSentence">Next</button>
-      <button id="resetSentence" style="display:none;">Reset</button>
+      <button id="checkSentence">Prüfen</button>
+      <button id="nextSentence">Weiter</button>
+      <button id="resetSentence" style="display:none;">Zurücksetzen</button>
       <p id="result"></p>
       <p><small>${sent.explanation ?? ""}</small></p>
     </div>
@@ -37,9 +49,7 @@ export async function showSentences(): Promise<void> {
     span.className = "token";
     span.onclick = () => {
       const clone = span.cloneNode(true) as HTMLSpanElement;
-      clone.onclick = () => {
-        drop.removeChild(clone);
-      };
+      clone.onclick = () => drop.removeChild(clone);
       drop.appendChild(clone);
     };
     tokensDiv.appendChild(span);
@@ -57,13 +67,13 @@ export async function showSentences(): Promise<void> {
     const norm = (s: string) => s.trim().replace(/[.?!]\s*$/, "");
 
     if (norm(userStr) === norm(targetStr)) {
-      resultP.textContent = "✅ Correct!";
+      resultP.textContent = "✅ Richtig!";
       drop.classList.remove("wrong");
       drop.classList.add("correct");
       lastCorrect = true;
       resetBtn.style.display = "none";
     } else {
-      resultP.textContent = "❌ No. Correct: " + sent.target;
+      resultP.textContent = "❌ Nicht ganz. Richtig: " + sent.target;
       drop.classList.remove("correct");
       drop.classList.add("wrong");
       lastCorrect = false;
@@ -74,7 +84,7 @@ export async function showSentences(): Promise<void> {
 
   const doNext = () => {
     document.removeEventListener("keydown", onKey);
-    showSentences();
+    showSentences(level);
   };
 
   const doReset = () => {
@@ -82,8 +92,8 @@ export async function showSentences(): Promise<void> {
     drop.classList.remove("wrong", "correct");
     resultP.textContent = "";
     lastCorrect = false;
-    resetBtn.style.display = "none";
     wasChecked = false;
+    resetBtn.style.display = "none";
   };
 
   checkBtn.onclick = doCheck;
@@ -94,10 +104,9 @@ export async function showSentences(): Promise<void> {
     if (e.key === "Enter") {
       e.preventDefault();
       if (!wasChecked) {
-      checkBtn.click();
-      return;
+        checkBtn.click();
+        return;
       }
-      
       if (lastCorrect) {
         nextBtn.click();
       } else {

@@ -25,10 +25,13 @@ export function handleRoute() {
 
     // Sätze
     case "#/sentences":
-      showSentences();
-      break;
+      showSentences(); //all levels
     case "#/sentences-a1":
+      showSentences("A1");
+      break;
     case "#/sentences-a2":
+      showSentences("A2");
+      break;
     case "#/sentences-b1":
       showTodo("Satztraining – bald verfügbar");
       break;
