@@ -37,6 +37,16 @@ app.get("/api/words", (_req: Request, res: Response) => {
   console.log("call to /api/words");
 });
 
+app.get("/api/sentences/:level", (req: Request, res: Response) => {
+  const level = req.params.level.toLowerCase(); // a1, a2, b1 ...
+  const file = path.join(DATA_DIR, `sentences-${level}.json`);
+  if (!fs.existsSync(file)) {
+    return res.status(404).json({ error: "sentences file not found" });
+  }
+  const raw = fs.readFileSync(file, "utf8");
+  res.json(JSON.parse(raw));
+});
+
 app.get("/api/sentences", (_req: Request, res: Response) => {
   const filePath = path.join(__dirname, "..", "data", "sentences.json");
   const raw = fs.readFileSync(filePath, "utf8");
