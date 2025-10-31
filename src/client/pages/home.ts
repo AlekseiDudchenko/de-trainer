@@ -46,7 +46,7 @@ export function showHome() {
             </div>
           </a>
           <a class="card-link" href="#/sentences-a2">
-            <div class="card small muted">
+            <div class="card small">
               <h3>A2 Sätze bauen</h3>
               <p>Haupt- und Nebensätze.</p>
             </div>

@@ -25,7 +25,7 @@ export function handleRoute() {
 
     // Sätze
     case "#/sentences":
-      showSentences(); //all levels
+      showSentences("all");
     case "#/sentences-a1":
       showSentences("A1");
       break;

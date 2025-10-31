@@ -4,21 +4,20 @@ const app = document.getElementById("app") as HTMLElement;
 
 export async function showSentences(level?: string): Promise<void> {
   const lvl = (level ?? "A1").toLowerCase();
-  const res = await fetch(`/api/sentences/${lvl}`);
 
-  if (!res.ok) {
-    app.innerHTML = `<div class="card"><h2>Sätze (${level ?? "A1"})</h2><p>Keine Daten.</p></div>`;
+
+  const sentences =
+    lvl === "all"
+      ? await loadAllLevels()
+      : await loadOneLevel(lvl);
+
+  if (!sentences || sentences.length === 0) {
+    app.innerHTML = `<div class="card"><h2>Sätze</h2><p>Keine Daten.</p></div>`;
     return;
   }
 
-  const sentences: Sentence[] = await res.json();
   const sent = sentences[Math.floor(Math.random() * sentences.length)];
-
-  // 👇 нормализация токенов
-  const rawTokens = Array.isArray(sent.tokens)
-    ? sent.tokens
-    : (sent.tokens as unknown as string).split(" ");
-
+  const rawTokens = normalizeTokens(sent.tokens);
   const shuffled = [...rawTokens].sort(() => Math.random() - 0.5);
 
   app.innerHTML = `
@@ -84,6 +83,7 @@ export async function showSentences(level?: string): Promise<void> {
 
   const doNext = () => {
     document.removeEventListener("keydown", onKey);
+    // если был all — снова all
     showSentences(level);
   };
 
@@ -116,4 +116,49 @@ export async function showSentences(level?: string): Promise<void> {
   };
 
   document.addEventListener("keydown", onKey);
+}
+
+/* ===== helpers ===== */
+
+async function loadOneLevel(lvl: string): Promise<Sentence[]> {
+  const res = await fetch(`/api/sentences/${lvl}`);
+  if (!res.ok) return [];
+  return (await res.json()) as Sentence[];
+}
+
+async function loadAllLevels(): Promise<Sentence[]> {
+  // какие уровни есть — жёстко задаём
+  const levels = ["a1", "a2", "b1", "b2", "c1", "c2"];
+  const results: Sentence[] = [];
+
+  for (const l of levels) {
+    const res = await fetch(`/api/sentences/${l}`);
+    if (res.ok) {
+      const part = (await res.json()) as Sentence[];
+      results.push(...part);
+    }
+  }
+
+  return results;
+}
+
+function normalizeTokens(input: unknown): string[] {
+  if (Array.isArray(input)) {
+    if (input.length === 1 && typeof input[0] === "string") {
+      return splitToWords(input[0]);
+    }
+    return input.map(String);
+  }
+  if (typeof input === "string") {
+    return splitToWords(input);
+  }
+  return [];
+}
+
+function splitToWords(s: string): string[] {
+  return s
+    .replace(/,/g, " ")
+    .split(/\s+/)
+    .map((w) => w.trim())
+    .filter(Boolean);
 }
