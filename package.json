@@ -6,7 +6,8 @@
   "scripts": {
     "rundev": "tsc -p tsconfig.client.json && ts-node-dev --project tsconfig.json --respawn --transpile-only src/server.ts",
     "dev": "ts-node-dev --project tsconfig.json --respawn --transpile-only src/server.ts",
-    "build:client": "tsc -p tsconfig.client.json"
+    "build:client": "tsc -p tsconfig.client.json",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
