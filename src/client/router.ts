@@ -1,6 +1,6 @@
-import { showWords } from "./pages/words";
-import { showSentences } from "./pages/sentences";
-import { showGaps } from "./pages/gaps";
+import { showWords } from "./pages/words.js";
+import { showSentences } from "./pages/sentences.js";
+import { showGaps } from "./pages/gaps.js";
 
 export function handleRoute() {
   const hash = window.location.hash || "#/words";

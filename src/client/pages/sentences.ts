@@ -75,7 +75,7 @@ export async function showSentences(): Promise<void> {
   nextBtn.onclick = doNext;
 
   const onKey = (e: KeyboardEvent) => {
-    if (e.key === "Enter") {
+      if (e.key === "Enter") {
       e.preventDefault();
       if (lastCorrect) {
         nextBtn.click();
