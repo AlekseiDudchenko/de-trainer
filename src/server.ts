@@ -3,8 +3,7 @@ import path from "path";
 import fs from "fs";
 
 const app = express();
-const PORT = process.env.PORT || 3000;
-
+const PORT = process.env.PORT ? Number(process.env.PORT) : 3000;
 
 app.use(express.static(path.join(__dirname, "..", "public")));
 
@@ -19,9 +18,14 @@ type Gap = {
 };
 
 function readGaps(): Gap[] {
+  if (!fs.existsSync(GAPS_FILE)) return [];
   const raw = fs.readFileSync(GAPS_FILE, "utf8");
   return JSON.parse(raw) as Gap[];
 }
+
+app.get('/', (_req, res) => {
+  res.send('ok from fly.io');
+});
 
 app.get("/api/gaps/one", (_req: Request, res: Response) => {
   const gaps = readGaps();
@@ -61,6 +65,6 @@ app.get("/api/gaps", (_req: Request, res: Response) => {
   console.log("call to /api/gaps");
 });
 
-app.listen(PORT, () => {
-  console.log(`Trainer (TS) running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`listening on ${PORT}`);
 });
