@@ -49,6 +49,32 @@ header {
     opacity: 0.6;
 }
 
+/* === added for training === */
+.token {
+    display: inline-block;
+    border: 1px solid #888;
+    padding: 4px 8px;
+    margin: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #fff;
+}
+
+.dropzone {
+    min-height: 50px;
+    border: 1px dashed #ccc;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.correct {
+    background: #c8f7c5;
+}
+
+.wrong {
+    background: #f7c5c5;
+}
+
 /* на узких экранах в один столбец */
 @media (max-width: 800px) {
     .columns {
