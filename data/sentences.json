@@ -1,0 +1,18 @@
+[
+  {
+    "id": "s1",
+    "target": "Ich wohne in Berlin.",
+    "tokens": ["Ich", "wohne", "in", "Berlin."],
+    "type": "drag",
+    "explanation": "Прямой порядок: S – V – Rest.",
+    "level": "A1"
+  },
+  {
+    "id": "s2",
+    "target": "Weil ich krank bin, bleibe ich zu Hause.",
+    "tokens": ["Weil", "ich", "krank", "bin,", "bleibe", "ich", "zu", "Hause."],
+    "type": "drag",
+    "explanation": "В придаточном глагол в конец.",
+    "level": "A2"
+  }
+]

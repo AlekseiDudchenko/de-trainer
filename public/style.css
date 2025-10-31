@@ -1,0 +1,44 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+}
+
+.words-controls button,
+header button {
+    margin-right: 10px;
+}
+
+.token {
+    border: 1px solid #888;
+    display: inline-block;
+    padding: 4px 8px;
+    margin: 4px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.dropzone {
+    min-height: 40px;
+    border: 1px dashed #ccc;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.correct {
+    background: #c8f7c5;
+}
+
+.wrong {
+    background: #f7c5c5;
+}

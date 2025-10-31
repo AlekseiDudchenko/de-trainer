@@ -1,0 +1,21 @@
+[
+  {
+    "id": "w1",
+    "de": "der Tisch",
+    "article": "der",
+    "ru": "стол",
+    "exampleDe": "Der Tisch ist groß.",
+    "exampleRu": "Стол большой.",
+    "level": "A1",
+    "tags": ["möbel"]
+  },
+  {
+    "id": "w2",
+    "de": "sprechen",
+    "ru": "говорить",
+    "exampleDe": "Ich spreche Deutsch.",
+    "exampleRu": "Я говорю по-немецки.",
+    "level": "A1",
+    "tags": ["verb"]
+  }
+]
