@@ -1,4 +1,4 @@
-import { Sentence } from "../types";
+import { Sentence } from "../types.js";
 
 const app = document.getElementById("app") as HTMLElement;
 
@@ -13,11 +13,12 @@ export async function showSentences(): Promise<void> {
     <div class="card">
       <h2>Make a sentence</h2>
       <p><small>Level: ${sent.level ?? "-"}</small></p>
-      ${sent.translation_en ? `<p><small>EN: ${sent.translation_en}</small></p>` : ""}
+      ${sent.translation_en ? `<p><small><b>${sent.translation_en}</b></small></p>` : ""}
       <div id="tokens"></div>
       <div id="drop" class="dropzone"></div>
       <button id="checkSentence">Check</button>
       <button id="nextSentence">Next</button>
+      <button id="resetSentence" style="display:none;">Reset</button>
       <p id="result"></p>
       <p><small>${sent.explanation ?? ""}</small></p>
     </div>
@@ -27,6 +28,7 @@ export async function showSentences(): Promise<void> {
   const drop = document.getElementById("drop") as HTMLDivElement;
   const checkBtn = document.getElementById("checkSentence") as HTMLButtonElement;
   const nextBtn = document.getElementById("nextSentence") as HTMLButtonElement;
+  const resetBtn = document.getElementById("resetSentence") as HTMLButtonElement;
   const resultP = document.getElementById("result") as HTMLParagraphElement;
 
   shuffled.forEach((t) => {
@@ -44,6 +46,7 @@ export async function showSentences(): Promise<void> {
   });
 
   let lastCorrect = false;
+  let wasChecked = false;
 
   const doCheck = () => {
     const userTokens = Array.from(drop.querySelectorAll(".token")).map(
@@ -58,12 +61,15 @@ export async function showSentences(): Promise<void> {
       drop.classList.remove("wrong");
       drop.classList.add("correct");
       lastCorrect = true;
+      resetBtn.style.display = "none";
     } else {
       resultP.textContent = "❌ No. Correct: " + sent.target;
       drop.classList.remove("correct");
       drop.classList.add("wrong");
       lastCorrect = false;
+      resetBtn.style.display = "inline-block";
     }
+    wasChecked = true;
   };
 
   const doNext = () => {
@@ -71,16 +77,31 @@ export async function showSentences(): Promise<void> {
     showSentences();
   };
 
+  const doReset = () => {
+    drop.innerHTML = "";
+    drop.classList.remove("wrong", "correct");
+    resultP.textContent = "";
+    lastCorrect = false;
+    resetBtn.style.display = "none";
+    wasChecked = false;
+  };
+
   checkBtn.onclick = doCheck;
   nextBtn.onclick = doNext;
+  resetBtn.onclick = doReset;
 
   const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Enter") {
+    if (e.key === "Enter") {
       e.preventDefault();
+      if (!wasChecked) {
+      checkBtn.click();
+      return;
+      }
+      
       if (lastCorrect) {
         nextBtn.click();
       } else {
-        checkBtn.click();
+        resetBtn.click();
       }
     }
   };
