@@ -20,25 +20,35 @@ type Sentence = {
 
 type Gap = {
   id: number;
-  sentence: string; // с ___
+  sentence: string;
   answer: string;
 };
 
 const app = document.getElementById("app") as HTMLElement;
-const btnWords = document.getElementById("btnWords") as HTMLButtonElement;
-const btnSentences = document.getElementById("btnSentences") as HTMLButtonElement;
-const btnGaps = document.getElementById("btnGaps") as HTMLButtonElement;
 
-btnWords.addEventListener("click", () => showWords());
-btnSentences.addEventListener("click", () => showSentences());
-btnGaps.addEventListener("click", () => showGaps());
+window.addEventListener("hashchange", handleRoute);
+handleRoute(); // старт
 
-showWords();
+function handleRoute() {
+  const hash = window.location.hash || "#/words";
+  switch (hash) {
+    case "#/words":
+      showWords();
+      break;
+    case "#/sentences":
+      showSentences();
+      break;
+    case "#/gaps":
+      showGaps();
+      break;
+    default:
+      showWords();
+  }
+}
 
 async function showWords(): Promise<void> {
   const res = await fetch("/api/words");
   const words: Word[] = await res.json();
-
   const word = words[Math.floor(Math.random() * words.length)];
 
   app.innerHTML = `
@@ -76,8 +86,8 @@ async function showSentences(): Promise<void> {
       <p><small>Уровень: ${sent.level ?? "-"}</small></p>
       <div id="tokens"></div>
       <div id="drop" class="dropzone"></div>
-      <button id="check">Check</button>
-      <button id="check">Next</button>
+      <button id="checkSentence">Check</button>
+      <button id="nextSentence">Next</button>
       <p id="result"></p>
       <p><small>${sent.explanation ?? ""}</small></p>
     </div>
@@ -85,7 +95,8 @@ async function showSentences(): Promise<void> {
 
   const tokensDiv = document.getElementById("tokens") as HTMLDivElement;
   const drop = document.getElementById("drop") as HTMLDivElement;
-  const checkBtn = document.getElementById("check") as HTMLButtonElement;
+  const checkBtn = document.getElementById("checkSentence") as HTMLButtonElement;
+  const nextBtn = document.getElementById("nextSentence") as HTMLButtonElement;
   const resultP = document.getElementById("result") as HTMLParagraphElement;
 
   shuffled.forEach((t) => {
@@ -103,7 +114,9 @@ async function showSentences(): Promise<void> {
   });
 
   checkBtn.onclick = () => {
-    const userTokens = Array.from(drop.querySelectorAll(".token")).map((n) => n.textContent ?? "");
+    const userTokens = Array.from(drop.querySelectorAll(".token")).map(
+      (n) => n.textContent ?? ""
+    );
     const userStr = userTokens.join(" ").trim();
     const targetStr = sent.target.trim();
 
@@ -117,6 +130,8 @@ async function showSentences(): Promise<void> {
       drop.classList.add("wrong");
     }
   };
+
+  nextBtn.onclick = () => showSentences();
 }
 
 async function showGaps(): Promise<void> {
@@ -136,11 +151,11 @@ async function showGaps(): Promise<void> {
   `;
 
   const input = document.getElementById("gapInput") as HTMLInputElement;
-  const btn = document.getElementById("checkGap") as HTMLButtonElement;
-  const nextGapBtn = document.getElementById("nextGap") as HTMLButtonElement;
+  const checkBtn = document.getElementById("checkGap") as HTMLButtonElement;
+  const nextBtn = document.getElementById("nextGapBtn") as HTMLButtonElement;
   const result = document.getElementById("gapResult") as HTMLParagraphElement;
 
-  btn.onclick = () => {
+  checkBtn.onclick = () => {
     const user = input.value.trim();
     if (user.toLowerCase() === task.answer.toLowerCase()) {
       result.textContent = "✅ Correct!";
@@ -150,5 +165,7 @@ async function showGaps(): Promise<void> {
       result.className = "wrong";
     }
   };
-  nextGapBtn.onclick = () => showGaps();
+
+  nextBtn.onclick = () => showGaps();
+  
 }
