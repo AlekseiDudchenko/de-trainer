@@ -5,6 +5,7 @@ const app = document.getElementById("app") as HTMLElement;
 export async function showSentences(level?: string): Promise<void> {
   const lvl = (level ?? "A1").toLowerCase();
 
+  console.log("Selected level:", lvl);
 
   const sentences =
     lvl === "all"
@@ -15,6 +16,8 @@ export async function showSentences(level?: string): Promise<void> {
     app.innerHTML = `<div class="card"><h2>Sätze</h2><p>Keine Daten.</p></div>`;
     return;
   }
+
+  console.log("Loaded sentences:", sentences.length);
 
   const sent = sentences[Math.floor(Math.random() * sentences.length)];
   const rawTokens = normalizeTokens(sent.tokens);
@@ -42,26 +45,57 @@ export async function showSentences(level?: string): Promise<void> {
   const resetBtn = document.getElementById("resetSentence") as HTMLButtonElement;
   const resultP = document.getElementById("result") as HTMLParagraphElement;
 
-  shuffled.forEach((t) => {
-    const span = document.createElement("span");
-    span.textContent = t;
-    span.className = "token";
-    span.onclick = () => {
-      const clone = span.cloneNode(true) as HTMLSpanElement;
-      clone.onclick = () => drop.removeChild(clone);
-      drop.appendChild(clone);
-    };
-    tokensDiv.appendChild(span);
-  });
+  // Track which tokens are in suggestions vs answer
+  let availableTokens = [...shuffled];
+  let answerTokens: string[] = [];
+
+  // Render both token areas
+  const renderTokens = () => {
+    if (!tokensDiv || !drop) return;
+    
+    // Clear and render available tokens
+    tokensDiv.innerHTML = '';
+    availableTokens.forEach(t => {
+      const span = document.createElement("span");
+      span.textContent = t;
+      span.className = "token";
+      span.onclick = () => {
+        const idx = availableTokens.indexOf(t);
+        if (idx >= 0) {
+          availableTokens.splice(idx, 1);
+          answerTokens.push(t);
+          renderTokens();
+        }
+      };
+      tokensDiv.appendChild(span);
+    });
+
+    // Clear and render answer tokens
+    drop.innerHTML = '';
+    answerTokens.forEach(t => {
+      const span = document.createElement("span");
+      span.textContent = t;
+      span.className = "token";
+      span.onclick = () => {
+        const idx = answerTokens.indexOf(t);
+        if (idx >= 0) {
+          answerTokens.splice(idx, 1);
+          availableTokens.push(t);
+          renderTokens();
+        }
+      };
+      drop.appendChild(span);
+    });
+  };
+
+  // Initial render
+  renderTokens();
 
   let lastCorrect = false;
   let wasChecked = false;
 
   const doCheck = () => {
-    const userTokens = Array.from(drop.querySelectorAll(".token")).map(
-      (n) => n.textContent ?? ""
-    );
-    const userStr = userTokens.join(" ").trim();
+    const userStr = answerTokens.join(" ").trim();
     const targetStr = sent.target.trim();
     const norm = (s: string) => s.trim().replace(/[.?!]\s*$/, "");
 
@@ -83,12 +117,15 @@ export async function showSentences(level?: string): Promise<void> {
 
   const doNext = () => {
     document.removeEventListener("keydown", onKey);
-    // если был all — снова all
     showSentences(level);
   };
 
   const doReset = () => {
-    drop.innerHTML = "";
+    // Move all tokens back to available
+    availableTokens = [...availableTokens, ...answerTokens];
+    answerTokens = [];
+    renderTokens();
+    
     drop.classList.remove("wrong", "correct");
     resultP.textContent = "";
     lastCorrect = false;

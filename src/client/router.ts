@@ -25,6 +25,7 @@ export function handleRoute() {
 
     // Sätze
     case "#/sentences":
+      console.log("Selected level: all");
       showSentences("all");
     case "#/sentences-a1":
       showSentences("A1");
