@@ -34,7 +34,16 @@ export function handleRoute() {
       showSentences("A2");
       break;
     case "#/sentences-b1":
-      showTodo("Satztraining – bald verfügbar");
+      showTodo("B1");
+      break;
+    case "#/sentences-b2":
+      showTodo("B2");
+      break;
+    case "#/sentences-c1":
+      showTodo("C1");
+      break;
+    case "#/sentences-c2":
+      showTodo("C2");
       break;
 
     // Gaps / Artikel
