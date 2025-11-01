@@ -16,6 +16,7 @@ export type Sentence = {
   type: "drag";
   explanation?: string;
   translation_en?: string;
+  translation_ru?: string;
   level?: string;
 };
 
