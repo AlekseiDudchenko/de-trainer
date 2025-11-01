@@ -52,15 +52,27 @@ export function showHome() {
             </div>
           </a>
           <a class="card-link" href="#/sentences-b1">
-            <div class="card small muted">
+            <div class="card small">
               <h3>B1 Sätze bauen</h3>
+              <p>Nebensätze mit obwohl, damit, etc.</p>
+            </div>
+          </a>
+          <a class="card-link" href="#/sentences-b2">
+            <div class="card small">
+              <h3>B2 Sätze bauen</h3>
               <p>Bald verfügbar.</p>
             </div>
           </a>
-          <a class="card-link" href="#/sentences">
+          <a class="card-link" href="#/sentences-с1">
             <div class="card small">
-              <h3>Zufälliger Satz</h3>
-              <p>Jetzt üben →</p>
+              <h3>С1 Sätze bauen</h3>
+              <p>Bald verfügbar.</p>
+            </div>
+          </a>
+          <a class="card-link" href="#/sentences-с2">
+            <div class="card small">
+              <h3>С2 Sätze bauen</h3>
+              <p>Bald verfügbar.</p>
             </div>
           </a>
         </div>
