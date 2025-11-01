@@ -213,7 +213,7 @@
     "exampleRu": "Я помню отпуск.",
     "exampleEn": "I remember the vacation.",
     "level": "B1",
-    "tags": ["verb", "reflexiv", "akkusativ"]
+    "tags": ["verb", "reflexiv", "akkusativ", "refl"]
   },
   {
     "id": "w_b1_19",
@@ -393,7 +393,7 @@
     "exampleRu": "Я беру на себя ответственность.",
     "exampleEn": "I take responsibility.",
     "level": "B1",
-    "tags": ["arbeit", "gesellschaft"]
+    "tags": ["arbeit", "gesellschaft", "substantiv"]
   },
   {
     "id": "w_b1_34",
@@ -405,7 +405,7 @@
     "exampleRu": "Знание немецкого — одно из требований.",
     "exampleEn": "German skills are a prerequisite.",
     "level": "B1",
-    "tags": ["arbeit", "bildung"]
+    "tags": ["arbeit", "bildung", "substantiv"]
   },
   {
     "id": "w_b1_35",
@@ -429,7 +429,7 @@
     "exampleRu": "Преимущество — низкая цена.",
     "exampleEn": "One advantage is the low price.",
     "level": "B1",
-    "tags": ["argumentation"]
+    "tags": ["argumentation", "substantiv", "diskussion"]
   },
   {
     "id": "w_b1_37",
@@ -441,7 +441,7 @@
     "exampleRu": "Недостаток — долгое время в пути.",
     "exampleEn": "A disadvantage is the long travel time.",
     "level": "B1",
-    "tags": ["argumentation"]
+    "tags": ["argumentation", "substantiv", "diskussion"]
   },
   {
     "id": "w_b1_38",
@@ -623,30 +623,8 @@
   "level": "B1",
   "tags": ["substantiv", "arbeit", "schule"]
   },
-  {
-  "id": "w_b1_003",
-  "de": "die Voraussetzung",
-  "article": "die",
-  "ru": "предпосылка, условие",
-  "en": "requirement, prerequisite",
-  "exampleDe": "Gute Deutschkenntnisse sind eine wichtige Voraussetzung für diese Stelle.",
-  "exampleRu": "Хорошее знание немецкого — важное условие для этой должности.",
-  "exampleEn": "Good German skills are an important requirement for this position.",
-  "level": "B1",
-  "tags": ["substantiv", "arbeit"]
-  },
-  {
-  "id": "w_b1_004",
-  "de": "die Verantwortung",
-  "article": "die",
-  "ru": "ответственность",
-  "en": "responsibility",
-  "exampleDe": "Als Teamleiter trägt sie viel Verantwortung.",
-  "exampleRu": "Как руководитель команды, она несёт большую ответственность.",
-  "exampleEn": "As a team leader she has a lot of responsibility.",
-  "level": "B1",
-  "tags": ["substantiv", "arbeit"]
-  },
+
+
   {
   "id": "w_b1_005",
   "de": "die Gelegenheit",
@@ -731,30 +709,8 @@
   "level": "B1",
   "tags": ["substantiv", "abstrakt"]
   },
-  {
-  "id": "w_b1_012",
-  "de": "der Vorteil",
-  "article": "der",
-  "ru": "преимущество",
-  "en": "advantage",
-  "exampleDe": "Ein großer Vorteil ist, dass die Firma sehr flexibel ist.",
-  "exampleRu": "Большое преимущество — компания очень гибкая.",
-  "exampleEn": "A big advantage is that the company is very flexible.",
-  "level": "B1",
-  "tags": ["substantiv", "diskussion"]
-  },
-  {
-  "id": "w_b1_013",
-  "de": "der Nachteil",
-  "article": "der",
-  "ru": "недостаток",
-  "en": "disadvantage",
-  "exampleDe": "Der einzige Nachteil der Wohnung ist der hohe Preis.",
-  "exampleRu": "Единственный недостаток квартиры — высокая цена.",
-  "exampleEn": "The only disadvantage of the flat is the high price.",
-  "level": "B1",
-  "tags": ["substantiv", "diskussion"]
-  },
+
+
   {
   "id": "w_b1_014",
   "de": "das Verhalten",
@@ -1019,30 +975,8 @@
   "level": "B1",
   "tags": ["adverb"]
   },
-  {
-  "id": "w_b1_036",
-  "de": "die Ernährung",
-  "article": "die",
-  "ru": "питание",
-  "en": "nutrition",
-  "exampleDe": "Gesunde Ernährung ist wichtig für die Gesundheit.",
-  "exampleRu": "Здоровое питание важно для здоровья.",
-  "exampleEn": "Healthy nutrition is important for health.",
-  "level": "B1",
-  "tags": ["substantiv", "gesundheit"]
-  },
-  {
-  "id": "w_b1_037",
-  "de": "die Bewegung",
-  "article": "die",
-  "ru": "движение, физическая активность",
-  "en": "exercise, movement",
-  "exampleDe": "Mehr Bewegung würde dir gut tun.",
-  "exampleRu": "Тебе бы не помешало больше двигаться.",
-  "exampleEn": "More exercise would be good for you.",
-  "level": "B1",
-  "tags": ["substantiv", "gesundheit"]
-  },
+
+
   {
   "id": "w_b1_038",
   "de": "die Untersuchung",
@@ -1055,18 +989,7 @@
   "level": "B1",
   "tags": ["substantiv", "gesundheit"]
   },
-  {
-  "id": "w_b1_039",
-  "de": "vermeiden",
-  "article": "",
-  "ru": "избегать",
-  "en": "to avoid",
-  "exampleDe": "Versuchen Sie, Stress zu vermeiden.",
-  "exampleRu": "Постарайтесь избегать стресса.",
-  "exampleEn": "Try to avoid stress.",
-  "level": "B1",
-  "tags": ["verb", "gesundheit"]
-  },
+
   {
   "id": "w_b1_040",
   "de": "ausreichend",
@@ -1163,30 +1086,8 @@
   "level": "B1",
   "tags": ["verb", "diskussion"]
   },
-  {
-  "id": "w_b1_048",
-  "de": "sich erinnern an",
-  "article": "",
-  "ru": "помнить, вспоминать о",
-  "en": "to remember",
-  "exampleDe": "Ich erinnere mich nicht mehr an seinen Namen.",
-  "exampleRu": "Я больше не помню его имени.",
-  "exampleEn": "I no longer remember his name.",
-  "level": "B1",
-  "tags": ["verb", "refl"]
-  },
-  {
-  "id": "w_b1_049",
-  "de": "sich gewöhnen an",
-  "article": "",
-  "ru": "привыкать к",
-  "en": "to get used to",
-  "exampleDe": "Ich habe mich schnell an die neue Stadt gewöhnt.",
-  "exampleRu": "Я быстро привык к новому городу.",
-  "exampleEn": "I quickly got used to the new city.",
-  "level": "B1",
-  "tags": ["verb", "refl"]
-  },
+
+
   {
   "id": "w_b1_050",
   "de": "verhindern",
@@ -1199,18 +1100,7 @@
   "level": "B1",
   "tags": ["verb", "politik"]
   },
-  {
-  "id": "w_b1_051",
-  "de": "erreichen",
-  "article": "",
-  "ru": "достигать, дозваниваться",
-  "en": "to reach",
-  "exampleDe": "Ich konnte dich gestern nicht erreichen.",
-  "exampleRu": "Я не смог вчера до тебя дозвониться.",
-  "exampleEn": "I could not reach you yesterday.",
-  "level": "B1",
-  "tags": ["verb", "kommunikation"]
-  },
+
   {
   "id": "w_b1_052",
   "de": "bestehen aus",
@@ -1235,18 +1125,7 @@
   "level": "B1",
   "tags": ["verb"]
   },
-  {
-  "id": "w_b1_054",
-  "de": "stattfinden",
-  "article": "",
-  "ru": "состояться",
-  "en": "to take place",
-  "exampleDe": "Die Veranstaltung findet am Freitag statt.",
-  "exampleRu": "Мероприятие состоится в пятницу.",
-  "exampleEn": "The event takes place on Friday.",
-  "level": "B1",
-  "tags": ["verb"]
-  },
+
   {
   "id": "w_b1_055",
   "de": "ausreichen",
@@ -1356,18 +1235,6 @@
   "tags": ["konjunktion"]
   },
   {
-  "id": "w_b1_064",
-  "de": "sodass",
-  "article": "",
-  "ru": "так что",
-  "en": "so that",
-  "exampleDe": "Es war sehr laut, sodass ich nicht schlafen konnte.",
-  "exampleRu": "Было очень шумно, так что я не мог спать.",
-  "exampleEn": "It was very loud so that I couldn’t sleep.",
-  "level": "B1",
-  "tags": ["konjunktion"]
-  },
-  {
   "id": "w_b1_065",
   "de": "trotzdem",
   "article": "",
@@ -1379,18 +1246,7 @@
   "level": "B1",
   "tags": ["adverb", "konnektor"]
   },
-  {
-  "id": "w_b1_066",
-  "de": "außerdem",
-  "article": "",
-  "ru": "кроме того",
-  "en": "in addition",
-  "exampleDe": "Die Wohnung ist groß und außerdem sehr hell.",
-  "exampleRu": "Квартира большая и, кроме того, очень светлая.",
-  "exampleEn": "The flat is big and in addition very bright.",
-  "level": "B1",
-  "tags": ["adverb", "konnektor"]
-  },
+
   {
   "id": "w_b1_067",
   "de": "jedoch",
@@ -1403,18 +1259,7 @@
   "level": "B1",
   "tags": ["adverb", "konnektor"]
   },
-  {
-  "id": "w_b1_068",
-  "de": "sowohl ... als auch",
-  "article": "",
-  "ru": "как ... так и",
-  "en": "both ... and",
-  "exampleDe": "Sie spricht sowohl Deutsch als auch Englisch.",
-  "exampleRu": "Она говорит как по-немецки, так и по-английски.",
-  "exampleEn": "She speaks both German and English.",
-  "level": "B1",
-  "tags": ["konjunktion", "struktur"]
-  },
+
   {
   "id": "w_b1_069",
   "de": "weder ... noch",
@@ -1439,30 +1284,8 @@
   "level": "B1",
   "tags": ["präposition", "genitiv"]
   },
-  {
-  "id": "w_b1_071",
-  "de": "trotz",
-  "article": "",
-  "ru": "несмотря на",
-  "en": "despite",
-  "exampleDe": "Trotz des Regens sind viele Leute gekommen.",
-  "exampleRu": "Несмотря на дождь, пришло много людей.",
-  "exampleEn": "Despite the rain, many people came.",
-  "level": "B1",
-  "tags": ["präposition", "genitiv"]
-  },
-  {
-  "id": "w_b1_072",
-  "de": "innerhalb",
-  "article": "",
-  "ru": "внутри, в течение",
-  "en": "within",
-  "exampleDe": "Bitte antworten Sie innerhalb von drei Tagen.",
-  "exampleRu": "Пожалуйста, ответьте в течение трёх дней.",
-  "exampleEn": "Please reply within three days.",
-  "level": "B1",
-  "tags": ["präposition", "genitiv"]
-  },
+
+
   {
   "id": "w_b1_073",
   "de": "zumindest",
