@@ -956,7 +956,6 @@
     "level": "B1",
     "tags": ["verb", "gesellschaft", "refl"]
   },
-  ,
   {
     "id": "w_b1_096",
     "de": "die Lebensqualität",
@@ -1016,8 +1015,8 @@
     "exampleEn": "The integration of migrants is an important task.",
     "level": "B1",
     "tags": ["substantiv", "gesellschaft", "politik"]
-  }
-   {
+  },
+  {
     "id": "w_b1_101",
     "de": "erreichen",
     "article": "",
@@ -1390,15 +1389,15 @@
   },
   {
     "id": "w_b1_132",
-    "de": "weder ... noch",
-    "article": "",
-    "ru": "ни ..., ни ...",
-    "en": "neither ... nor",
-    "exampleDe": "Sie trinkt weder Kaffee noch Tee.",
-    "exampleRu": "Она не пьёт ни кофе, ни чай.",
-    "exampleEn": "She drinks neither coffee nor tea.",
+    "de": "die Toleranz",
+    "article": "die",
+    "ru": "терпимость",
+    "en": "tolerance",
+    "exampleDe": "Toleranz ist wichtig in einer multikulturellen Gesellschaft.",
+    "exampleRu": "Терпимость важна в мультикультурном обществе.",
+    "exampleEn": "Tolerance is important in a multicultural society.",
     "level": "B1",
-    "tags": ["korrelativ", "konnektor"]
+    "tags": ["substantiv", "gesellschaft", "sozial"]
   },
   {
     "id": "w_b1_133",
