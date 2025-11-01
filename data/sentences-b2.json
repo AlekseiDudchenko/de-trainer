@@ -1,0 +1,282 @@
+[
+  {
+    "id": "s_b2_1",
+    "target": "Obwohl die Ergebnisse überzeugend wirken, sollte man alternative Erklärungen in Betracht ziehen.",
+    "tokens": ["Obwohl", "die", "Ergebnisse", "überzeugend", "wirken,", "sollte", "man", "alternative", "Erklärungen", "in", "Betracht", "ziehen"],
+    "type": "drag",
+    "explanation": "B2: Concession clause with 'obwohl' + fixed collocation 'in Betracht ziehen'; verb-final in the subordinate clause.",
+    "translation_en": "Although the results seem convincing, one should consider alternative explanations.",
+    "translation_ru": "Хотя результаты кажутся убедительными, следует рассмотреть альтернативные объяснения.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_2",
+    "target": "Je genauer wir die Daten auswerten, desto zuverlässiger werden unsere Prognosen.",
+    "tokens": ["Je", "genauer", "wir", "die", "Daten", "auswerten,", "desto", "zuverlässiger", "werden", "unsere", "Prognosen"],
+    "type": "drag",
+    "explanation": "B2: Correlative structure 'je ... desto' + comparative adjectives; verb-final in the first clause.",
+    "translation_en": "The more precisely we analyze the data, the more reliable our forecasts become.",
+    "translation_ru": "Чем точнее мы анализируем данные, тем надёжнее становятся наши прогнозы.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_3",
+    "target": "Damit die Teilnehmer aktiv mitarbeiten, sollten die Aufgaben abwechslungsreich gestaltet sein.",
+    "tokens": ["Damit", "die", "Teilnehmer", "aktiv", "mitarbeiten,", "sollten", "die", "Aufgaben", "abwechslungsreich", "gestaltet", "sein"],
+    "type": "drag",
+    "explanation": "B2: Purpose clause with 'damit' + adjective 'abwechslungsreich'; verb-final in the subordinate clause.",
+    "translation_en": "In order for the participants to actively collaborate, the tasks should be designed to be varied.",
+    "translation_ru": "Чтобы участники активно сотрудничали, задачи должны быть разнообразными.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_4",
+    "target": "Sofern keine unvorhergesehenen Schwierigkeiten auftreten, wird das Projekt fristgerecht abgeschlossen.",
+    "tokens": ["Sofern", "keine", "unvorhergesehenen", "Schwierigkeiten", "auftreten,", "wird", "das", "Projekt", "fristgerecht", "abgeschlossen"],
+    "type": "drag",
+    "explanation": "B2: Conditional with 'sofern' (formal alternative to 'wenn') + compound adjective 'unvorhergesehen' + professional context.",
+    "translation_en": "Provided that no unforeseen difficulties arise, the project will be completed on schedule.",
+    "translation_ru": "При условии, что не возникнет непредвиденных трудностей, проект будет завершен в срок.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_5",
+    "target": "Inwiefern sich die neue Methode als effektiv erweist, lässt sich erst nach weiteren Tests beurteilen.",
+    "tokens": ["Inwiefern", "sich", "die", "neue", "Methode", "als", "effektiv", "erweist,", "lässt", "sich", "erst", "nach", "weiteren", "Tests", "beurteilen"],
+    "type": "drag",
+    "explanation": "B2: Indirect question with 'inwiefern' + reflexive construction 'sich erweisen als' + passive voice with 'lässt sich'.",
+    "translation_en": "The extent to which the new method proves effective can only be assessed after further testing.",
+    "translation_ru": "Насколько эффективным окажется новый метод, можно будет оценить только после дополнительных тестов.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_6",
+    "target": "Während einerseits die Kosten steigen, nimmt andererseits die Nachfrage kontinuierlich ab.",
+    "tokens": ["Während", "einerseits", "die", "Kosten", "steigen,", "nimmt", "andererseits", "die", "Nachfrage", "kontinuierlich", "ab"],
+    "type": "drag",
+    "explanation": "B2: Contrasting structure with 'während' + correlative pair 'einerseits...andererseits' + separable verb.",
+    "translation_en": "While on the one hand costs are rising, on the other hand demand is continuously decreasing.",
+    "translation_ru": "В то время как, с одной стороны, растут затраты, с другой стороны, спрос постоянно снижается.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_7",
+    "target": "Insofern die Voraussetzungen erfüllt sind, kann der Antrag genehmigt werden.",
+    "tokens": ["Insofern", "die", "Voraussetzungen", "erfüllt", "sind,", "kann", "der", "Antrag", "genehmigt", "werden"],
+    "type": "drag",
+    "explanation": "B2: Conditional with formal 'insofern' + passive voice in both clauses; administrative language.",
+    "translation_en": "Provided that the requirements are met, the application can be approved.",
+    "translation_ru": "В той мере, в какой выполнены предпосылки, заявка может быть одобрена.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_8",
+    "target": "Je nachdem, wie die Abstimmung ausfällt, müssen die Pläne möglicherweise überarbeitet werden.",
+    "tokens": ["Je", "nachdem,", "wie", "die", "Abstimmung", "ausfällt,", "müssen", "die", "Pläne", "möglicherweise", "überarbeitet", "werden"],
+    "type": "drag",
+    "explanation": "B2: Complex dependent clause with 'je nachdem' + modal verb + passive voice; formal business context.",
+    "translation_en": "Depending on how the vote turns out, the plans may need to be revised.",
+    "translation_ru": "В зависимости от того, как пройдет голосование, планы, возможно, придется пересмотреть.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_9",
+    "target": "Angesichts der steigenden Nachfrage sollte der Produktionsprozess entsprechend angepasst werden.",
+    "tokens": ["Angesichts", "der", "steigenden", "Nachfrage", "sollte", "der", "Produktionsprozess", "entsprechend", "angepasst", "werden"],
+    "type": "drag",
+    "explanation": "B2: Formal preposition 'angesichts' + present participle as adjective + passive voice with modal verb.",
+    "translation_en": "In view of the increasing demand, the production process should be adjusted accordingly.",
+    "translation_ru": "Учитывая растущий спрос, производственный процесс следует соответственно адаптировать.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_10",
+    "target": "Im Zuge der Digitalisierung werden zahlreiche Arbeitsabläufe grundlegend umstrukturiert.",
+    "tokens": ["Im", "Zuge", "der", "Digitalisierung", "werden", "zahlreiche", "Arbeitsabläufe", "grundlegend", "umstrukturiert"],
+    "type": "drag",
+    "explanation": "B2: Fixed expression 'im Zuge' + nominalization + passive present tense; business/technical context.",
+    "translation_en": "In the course of digitalization, numerous work processes are being fundamentally restructured.",
+    "translation_ru": "В ходе цифровизации многие рабочие процессы подвергаются фундаментальной реструктуризации.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_11",
+    "target": "Sowohl die wirtschaftlichen als auch die ökologischen Aspekte müssen bei der Entscheidung berücksichtigt werden.",
+    "tokens": ["Sowohl", "die", "wirtschaftlichen", "als", "auch", "die", "ökologischen", "Aspekte", "müssen", "bei", "der", "Entscheidung", "berücksichtigt", "werden"],
+    "type": "drag",
+    "explanation": "B2: Correlative conjunction 'sowohl...als auch' + passive construction with modal verb.",
+    "translation_en": "Both the economic and ecological aspects must be taken into account in the decision.",
+    "translation_ru": "Как экономические, так и экологические аспекты должны быть учтены при принятии решения.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_12",
+    "target": "Wenngleich die Investition kurzfristig kostspielig erscheint, dürfte sie sich langfristig auszahlen.",
+    "tokens": ["Wenngleich", "die", "Investition", "kurzfristig", "kostspielig", "erscheint,", "dürfte", "sie", "sich", "langfristig", "auszahlen"],
+    "type": "drag",
+    "explanation": "B2: Formal concessive 'wenngleich' + subjunctive with 'dürfte' + reflexive verb; financial context.",
+    "translation_en": "Although the investment appears costly in the short term, it should pay off in the long run.",
+    "translation_ru": "Хотя инвестиция кажется дорогостоящей в краткосрочной перспективе, она должна окупиться в долгосрочной.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_13",
+    "target": "Insoweit die Studie methodisch einwandfrei durchgeführt wurde, können ihre Ergebnisse als verlässlich gelten.",
+    "tokens": ["Insoweit", "die", "Studie", "methodisch", "einwandfrei", "durchgeführt", "wurde,", "können", "ihre", "Ergebnisse", "als", "verlässlich", "gelten"],
+    "type": "drag",
+    "explanation": "B2: Formal conditional 'insoweit' + academic context + passive perfect tense.",
+    "translation_en": "To the extent that the study was conducted methodologically flawlessly, its results can be considered reliable.",
+    "translation_ru": "Поскольку исследование было проведено методологически безупречно, его результаты можно считать надежными.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_14",
+    "target": "Der Vorschlag wurde nicht zuletzt deshalb abgelehnt, weil er den Qualitätsstandards nicht entsprach.",
+    "tokens": ["Der", "Vorschlag", "wurde", "nicht", "zuletzt", "deshalb", "abgelehnt,", "weil", "er", "den", "Qualitätsstandards", "nicht", "entsprach"],
+    "type": "drag",
+    "explanation": "B2: Complex construction with 'nicht zuletzt deshalb, weil' + past tense in both clauses.",
+    "translation_en": "The proposal was rejected not least because it did not meet the quality standards.",
+    "translation_ru": "Предложение было отклонено не в последнюю очередь потому, что оно не соответствовало стандартам качества.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_15",
+    "target": "Es sei denn, die Mehrheit stimmt dagegen, wird das neue Konzept ab nächstem Monat umgesetzt.",
+    "tokens": ["Es", "sei", "denn,", "die", "Mehrheit", "stimmt", "dagegen,", "wird", "das", "neue", "Konzept", "ab", "nächstem", "Monat", "umgesetzt"],
+    "type": "drag",
+    "explanation": "B2: Exception clause with 'es sei denn' + future passive; administrative context.",
+    "translation_en": "Unless the majority votes against it, the new concept will be implemented starting next month.",
+    "translation_ru": "Если только большинство не проголосует против, новая концепция будет реализована со следующего месяца.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_16",
+    "target": "Je mehr sich die Technologie weiterentwickelt, desto größer werden die Anforderungen an die Mitarbeiter.",
+    "tokens": ["Je", "mehr", "sich", "die", "Technologie", "weiterentwickelt,", "desto", "größer", "werden", "die", "Anforderungen", "an", "die", "Mitarbeiter"],
+    "type": "drag",
+    "explanation": "B2: Correlative 'je...desto' + reflexive verb + prepositional object with 'an'.",
+    "translation_en": "The more technology continues to develop, the greater the demands on employees become.",
+    "translation_ru": "Чем больше развивается технология, тем выше становятся требования к сотрудникам.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_17",
+    "target": "Selbst wenn alle Vorsichtsmaßnahmen getroffen werden, lässt sich ein Restrisiko nicht völlig ausschließen.",
+    "tokens": ["Selbst", "wenn", "alle", "Vorsichtsmaßnahmen", "getroffen", "werden,", "lässt", "sich", "ein", "Restrisiko", "nicht", "völlig", "ausschließen"],
+    "type": "drag",
+    "explanation": "B2: Concessive with 'selbst wenn' + passive present + 'sich lassen' construction.",
+    "translation_en": "Even if all precautionary measures are taken, a residual risk cannot be completely ruled out.",
+    "translation_ru": "Даже если приняты все меры предосторожности, остаточный риск нельзя полностью исключить.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_18",
+    "target": "Indem wir die Prozesse systematisch analysieren, können wir Optimierungspotenziale identifizieren.",
+    "tokens": ["Indem", "wir", "die", "Prozesse", "systematisch", "analysieren,", "können", "wir", "Optimierungspotenziale", "identifizieren"],
+    "type": "drag",
+    "explanation": "B2: Modal construction with 'indem' + compound noun; business optimization context.",
+    "translation_en": "By analyzing the processes systematically, we can identify potential for optimization.",
+    "translation_ru": "Систематически анализируя процессы, мы можем выявить потенциал для оптимизации.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_19",
+    "target": "Abgesehen davon, dass die Umsetzung Zeit braucht, sprechen keine weiteren Argumente gegen das Projekt.",
+    "tokens": ["Abgesehen", "davon,", "dass", "die", "Umsetzung", "Zeit", "braucht,", "sprechen", "keine", "weiteren", "Argumente", "gegen", "das", "Projekt"],
+    "type": "drag",
+    "explanation": "B2: Complex prepositional phrase 'abgesehen davon, dass' + project management context.",
+    "translation_en": "Apart from the fact that implementation takes time, there are no other arguments against the project.",
+    "translation_ru": "Не считая того, что реализация требует времени, никакие другие аргументы не говорят против проекта.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_20",
+    "target": "Vorausgesetzt, dass alle erforderlichen Genehmigungen vorliegen, kann mit den Bauarbeiten begonnen werden.",
+    "tokens": ["Vorausgesetzt,", "dass", "alle", "erforderlichen", "Genehmigungen", "vorliegen,", "kann", "mit", "den", "Bauarbeiten", "begonnen", "werden"],
+    "type": "drag",
+    "explanation": "B2: Formal conditional 'vorausgesetzt, dass' + passive infinitive construction with modal verb.",
+    "translation_en": "Provided that all necessary permits are available, construction work can begin.",
+    "translation_ru": "При условии наличия всех необходимых разрешений, можно начинать строительные работы.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_21",
+    "target": "Sollten sich die Marktbedingungen verschlechtern, müssten die Prognosen entsprechend nach unten korrigiert werden.",
+    "tokens": ["Sollten", "sich", "die", "Marktbedingungen", "verschlechtern,", "müssten", "die", "Prognosen", "entsprechend", "nach", "unten", "korrigiert", "werden"],
+    "type": "drag",
+    "explanation": "B2: Inverted conditional with 'sollte' + reflexive verb + passive subjunctive; economic context.",
+    "translation_en": "Should market conditions deteriorate, the forecasts would need to be adjusted downward accordingly.",
+    "translation_ru": "Если рыночные условия ухудшатся, прогнозы нужно будет соответственно скорректировать в сторону понижения.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_22",
+    "target": "Ob und inwiefern sich die Investition rentiert, hängt von verschiedenen Faktoren ab.",
+    "tokens": ["Ob", "und", "inwiefern", "sich", "die", "Investition", "rentiert,", "hängt", "von", "verschiedenen", "Faktoren", "ab"],
+    "type": "drag",
+    "explanation": "B2: Double indirect question with 'ob und inwiefern' + reflexive verb + separable verb.",
+    "translation_en": "Whether and to what extent the investment pays off depends on various factors.",
+    "translation_ru": "Окупится ли инвестиция и в какой степени, зависит от различных факторов.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_23",
+    "target": "Der Erfolg des Projekts setzt voraus, dass alle Beteiligten konstruktiv zusammenarbeiten.",
+    "tokens": ["Der", "Erfolg", "des", "Projekts", "setzt", "voraus,", "dass", "alle", "Beteiligten", "konstruktiv", "zusammenarbeiten"],
+    "type": "drag",
+    "explanation": "B2: Fixed expression 'voraussetzen, dass' + nominalized participle 'Beteiligte'; project management.",
+    "translation_en": "The success of the project presupposes that all parties involved work together constructively.",
+    "translation_ru": "Успех проекта предполагает, что все участники будут конструктивно сотрудничать.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_24",
+    "target": "Die Ergebnisse der Analyse weisen darauf hin, dass weitere Untersuchungen erforderlich sind.",
+    "tokens": ["Die", "Ergebnisse", "der", "Analyse", "weisen", "darauf", "hin,", "dass", "weitere", "Untersuchungen", "erforderlich", "sind"],
+    "type": "drag",
+    "explanation": "B2: Academic phrase with 'darauf hinweisen' + formal register; research context.",
+    "translation_en": "The results of the analysis indicate that further investigations are necessary.",
+    "translation_ru": "Результаты анализа указывают на то, что необходимы дальнейшие исследования.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_25",
+    "target": "Dadurch, dass die Prozesse automatisiert wurden, konnte die Effizienz deutlich gesteigert werden.",
+    "tokens": ["Dadurch,", "dass", "die", "Prozesse", "automatisiert", "wurden,", "konnte", "die", "Effizienz", "deutlich", "gesteigert", "werden"],
+    "type": "drag",
+    "explanation": "B2: Causal connection with 'dadurch, dass' + double passive construction; technical context.",
+    "translation_en": "Through the automation of processes, efficiency could be significantly increased.",
+    "translation_ru": "Благодаря тому, что процессы были автоматизированы, удалось значительно повысить эффективность.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_26",
+    "target": "Ungeachtet der hohen Kosten wird die Modernisierung der Anlagen als unverzichtbar angesehen.",
+    "tokens": ["Ungeachtet", "der", "hohen", "Kosten", "wird", "die", "Modernisierung", "der", "Anlagen", "als", "unverzichtbar", "angesehen"],
+    "type": "drag",
+    "explanation": "B2: Formal preposition 'ungeachtet' + passive construction with 'als' + technical vocabulary.",
+    "translation_en": "Despite the high costs, the modernization of the facilities is considered indispensable.",
+    "translation_ru": "Несмотря на высокие затраты, модернизация оборудования считается необходимой.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_27",
+    "target": "Inwieweit die geplanten Maßnahmen greifen werden, lässt sich zum jetzigen Zeitpunkt noch nicht absehen.",
+    "tokens": ["Inwieweit", "die", "geplanten", "Maßnahmen", "greifen", "werden,", "lässt", "sich", "zum", "jetzigen", "Zeitpunkt", "noch", "nicht", "absehen"],
+    "type": "drag",
+    "explanation": "B2: Indirect question with 'inwieweit' + 'sich lassen' construction + temporal expression.",
+    "translation_en": "To what extent the planned measures will be effective cannot be foreseen at this point in time.",
+    "translation_ru": "В какой степени запланированные меры окажутся эффективными, пока что невозможно предвидеть.",
+    "level": "B2"
+  },
+  {
+    "id": "s_b2_28",
+    "target": "Es gilt als erwiesen, dass regelmäßige Fortbildungen zur Mitarbeiterzufriedenheit beitragen.",
+    "tokens": ["Es", "gilt", "als", "erwiesen,", "dass", "regelmäßige", "Fortbildungen", "zur", "Mitarbeiterzufriedenheit", "beitragen"],
+    "type": "drag",
+    "explanation": "B2: Impersonal construction 'es gilt als' + compound noun; HR/professional development context.",
+    "translation_en": "It is considered proven that regular training contributes to employee satisfaction.",
+    "translation_ru": "Считается доказанным, что регулярное повышение квалификации способствует удовлетворенности сотрудников.",
+    "level": "B2"
+  }
+]
