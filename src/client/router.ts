@@ -3,62 +3,63 @@ import { showWords } from "./pages/words.js";
 import { showSentences } from "./pages/sentences.js";
 import { showGaps } from "./pages/gaps.js";
 import { showTodo } from "./pages/todo.js";
+import { Level } from "./types.js";
+
+function matchPath(re: RegExp): RegExpMatchArray | null {
+  return location.pathname.match(re);
+}
+
+export function navigate(to: string) {
+  if (location.pathname === to) {
+    handleRoute();
+  } else {
+    history.pushState(null, "", to);
+    handleRoute();
+  }
+}
 
 export function handleRoute() {
-  const hash = window.location.hash || "#/";
-  switch (hash) {
-    case "#/":
-    case "#/home":
-      showHome();
-      break;
+  // examples:
+  // "/"                       -> home
+  // "/words"                  -> words (default level)
+  // "/words/a1"               -> words A1 (if you support it)
+  // "/sentences"              -> sentences (all)
+  // "/sentences/a2"           -> sentences A2
+  // "/gaps"                   -> gaps
+  const p = location.pathname;
+  console.log("router.ts: handleRoute for path:", p);
 
-    // Wörter
-    case "#/words":
-    case "#/words-a1":
-      showWords();
-      break;
-    case "#/words-a2":
-    case "#/words-b1":
-    case "#/words-c1":
-      showTodo("Wortschatz – bald verfügbar");
-      break;
+  // Home
+  if (p === "/" || p === "/home") return showHome();
 
-    // Sätze
-    case "#/sentences":
-      console.log("Selected level: all");
-      showSentences("all");
-    case "#/sentences-a1":
-      showSentences("A1");
-      break;
-    case "#/sentences-a2":
-      showSentences("A2");
-      break;
-    case "#/sentences-b1":
-      showSentences("B1");
-      break;
-    case "#/sentences-b2":
-      showSentences("B2");
-      break;
-    case "#/sentences-c1":
-      showSentences("C1");
-      break;
-    case "#/sentences-c2":
-      showSentences("C2");
-      break;
-
-    // Gaps / Artikel
-    case "#/gaps":
-      showGaps();
-      break;
-
-    // Grammatik
-    case "#/grammar-nominativ":
-    case "#/grammar-passiv":
-    case "#/grammar-prep":
-      showTodo("Grammatik – bald verfügbar");
-      break;
-
-    default:
-      showHome();
+  // Words
+  if (p === "/words") return showWords();
+  const mWords = matchPath(/^\/words\/([a-z0-9]+)$/i);
+  if (mWords) {
+    // If/when you support levels for words:
+    const level = mWords[1].toUpperCase();
+    return showWords(); // or showTodo until implemented
   }
+
+  // Sentences
+  if (p === "/sentences") return showSentences("all");
+  const mSent = matchPath(/^\/sentences\/([a-z0-9]+)$/i);
+  if (!mSent || !mSent[1]) {
+    return showSentences("all");
+  }
+
+  const raw = mSent?.[1]?.toUpperCase();
+  if (raw && ["A1","A2","B1","B2","C1","C2"].includes(raw)) {
+    return showSentences(raw as Level);
+  }
+
+  // Gaps
+  if (p === "/gaps") return showGaps();
+
+  // Grammar placeholders
+  const mGram = matchPath(/^\/grammar-(.+)$/i);
+  if (mGram) return showTodo(`Grammatik – ${mGram[1]} (bald verfügbar)`);
+
+  // 404
+  return showTodo("Seite nicht gefunden");
 }

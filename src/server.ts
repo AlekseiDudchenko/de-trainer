@@ -73,6 +73,7 @@ app.get("/api/words", (_req: Request, res: Response) => {
 
 app.get("/api/sentences/:level", (req: Request, res: Response) => {
   const level = req.params.level.toLowerCase();
+  console.log(`Loading sentences for level: ${level}`);
   const data = getSentencesByLevel(level);
   if (!data.length) {
     return res.status(404).json({ error: "sentences file not found" });
@@ -80,7 +81,6 @@ app.get("/api/sentences/:level", (req: Request, res: Response) => {
   res.json(data);
 });
 
-// старый общий
 app.get("/api/sentences", (_req: Request, res: Response) => {
   const data = IS_DEV
     ? loadJSON<any[]>(path.join(DATA_DIR, "sentences.json")) ?? cache.sentencesDefault
@@ -88,11 +88,10 @@ app.get("/api/sentences", (_req: Request, res: Response) => {
   res.json(data);
 });
 
-app.get("/api/gaps", (_req: Request, res: Response) => {
-  const gaps = IS_DEV
-    ? loadJSON<Gap[]>(path.join(DATA_DIR, "gaps.json")) ?? cache.gaps
-    : cache.gaps;
-  res.json(gaps);
+app.get(/^\/(?!api\/).*/, (req, res, next) => {
+  if (req.method !== "GET") return next();
+  if (req.path.includes(".")) return next(); // let static serve real files
+  res.sendFile(path.join(PUBLIC_DIR, "index.html"));
 });
 
 app.listen(PORT, "0.0.0.0", () => {
