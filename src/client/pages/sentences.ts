@@ -28,6 +28,7 @@ export async function showSentences(level?: string): Promise<void> {
       <h2>Satz bilden</h2>
       <p><small>Niveau: ${sent.level ?? level ?? "-"}</small></p>
       ${sent.translation_en ? `<p><small><b>${sent.translation_en}</b></small></p>` : ""}
+      ${sent.translation_ru ? `<p><small>${sent.translation_ru}</small></p>` : ""}
       <div id="tokens"></div>
       <div id="drop" class="dropzone"></div>
       <button id="checkSentence">Prüfen</button>
@@ -138,6 +139,12 @@ export async function showSentences(level?: string): Promise<void> {
   resetBtn.onclick = doReset;
 
   const onKey = (e: KeyboardEvent) => {
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      nextBtn.click();
+      return;
+    }
+
     if (e.key === "Enter") {
       e.preventDefault();
       if (!wasChecked) {
