@@ -80,16 +80,16 @@ export function showHome() {
         <!-- Spalte 3: Artikel / Grammatik -->
         <div class="col">
           <h2>Artikel & Grammatik</h2>
-          <a class="card-link" href="/gaps">
+          <a class="card-link" href="/grammar/b1/relativpronomen-gap">
             <div class="card small">
-              <h3>Artikel einsetzen</h3>
-              <p>der / die / das / den ...</p>
+              <h3>Artikel im Relativsatz</h3>
+              <p>Lücke mit der/die/das/den ... füllen</p>
             </div>
           </a>
-          <a class="card-link" href="/grammar-nominativ">
-            <div class="card small muted">
-              <h3>Nominativ (Subjekt)</h3>
-              <p>Erklärung + Beispiele.</p>
+          <a class="card-link" href="/grammar/artikel">
+            <div class="card small">
+              <h3>Artikel einsetzen</h3>
+              <p>der / die / das auswählen</p>
             </div>
           </a>
           <a class="card-link" href="/grammar-passiv">

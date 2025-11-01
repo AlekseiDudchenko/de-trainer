@@ -3,6 +3,7 @@ import { Gap } from "../types";
 const app = document.getElementById("app") as HTMLElement;
 
 export async function showGaps(): Promise<void> {
+  console.log("pages/gaps.ts: showGaps called");
   const task = await loadGap();
   renderGap(task);
 

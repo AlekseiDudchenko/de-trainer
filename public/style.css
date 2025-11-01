@@ -1,10 +1,26 @@
-body {
+﻿body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     margin: 20px;
 }
 
 header {
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+header a:hover {
+    text-decoration: underline;
 }
 
 .home {
@@ -25,10 +41,25 @@ header {
 
 .card {
     border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 14px 16px;
-    margin-bottom: 12px;
+    border-radius: 16px;
+    padding: 22px 24px;
+    margin-bottom: 18px;
     background: #fff;
+    max-width: 420px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 18px 32px rgba(15, 23, 42, 0.12);
+}
+
+.card h2 {
+    font-size: 1.65rem;
+    margin-bottom: 14px;
+}
+
+.card p {
+    font-size: 1.15rem;
+    line-height: 1.6;
 }
 
 .card.small {
@@ -43,6 +74,24 @@ header {
 
 .card-link:hover .card {
     background: #f6f6f6;
+}
+
+.home .card {
+    max-width: none;
+    box-shadow: none;
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.home .card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.home .card p {
+    font-size: 1rem;
 }
 
 .muted {
@@ -75,9 +124,53 @@ header {
     background: #f7c5c5;
 }
 
-/* на узких экранах в один столбец */
+#gapInput,
+#checkGap,
+#nextGapBtn {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.15rem;
+    padding: 12px 14px;
+    margin-top: 12px;
+    border-radius: 12px;
+}
+
+#checkGap,
+#nextGapBtn {
+    font-weight: 600;
+}
+
+#gapResult {
+    margin-top: 16px;
+}
+
+/* �� 㧪�� ��࠭�� � ���� �⮫��� */
 @media (max-width: 800px) {
     .columns {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin: 12px;
+    }
+
+    header {
+        gap: 12px;
+    }
+
+    header a {
+        font-size: 0.98rem;
+    }
+
+    .card {
+        max-width: 100%;
+        padding: 20px 22px;
+        border-radius: 18px;
+    }
+
+    .card p {
+        font-size: 1.05rem;
     }
 }

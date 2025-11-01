@@ -4,6 +4,7 @@ import { showSentences } from "./pages/sentences.js";
 import { showGaps } from "./pages/gaps.js";
 import { showTodo } from "./pages/todo.js";
 import { Level } from "./types.js";
+import e from "express";
 
 function matchPath(re: RegExp): RegExpMatchArray | null {
   return location.pathname.match(re);
@@ -44,7 +45,7 @@ export function handleRoute() {
   // Sentences
   if (p === "/sentences") return showSentences("all");
   const mSent = matchPath(/^\/sentences\/([a-z0-9]+)$/i);
-  if (!mSent || !mSent[1]) {
+  if (mSent && !mSent[1]) {
     return showSentences("all");
   }
 
@@ -52,9 +53,14 @@ export function handleRoute() {
   if (raw && ["A1","A2","B1","B2","C1","C2"].includes(raw)) {
     return showSentences(raw as Level);
   }
+ else if (raw) {
+    return showTodo(`Sätze – Niveau ${raw} (nicht unterstützt)`);
+  }
 
-  // Gaps
-  if (p === "/gaps") return showGaps();
+  // Grammar 
+  if (p === "/grammar/b1/relativpronomen-gap") return showGaps();
+  
+  if (p === "/grammar/artikel") return showTodo("Grammatik – Artikel einsetzen");
 
   // Grammar placeholders
   const mGram = matchPath(/^\/grammar-(.+)$/i);
