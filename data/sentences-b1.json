@@ -1,11 +1,12 @@
 [
-  {
+   {
     "id": "s_b1_1",
     "target": "Obwohl das Projekt komplizierter war als gedacht, konnten wir es rechtzeitig abschließen.",
     "tokens": ["Obwohl", "das", "Projekt", "komplizierter", "war", "als", "gedacht,", "konnten", "wir", "es", "rechtzeitig", "abschließen"],
     "type": "drag",
     "explanation": "B1: concessive clause + Vergleich ('als gedacht') + Präteritum/Modal in main clause.",
     "translation_en": "Although the project was more complicated than expected, we were able to finish it on time.",
+    "translation_ru": "Хотя проект оказался сложнее, чем думали, мы смогли завершить его вовремя.",
     "level": "B1"
   },
   {
@@ -15,6 +16,7 @@
     "type": "drag",
     "explanation": "B1: temporal 'seitdem' + Perfekt in main clause + Präpositionalobjekt.",
     "translation_en": "Since I have been working in this company, I have learned a lot about teamwork.",
+    "translation_ru": "С тех пор как я работаю в этой компании, я многому научился(ась) командной работе.",
     "level": "B1"
   },
   {
@@ -24,6 +26,7 @@
     "type": "drag",
     "explanation": "B1: causal 'da' + modal in subclause, Perfekt in main clause.",
     "translation_en": "Since I had to work overtime yesterday, I missed the training.",
+    "translation_ru": "Так как вчера мне пришлось работать сверхурочно, я пропустил(а) тренировку.",
     "level": "B1"
   },
   {
@@ -33,6 +36,7 @@
     "type": "drag",
     "explanation": "B1: conditional with time adverbials and modal.",
     "translation_en": "If you send me the documents on time, I can still write the report today.",
+    "translation_ru": "Если ты пришлёшь мне документы вовремя, я смогу написать отчёт ещё сегодня.",
     "level": "B1"
   },
   {
@@ -42,6 +46,7 @@
     "type": "drag",
     "explanation": "B1: contrast between learning time and level.",
     "translation_en": "Although he hasn’t been learning German for long, he already speaks quite fluently.",
+    "translation_ru": "Хотя он учит немецкий не так давно, он уже говорит довольно бегло.",
     "level": "B1"
   },
   {
@@ -51,6 +56,7 @@
     "type": "drag",
     "explanation": "B1: 'seitdem' + Perfekt in subclause.",
     "translation_en": "Since we moved, we have had much more space for the kids.",
+    "translation_ru": "С тех пор как мы переехали, у нас намного больше места для детей.",
     "level": "B1"
   },
   {
@@ -60,6 +66,7 @@
     "type": "drag",
     "explanation": "B1: purpose with 'damit' + modal 'sollten'.",
     "translation_en": "So that we arrive on time, we should leave earlier.",
+    "translation_ru": "Чтобы прибыть вовремя, нам следует выехать пораньше.",
     "level": "B1"
   },
   {
@@ -69,6 +76,7 @@
     "type": "drag",
     "explanation": "B1: 'obwohl' + reason with 'wegen'.",
     "translation_en": "Although the flat is very small, I like it because of the location.",
+    "translation_ru": "Хотя квартира очень маленькая, она мне нравится из-за расположения.",
     "level": "B1"
   },
   {
@@ -78,6 +86,7 @@
     "type": "drag",
     "explanation": "B1: condition + passive-like info flow.",
     "translation_en": "If the course is cancelled, all participants will receive an email.",
+    "translation_ru": "Если курс отменяется, все участники получат электронное письмо.",
     "level": "B1"
   },
   {
@@ -87,6 +96,7 @@
     "type": "drag",
     "explanation": "B1: 'da' + Futurabsicht with 'sollen'.",
     "translation_en": "Since the weather is supposed to be bad tomorrow, we will rather take the train.",
+    "translation_ru": "Поскольку завтра обещают плохую погоду, мы лучше поедем на поезде.",
     "level": "B1"
   },
   {
@@ -96,6 +106,7 @@
     "type": "drag",
     "explanation": "B1: 'weil' + Perfekt, main clause in Präteritum with modal.",
     "translation_en": "Because I lost my passport, I had to apply for a new one.",
+    "translation_ru": "Потому что я потерял(а) паспорт, мне пришлось подать заявление на новый.",
     "level": "B1"
   },
   {
@@ -105,6 +116,7 @@
     "type": "drag",
     "explanation": "B1: temporal 'sobald' for near future.",
     "translation_en": "As soon as I get the confirmation, I will forward it to you.",
+    "translation_ru": "Как только я получу подтверждение, я перешлю его тебе.",
     "level": "B1"
   },
   {
@@ -114,6 +126,7 @@
     "type": "drag",
     "explanation": "B1: 'bevor' + planning with modal.",
     "translation_en": "Before we start, we should divide the tasks.",
+    "translation_ru": "Прежде чем начинать, нам следует распределить задания.",
     "level": "B1"
   },
   {
@@ -123,6 +136,7 @@
     "type": "drag",
     "explanation": "B1: change of state with 'geworden'.",
     "translation_en": "Since he has been working from home, he has become much more flexible.",
+    "translation_ru": "С тех пор как он работает из дома, он стал гораздо гибче.",
     "level": "B1"
   },
   {
@@ -132,6 +146,7 @@
     "type": "drag",
     "explanation": "B1: concession + Perfekt.",
     "translation_en": "Although we didn’t know each other, we quickly had a good conversation.",
+    "translation_ru": "Хотя мы не были знакомы, мы быстро завели хороший разговор.",
     "level": "B1"
   },
   {
@@ -141,6 +156,7 @@
     "type": "drag",
     "explanation": "B1: purpose + negation in subclause.",
     "translation_en": "So that we don’t buy everything twice, I am making a shopping list.",
+    "translation_ru": "Чтобы мы не покупали всё дважды, я составляю список покупок.",
     "level": "B1"
   },
   {
@@ -150,6 +166,7 @@
     "type": "drag",
     "explanation": "B1: irreale Bedingung Vergangenheit (Konjunktiv II Perfekt).",
     "translation_en": "If I had known that you were coming, I would have baked a cake.",
+    "translation_ru": "Если бы я знал(а), что ты придёшь, я бы испёк(ла) торт.",
     "level": "B1"
   },
   {
@@ -159,6 +176,7 @@
     "type": "drag",
     "explanation": "B1: financial reason + reflexive 'uns teilen'.",
     "translation_en": "Since the rent is so high, we share the flat between three people.",
+    "translation_ru": "Так как аренда такая высокая, мы делим квартиру втроём.",
     "level": "B1"
   },
   {
@@ -168,6 +186,7 @@
     "type": "drag",
     "explanation": "B1: contrast exam difficulty vs result.",
     "translation_en": "Although the test was difficult, many got good marks.",
+    "translation_ru": "Хотя тест был сложным, многие получили хорошие оценки.",
     "level": "B1"
   },
   {
@@ -177,6 +196,7 @@
     "type": "drag",
     "explanation": "B1: condition + comparative adjective.",
     "translation_en": "If you register in time, you will get a cheaper price.",
+    "translation_ru": "Если ты зарегистрируешься вовремя, получишь более выгодную цену.",
     "level": "B1"
   },
   {
@@ -186,6 +206,7 @@
     "type": "drag",
     "explanation": "B1: consequence of possession.",
     "translation_en": "Since we have a car, shopping has become much easier.",
+    "translation_ru": "С тех пор как у нас есть машина, покупки стали гораздо проще.",
     "level": "B1"
   },
   {
@@ -195,6 +216,7 @@
     "type": "drag",
     "explanation": "B1: casual office situation with 'da'.",
     "translation_en": "Since the boss is not here today, we can leave a bit earlier.",
+    "translation_ru": "Поскольку начальника сегодня нет, мы можем уйти немного пораньше.",
     "level": "B1"
   },
   {
@@ -204,6 +226,7 @@
     "type": "drag",
     "explanation": "B1: concession + separable verb in Perfekt.",
     "translation_en": "Although she was very tired, she still finished the presentation.",
+    "translation_ru": "Хотя она была очень уставшей, она всё же закончила презентацию.",
     "level": "B1"
   },
   {
@@ -213,6 +236,7 @@
     "type": "drag",
     "explanation": "B1: 'sobald' + modal wish.",
     "translation_en": "As soon as I have vacation, I would like to visit my family.",
+    "translation_ru": "Как только у меня будет отпуск, я хотел(а) бы навестить семью.",
     "level": "B1"
   },
   {
@@ -222,6 +246,7 @@
     "type": "drag",
     "explanation": "B1: purpose + study context.",
     "translation_en": "So that we pass the exam, we should practise together regularly.",
+    "translation_ru": "Чтобы мы сдали экзамен, нам следует регулярно заниматься вместе.",
     "level": "B1"
   },
   {
