@@ -6,6 +6,7 @@
     "type": "drag",
     "explanation": "Subordinate clause with 'weil': verb at the end, then main clause.",
     "translation_en": "Because I have late shift today, I cannot come.",
+    "translation_ru": "Так как у меня сегодня поздняя смена, я не могу прийти.",
     "level": "A2"
   },
   {
@@ -15,6 +16,7 @@
     "type": "drag",
     "explanation": "Conditional clause with 'wenn' + main clause.",
     "translation_en": "If it rains tomorrow, we stay at home.",
+    "translation_ru": "Если завтра пойдёт дождь, мы останемся дома.",
     "level": "A2"
   },
   {
@@ -24,6 +26,7 @@
     "type": "drag",
     "explanation": "'Als' for a single past situation.",
     "translation_en": "When I was little, I lived in Bonn.",
+    "translation_ru": "Когда я был маленьким, я жил в Бонне.",
     "level": "A2"
   },
   {
