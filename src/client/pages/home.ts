@@ -60,19 +60,19 @@ export function showHome() {
           <a class="card-link" href="#/sentences-b2">
             <div class="card small">
               <h3>B2 Sätze bauen</h3>
-              <p>Bald verfügbar.</p>
+              <p>Geschäfts- und Fachsprache.</p>
             </div>
           </a>
-          <a class="card-link" href="#/sentences-с1">
+          <a class="card-link" href="#/sentences-c1">
             <div class="card small">
-              <h3>С1 Sätze bauen</h3>
-              <p>Bald verfügbar.</p>
+              <h3>C1 Sätze bauen</h3>
+              <p>Komplexe Strukturen, Konjunktiv.</p>
             </div>
           </a>
-          <a class="card-link" href="#/sentences-с2">
+          <a class="card-link" href="#/sentences-c2">
             <div class="card small">
-              <h3>С2 Sätze bauen</h3>
-              <p>Bald verfügbar.</p>
+              <h3>C2 Sätze bauen</h3>
+              <p>Wissenschaftssprache, Abstraktion.</p>
             </div>
           </a>
         </div>
