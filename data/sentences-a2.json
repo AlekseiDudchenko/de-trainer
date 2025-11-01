@@ -216,6 +216,7 @@
     "type": "drag",
     "explanation": "Reason + modal + reflexive in main clause.",
     "translation_en": "Because I have to study a lot, I do not meet with friends.",
+    "translation_ru": "Так как мне нужно много учиться, я не встречаюсь с друзьями.",
     "level": "A2"
   },
   {
@@ -225,6 +226,7 @@
     "type": "drag",
     "explanation": "Reported statement in past.",
     "translation_en": "I know that you were not there yesterday.",
+    "translation_ru": "Я знаю, что тебя вчера не было.",
     "level": "A2"
   },
   {
@@ -234,6 +236,7 @@
     "type": "drag",
     "explanation": "'als' + Präteritum, main clause follows.",
     "translation_en": "When I came home, nobody was there.",
+    "translation_ru": "Когда я пришёл домой, никого не было.",
     "level": "A2"
   },
   {
@@ -243,6 +246,7 @@
     "type": "drag",
     "explanation": "'nachdem' + Perfekt, then main clause.",
     "translation_en": "After he has called, we will leave.",
+    "translation_ru": "После того как он позвонит, мы поедем.",
     "level": "A2"
   },
   {
@@ -252,6 +256,7 @@
     "type": "drag",
     "explanation": "Reason + time adverb at the end.",
     "translation_en": "Because I do not have money with me, I will buy it tomorrow.",
+    "translation_ru": "Так как у меня с собой нет денег, я куплю это завтра.",
     "level": "A2"
   },
   {
@@ -261,6 +266,7 @@
     "type": "drag",
     "explanation": "Condition + modal + infinitive.",
     "translation_en": "If you come earlier, we can eat together.",
+    "translation_ru": "Если ты придёшь раньше, мы сможем поесть вместе.",
     "level": "A2"
   },
   {
@@ -270,6 +276,7 @@
     "type": "drag",
     "explanation": "Contrast between place and ability.",
     "translation_en": "Although he lives in Germany, he speaks little German.",
+    "translation_ru": "Хотя он живёт в Германии, он мало говорит по-немецки.",
     "level": "A2"
   },
   {
@@ -279,6 +286,7 @@
     "type": "drag",
     "explanation": "Opinion + 'dass' clause.",
     "translation_en": "I am sure that we will pass the exam.",
+    "translation_ru": "Я уверен(а), что мы сдадим экзамен.",
     "level": "A2"
   },
   {
@@ -288,6 +296,7 @@
     "type": "drag",
     "explanation": "Reason for choosing transport.",
     "translation_en": "Because my bike is broken, I take the train.",
+    "translation_ru": "Поскольку мой велосипед сломан, я еду на поезде.",
     "level": "A2"
   },
   {
@@ -297,6 +306,7 @@
     "type": "drag",
     "explanation": "Polite offer with condition.",
     "translation_en": "If you want, I can help you.",
+    "translation_ru": "Если хочешь, я могу тебе помочь.",
     "level": "A2"
   },
   {
@@ -306,6 +316,7 @@
     "type": "drag",
     "explanation": "Past habit with 'als'.",
     "translation_en": "When I was at school, I did a lot of sports.",
+    "translation_ru": "Когда я учился в школе, я много занимался спортом.",
     "level": "A2"
   },
   {
@@ -315,6 +326,7 @@
     "type": "drag",
     "explanation": "Past reason + modal.",
     "translation_en": "Because we did not have a key, we could not go in.",
+    "translation_ru": "Поскольку у нас не было ключа, мы не могли войти.",
     "level": "A2"
   },
   {
@@ -324,6 +336,7 @@
     "type": "drag",
     "explanation": "Condition with 'ihr'.",
     "translation_en": "When you are ready, we start the game.",
+    "translation_ru": "Когда вы будете готовы, мы начнём игру.",
     "level": "A2"
   },
   {
@@ -333,6 +346,7 @@
     "type": "drag",
     "explanation": "Contrast between sleep and mood.",
     "translation_en": "Although I slept little, I am in a good mood.",
+    "translation_ru": "Хотя я мало поспал(а), у меня хорошее настроение.",
     "level": "A2"
   },
   {
@@ -342,6 +356,7 @@
     "type": "drag",
     "explanation": "Reason for outdoor activity.",
     "translation_en": "Because the weather is so nice, we go hiking today.",
+    "translation_ru": "Потому что погода такая хорошая, мы сегодня идём в поход.",
     "level": "A2"
   },
   {
@@ -351,6 +366,7 @@
     "type": "drag",
     "explanation": "Sequence of actions.",
     "translation_en": "After I have showered, I have breakfast.",
+    "translation_ru": "После того как я приму душ, я завтракаю.",
     "level": "A2"
   },
   {
@@ -360,6 +376,7 @@
     "type": "drag",
     "explanation": "Emotion + 'dass' clause.",
     "translation_en": "I am glad that you came.",
+    "translation_ru": "Я рад(а), что ты пришёл(а).",
     "level": "A2"
   },
   {
@@ -369,6 +386,7 @@
     "type": "drag",
     "explanation": "Past reason → present result.",
     "translation_en": "Because I worked for a long time yesterday, I am tired today.",
+    "translation_ru": "Поскольку вчера я долго работал(а), сегодня я устал(а).",
     "level": "A2"
   },
   {
@@ -378,6 +396,7 @@
     "type": "drag",
     "explanation": "Condition showing result.",
     "translation_en": "If you practice German, you learn faster.",
+    "translation_ru": "Если ты занимаешься немецким, ты будешь учиться быстрее.",
     "level": "A2"
   },
   {
@@ -387,6 +406,7 @@
     "type": "drag",
     "explanation": "Concession in past.",
     "translation_en": "Although we had little time, we did everything.",
+    "translation_ru": "Хотя у нас было мало времени, мы всё успели.",
     "level": "A2"
   },
   {
@@ -396,6 +416,7 @@
     "type": "drag",
     "explanation": "Reason + alternative.",
     "translation_en": "Because my phone is broken, I am writing to you from the laptop.",
+    "translation_ru": "Потому что мой телефон сломан, я пишу тебе с ноутбука.",
     "level": "A2"
   },
   {
@@ -405,6 +426,7 @@
     "type": "drag",
     "explanation": "Condition with 'wir'.",
     "translation_en": "When we have vacation, we go to the sea.",
+    "translation_ru": "Когда у нас отпуск, мы едем на море.",
     "level": "A2"
   },
   {
@@ -414,24 +436,27 @@
     "type": "drag",
     "explanation": "Business-like sequence.",
     "translation_en": "After she has read the email, she calls the customer.",
+    "translation_ru": "После того как она прочтёт письмо, она позвонит клиенту.",
     "level": "A2"
   },
   {
     "id": "s_a2_45",
     "target": "Ich finde, dass dieser Film sehr interessant ist.",
-    "tokens": ["Ich", "finde,", "dass", "dieser", "Film", "sehr", "interessant", "ist"],
+    "tokens": ["Ich", "finde,", "dass", "dieser", "Film", "sehr", "interessant", "ист"],
     "type": "drag",
     "explanation": "Opinion + 'dass'.",
     "translation_en": "I think that this film is very interesting.",
+    "translation_ru": "Я считаю, что этот фильм очень интересный.",
     "level": "A2"
   },
   {
     "id": "s_a2_46",
     "target": "Weil wir umziehen wollen, suchen wir eine neue Wohnung.",
-    "tokens": ["Weil", "wir", "umziehen", "wollen,", "suchen", "wir", "eine", "neue", "Wohnung"],
+    "tokens": ["Weil", "wir", "умziehen", "wollen,", "suchen", "wir", "eine", "neue", "Wohnung"],
     "type": "drag",
     "explanation": "Reason with modal in subclause.",
     "translation_en": "Because we want to move, we are looking for a new flat.",
+    "translation_ru": "Так как мы хотим переехать, мы ищем новую квартиру.",
     "level": "A2"
   },
   {
@@ -441,6 +466,7 @@
     "type": "drag",
     "explanation": "Condition + modal + separable verb.",
     "translation_en": "If you have questions, you can call me.",
+    "translation_ru": "Если у тебя есть вопросы, ты можешь мне позвонить.",
     "level": "A2"
   },
   {
@@ -450,6 +476,7 @@
     "type": "drag",
     "explanation": "Contrast of money and help.",
     "translation_en": "Although he earns little, he helps his family.",
+    "translation_ru": "Хотя он мало зарабатывает, он помогает своей семье.",
     "level": "A2"
   },
   {
@@ -459,6 +486,7 @@
     "type": "drag",
     "explanation": "Ongoing change with 'seit'.",
     "translation_en": "Since we have a child, our life is different.",
+    "translation_ru": "С тех пор как у нас появился ребёнок, наша жизнь изменилась.",
     "level": "A2"
   },
   {
@@ -468,6 +496,7 @@
     "type": "drag",
     "explanation": "Reason in past + present thanks.",
     "translation_en": "Because you helped me, I thank you very much.",
+    "translation_ru": "Так как ты мне помог(ла), я очень благодарен(на) тебе.",
     "level": "A2"
   },
   {
@@ -477,6 +506,7 @@
     "type": "drag",
     "explanation": "'damit' = purpose, verb at the end.",
     "translation_en": "So that you understand everything, I speak more slowly.",
+    "translation_ru": "Чтобы ты всё понимал(а), я говорю медленнее.",
     "level": "A2"
   },
   {
@@ -486,6 +516,7 @@
     "type": "drag",
     "explanation": "'während' for simultaneous actions.",
     "translation_en": "While I am cooking, he tidies up the kitchen.",
+    "translation_ru": "Пока я готовлю, он убирает на кухне.",
     "level": "A2"
   },
   {
@@ -495,15 +526,17 @@
     "type": "drag",
     "explanation": "'solange' = for the duration of something.",
     "translation_en": "As long as it is still warm, we sit outside.",
+    "translation_ru": "Пока ещё тепло, мы сидим на улице.",
     "level": "A2"
   },
   {
     "id": "s_a2_54",
     "target": "Bis der Bus kommt, warten wir an der Haltestelle.",
-    "tokens": ["Bis", "der", "Bus", "kommt,", "warten", "wir", "an", "der", "Haltestelle"],
+    "tokens": ["Bis", "der", "Bus", "kommt,", "warten", "wir", "ан", "der", "Haltestelle"],
     "type": "drag",
     "explanation": "'bis' = until, subclause first.",
     "translation_en": "Until the bus comes, we wait at the stop.",
+    "translation_ru": "Пока автобус не придёт, мы ждём на остановке.",
     "level": "A2"
   },
   {
@@ -513,6 +546,7 @@
     "type": "drag",
     "explanation": "Opinion + 'dass'.",
     "translation_en": "I think that she is already on the way.",
+    "translation_ru": "Я думаю, что она уже в пути.",
     "level": "A2"
   },
   {
@@ -522,6 +556,7 @@
     "type": "drag",
     "explanation": "Reason + modal in subclause.",
     "translation_en": "Because we have to get up early, we go to sleep now.",
+    "translation_ru": "Потому что нам нужно рано вставать, мы сейчас идём спать.",
     "level": "A2"
   },
   {
@@ -531,6 +566,7 @@
     "type": "drag",
     "explanation": "Invitation with condition.",
     "translation_en": "If you feel like it, we can go for a walk.",
+    "translation_ru": "Если у тебя есть желание, мы можем пойти на прогулку.",
     "level": "A2"
   },
   {
@@ -540,6 +576,7 @@
     "type": "drag",
     "explanation": "Contrast between work and family.",
     "translation_en": "Although she works a lot, she has time for her family.",
+    "translation_ru": "Хотя она много работает, у неё есть время для семьи.",
     "level": "A2"
   },
   {
@@ -549,6 +586,7 @@
     "type": "drag",
     "explanation": "Condition → comparative adjective.",
     "translation_en": "If you come along, it will be more fun.",
+    "translation_ru": "Если ты пойдёшь с нами, будет веселее.",
     "level": "A2"
   },
   {
@@ -558,6 +596,7 @@
     "type": "drag",
     "explanation": "Past reason, present result.",
     "translation_en": "Because I forgot my glasses, I see badly.",
+    "translation_ru": "Потому что я забыл(а) свои очки, я плохо вижу.",
     "level": "A2"
   },
   {
@@ -567,6 +606,7 @@
     "type": "drag",
     "explanation": "Reported future action.",
     "translation_en": "I think that he will call us later.",
+    "translation_ru": "Я думаю, что он нам позже позвонит.",
     "level": "A2"
   },
   {
@@ -576,6 +616,7 @@
     "type": "drag",
     "explanation": "Condition with plural 'ihr'.",
     "translation_en": "If you are quiet, the baby can sleep.",
+    "translation_ru": "Если вы будете вести себя тихо, малыш сможет спать.",
     "level": "A2"
   },
   {
@@ -585,6 +626,7 @@
     "type": "drag",
     "explanation": "Work context reason.",
     "translation_en": "Because he has an appointment, he will come to the office later.",
+    "translation_ru": "Потому что у него встреча, он придёт в офис позже.",
     "level": "A2"
   },
   {
@@ -594,6 +636,7 @@
     "type": "drag",
     "explanation": "Concession with 'obwohl'.",
     "translation_en": "Although it is late, we watch another film.",
+    "translation_ru": "Хотя уже поздно, мы посмотрим ещё один фильм.",
     "level": "A2"
   },
   {
@@ -603,6 +646,7 @@
     "type": "drag",
     "explanation": "Temporal condition + imperative main clause.",
     "translation_en": "When you have arrived, please write to me.",
+    "translation_ru": "Когда приедешь, пожалуйста, напиши мне.",
     "level": "A2"
   },
   {
@@ -612,6 +656,7 @@
     "type": "drag",
     "explanation": "Cause of noise.",
     "translation_en": "Because our neighbours are celebrating, it is very loud.",
+    "translation_ru": "Потому что наши соседи празднуют, очень шумно.",
     "level": "A2"
   },
   {
@@ -621,6 +666,7 @@
     "type": "drag",
     "explanation": "Duration with 'solange'.",
     "translation_en": "As long as you are studying, I will not disturb you.",
+    "translation_ru": "Пока ты учишься, я не буду тебя беспокоить.",
     "level": "A2"
   },
   {
@@ -630,6 +676,7 @@
     "type": "drag",
     "explanation": "Two actions at the same time.",
     "translation_en": "While he is on the phone, she makes dinner.",
+    "translation_ru": "Пока он разговаривает по телефону, она готовит ужин.",
     "level": "A2"
   },
   {
@@ -639,6 +686,7 @@
     "type": "drag",
     "explanation": "Sequence after moving.",
     "translation_en": "After we have moved, we get to know the neighbours.",
+    "translation_ru": "После того как мы переедем, мы познакомимся с соседями.",
     "level": "A2"
   },
   {
@@ -648,6 +696,7 @@
     "type": "drag",
     "explanation": "Emotion + past 'dass' clause.",
     "translation_en": "I am happy that everything worked well.",
+    "translation_ru": "Я рад(а), что всё хорошо получилось.",
     "level": "A2"
   },
   {
@@ -657,6 +706,7 @@
     "type": "drag",
     "explanation": "Reason → separable verb in main clause.",
     "translation_en": "Because we are having visitors, I clean up the flat.",
+    "translation_ru": "Потому что к нам придут гости, я прибираюсь в квартире.",
     "level": "A2"
   },
   {
@@ -666,6 +716,7 @@
     "type": "drag",
     "explanation": "Condition/when → break.",
     "translation_en": "When the meeting is over, we take a break.",
+    "translation_ru": "Когда встреча закончится, мы сделаем перерыв.",
     "level": "A2"
   },
   {
@@ -675,6 +726,7 @@
     "type": "drag",
     "explanation": "Contrast language vs travel.",
     "translation_en": "Although I do not speak Italian, I travel to Rome.",
+    "translation_ru": "Хотя я не говорю по-итальянски, я еду в Рим.",
     "level": "A2"
   },
   {
@@ -684,6 +736,7 @@
     "type": "drag",
     "explanation": "Past reason → Perfekt main clause.",
     "translation_en": "Because my boss was satisfied, I received a bonus.",
+    "translation_ru": "Потому что мой начальник был доволен, я получил(а) премию.",
     "level": "A2"
   },
   {
@@ -693,6 +746,7 @@
     "type": "drag",
     "explanation": "Condition for catching transport.",
     "translation_en": "If you are quick, you can still catch the train.",
+    "translation_ru": "Если ты поторопишься, ты ещё успеешь на поезд.",
     "level": "A2"
   },
   {
@@ -702,6 +756,7 @@
     "type": "drag",
     "explanation": "Reason with modal in subclause.",
     "translation_en": "Because we want to save money, we cook at home.",
+    "translation_ru": "Потому что мы хотим экономить, мы готовим дома.",
     "level": "A2"
   },
   {
@@ -711,6 +766,7 @@
     "type": "drag",
     "explanation": "Concession with 'obwohl'.",
     "translation_en": "Although he is very tired, he still goes to work.",
+    "translation_ru": "Хотя он очень устал, он всё равно едет на работу.",
     "level": "A2"
   },
   {
@@ -720,6 +776,7 @@
     "type": "drag",
     "explanation": "Condition + reflexive 'mir'.",
     "translation_en": "If I have enough money, I will buy myself a new phone.",
+    "translation_ru": "Если у меня будет достаточно денег, я куплю себе новый телефон.",
     "level": "A2"
   },
   {
@@ -729,6 +786,7 @@
     "type": "drag",
     "explanation": "Past cause → Perfekt with 'sein'.",
     "translation_en": "Because the movie was so long, we came home late.",
+    "translation_ru": "Потому что фильм был таким длинным, мы поздно пришли домой.",
     "level": "A2"
   },
   {
@@ -738,6 +796,7 @@
     "type": "drag",
     "explanation": "Bad weather vs positive outcome.",
     "translation_en": "Although the weather was bad, we had fun.",
+    "translation_ru": "Хотя погода была плохой, нам было весело.",
     "level": "A2"
   },
   {
@@ -747,6 +806,7 @@
     "type": "drag",
     "explanation": "Temporal condition + imperative.",
     "translation_en": "When you are finished, send me the file.",
+    "translation_ru": "Когда закончишь, пришли мне файл.",
     "level": "A2"
   },
   {
@@ -756,6 +816,7 @@
     "type": "drag",
     "explanation": "Ongoing change with 'seit'.",
     "translation_en": "Since I started doing sports, I feel better.",
+    "translation_ru": "С тех пор как я занимаюсь спортом, я чувствую себя лучше.",
     "level": "A2"
   },
   {
@@ -765,6 +826,7 @@
     "type": "drag",
     "explanation": "Cause → slow performance.",
     "translation_en": "Because my laptop is very old, it works slowly.",
+    "translation_ru": "Потому что мой ноутбук очень старый, он работает медленно.",
     "level": "A2"
   },
   {
@@ -774,6 +836,7 @@
     "type": "drag",
     "explanation": "Past concession with movement.",
     "translation_en": "Although she was ill, she went to the exam.",
+    "translation_ru": "Хотя она была больна, она пошла на экзамен.",
     "level": "A2"
   },
   {
@@ -783,6 +846,7 @@
     "type": "drag",
     "explanation": "Condition with optional activity.",
     "translation_en": "If we have enough time, we will also visit the museum.",
+    "translation_ru": "Если у нас будет достаточно времени, мы также посетим музей.",
     "level": "A2"
   },
   {
@@ -792,6 +856,7 @@
     "type": "drag",
     "explanation": "Family context cause.",
     "translation_en": "Because the children are hungry, the mother cooks immediately.",
+    "translation_ru": "Потому что дети голодны, мама сразу готовит.",
     "level": "A2"
   },
   {
@@ -801,6 +866,7 @@
     "type": "drag",
     "explanation": "Concession + Perfekt.",
     "translation_en": "Although I was afraid, I took part.",
+    "translation_ru": "Хотя мне было страшно, я поучаствовал(а).",
     "level": "A2"
   },
   {
@@ -810,6 +876,7 @@
     "type": "drag",
     "explanation": "Delivery condition.",
     "translation_en": "When the parcel has arrived, I will bring it to you.",
+    "translation_ru": "Когда посылка придёт, я принесу её тебе.",
     "level": "A2"
   },
   {
@@ -819,6 +886,7 @@
     "type": "drag",
     "explanation": "Reason for transport choice.",
     "translation_en": "Because I do not have a driving licence, I always go by bike.",
+    "translation_ru": "Потому что у меня нет водительских прав, я всегда езжу на велосипеде.",
     "level": "A2"
   },
   {
@@ -828,6 +896,7 @@
     "type": "drag",
     "explanation": "Concession with purchase.",
     "translation_en": "Although it was expensive, we bought the house.",
+    "translation_ru": "Хотя это было дорого, мы купили дом.",
     "level": "A2"
   },
   {
@@ -837,6 +906,7 @@
     "type": "drag",
     "explanation": "Condition affecting understanding.",
     "translation_en": "If you speak more quietly, I understand you better.",
+    "translation_ru": "Если ты будешь говорить тише, я буду лучше тебя понимать.",
     "level": "A2"
   },
   {
@@ -846,6 +916,7 @@
     "type": "drag",
     "explanation": "Past reason + modal.",
     "translation_en": "Because we had no internet, we could not work.",
+    "translation_ru": "Потому что у нас не было интернета, мы не могли работать.",
     "level": "A2"
   },
   {
@@ -855,6 +926,7 @@
     "type": "drag",
     "explanation": "Concession about time.",
     "translation_en": "Although she has little time, she always helps everyone.",
+    "translation_ru": "Хотя у неё мало времени, она всегда всем помогает.",
     "level": "A2"
   },
   {
@@ -864,6 +936,7 @@
     "type": "drag",
     "explanation": "Traffic rule with modal.",
     "translation_en": "When the light is green, you may drive.",
+    "translation_ru": "Когда горит зелёный, тебе можно ехать.",
     "level": "A2"
   },
   {
@@ -873,6 +946,7 @@
     "type": "drag",
     "explanation": "Common delay reason.",
     "translation_en": "Because I missed the bus, I am coming late.",
+    "translation_ru": "Потому что я пропустил(а) автобус, я опаздываю.",
     "level": "A2"
   },
   {
@@ -882,6 +956,7 @@
     "type": "drag",
     "explanation": "Concession with 'niemanden'.",
     "translation_en": "Although he needs help, he does not ask anyone.",
+    "translation_ru": "Хотя ему нужна помощь, он ни у кого не просит.",
     "level": "A2"
   },
   {
@@ -891,6 +966,7 @@
     "type": "drag",
     "explanation": "A2 level conditional in past context.",
     "translation_en": "If you had come yesterday, you would have seen him.",
+    "translation_ru": "Если бы ты пришёл(а) вчера, ты бы его увидел(а).",
     "level": "A2"
   },
   {
@@ -900,6 +976,7 @@
     "type": "drag",
     "explanation": "Improvement → result.",
     "translation_en": "Because my German has become better, I understand more in class.",
+    "translation_ru": "Потому что мой немецкий стал лучше, я больше понимаю на уроке.",
     "level": "A2"
   },
   {
@@ -909,6 +986,7 @@
     "type": "drag",
     "explanation": "Concession with negative result.",
     "translation_en": "Although we searched for a long time, we did not find the address.",
+    "translation_ru": "Хотя мы долго искали, мы не нашли адрес.",
     "level": "A2"
   },
   {
@@ -918,6 +996,7 @@
     "type": "drag",
     "explanation": "Unreal condition in the past, still useful at A2 upper.",
     "translation_en": "If you had written to me earlier, I would have helped you.",
+    "translation_ru": "Если бы ты написал(а) мне раньше, я бы тебе помог(ла).",
     "level": "A2"
   }
 ]
