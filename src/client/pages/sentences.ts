@@ -1,11 +1,14 @@
 import { Sentence } from "../types.js";
 
 const app = document.getElementById("app") as HTMLElement;
+const sentenceCache = new Map<string, Sentence[]>();
+const pendingLoads = new Map<string, Promise<Sentence[]>>();
 
 export async function showSentences(level?: string): Promise<void> {
+  console.log("pages/sentences.ts: showSentences called with level:", level);
   const lvl = (level ?? "A1").toLowerCase();
 
-  console.log("Selected level:", lvl);
+  console.log("pages/sentences.ts: Selected level:", lvl);
 
   const sentences =
     lvl === "all"
@@ -17,7 +20,7 @@ export async function showSentences(level?: string): Promise<void> {
     return;
   }
 
-  console.log("Loaded sentences:", sentences.length);
+  console.log("pages/sentences.ts: Loaded sentences:", sentences.length);
 
   const sent = sentences[Math.floor(Math.random() * sentences.length)];
   const rawTokens = normalizeTokens(sent.tokens);
@@ -118,6 +121,7 @@ export async function showSentences(level?: string): Promise<void> {
 
   const doNext = () => {
     document.removeEventListener("keydown", onKey);
+    console.log("pages/sentences.ts: doNext called with level:", level);
     showSentences(level);
   };
 
@@ -138,26 +142,30 @@ export async function showSentences(level?: string): Promise<void> {
   nextBtn.onclick = doNext;
   resetBtn.onclick = doReset;
 
-  const onKey = (e: KeyboardEvent) => {
-    if (e.key === "ArrowRight") {
-      e.preventDefault();
-      nextBtn.click();
+const onKey = (e: KeyboardEvent) => {
+  if (e.key === "ArrowRight") {
+    if (e.repeat) return;         
+    e.preventDefault();
+    document.removeEventListener("keydown", onKey); 
+    nextBtn.click();
+    return;
+  }
+
+
+  if (e.key === "Enter") {
+    if (e.repeat) return;          
+    e.preventDefault();
+    if (!wasChecked) {
+      checkBtn.click();
       return;
     }
-
-    if (e.key === "Enter") {
-      e.preventDefault();
-      if (!wasChecked) {
-        checkBtn.click();
-        return;
-      }
-      if (lastCorrect) {
-        nextBtn.click();
-      } else {
-        resetBtn.click();
-      }
+    if (lastCorrect) {
+      nextBtn.click();
+    } else {
+      resetBtn.click();
     }
-  };
+  }
+};
 
   document.addEventListener("keydown", onKey);
 }
@@ -165,25 +173,58 @@ export async function showSentences(level?: string): Promise<void> {
 /* ===== helpers ===== */
 
 async function loadOneLevel(lvl: string): Promise<Sentence[]> {
-  const res = await fetch(`/api/sentences/${lvl}`);
-  if (!res.ok) return [];
-  return (await res.json()) as Sentence[];
+  const key = lvl.toLowerCase();
+
+  if (sentenceCache.has(key)) {
+    return sentenceCache.get(key)!;
+  }
+  if (pendingLoads.has(key)) {
+    return pendingLoads.get(key)!;
+  }
+
+  const promise = fetch(`/api/sentences/${key}`)
+    .then((res) => {
+      if (!res.ok) {
+        return [] as Sentence[];
+      }
+      return res.json() as Promise<Sentence[]>;
+    })
+    .then((data) => {
+      sentenceCache.set(key, data);
+      return data;
+    })
+    .finally(() => {
+      pendingLoads.delete(key);
+    });
+
+  pendingLoads.set(key, promise);
+  return promise;
 }
 
 async function loadAllLevels(): Promise<Sentence[]> {
   // какие уровни есть — жёстко задаём
   const levels = ["a1", "a2", "b1", "b2", "c1", "c2"];
-  const results: Sentence[] = [];
+  const key = "all";
 
-  for (const l of levels) {
-    const res = await fetch(`/api/sentences/${l}`);
-    if (res.ok) {
-      const part = (await res.json()) as Sentence[];
-      results.push(...part);
-    }
+  if (sentenceCache.has(key)) {
+    return sentenceCache.get(key)!;
+  }
+  if (pendingLoads.has(key)) {
+    return pendingLoads.get(key)!;
   }
 
-  return results;
+  const promise = Promise.all(levels.map((l) => loadOneLevel(l)))
+    .then((parts) => {
+      const merged = parts.flat();
+      sentenceCache.set(key, merged);
+      return merged;
+    })
+    .finally(() => {
+      pendingLoads.delete(key);
+    });
+
+  pendingLoads.set(key, promise);
+  return promise;
 }
 
 function normalizeTokens(input: unknown): string[] {
