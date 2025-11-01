@@ -36,6 +36,7 @@
     "type": "drag",
     "explanation": "'obwohl' = contrast, verb at the end.",
     "translation_en": "Although it is cold, he goes for a walk.",
+    "translation_ru": "Хотя холодно, он идёт на прогулку.",
     "level": "A2"
   },
   {
@@ -45,6 +46,7 @@
     "type": "drag",
     "explanation": "Reported statement with 'dass'.",
     "translation_en": "I think that he will come later today.",
+    "translation_ru": "Я думаю, что он сегодня придёт позже.",
     "level": "A2"
   },
   {
@@ -54,6 +56,7 @@
     "type": "drag",
     "explanation": "'dass' clause → verb at the end.",
     "translation_en": "She says that she has no time.",
+    "translation_ru": "Она говорит, что у неё нет времени.",
     "level": "A2"
   },
   {
@@ -63,6 +66,7 @@
     "type": "drag",
     "explanation": "'bevor' = earlier action.",
     "translation_en": "Before I go to work, I drink coffee.",
+    "translation_ru": "Перед тем как поехать на работу, я пью кофе.",
     "level": "A2"
   },
   {
@@ -72,6 +76,7 @@
     "type": "drag",
     "explanation": "'nachdem' + Perfekt in subclause.",
     "translation_en": "After we have eaten, we go for a walk.",
+    "translation_ru": "После того как мы поели, мы идём на прогулку.",
     "level": "A2"
   },
   {
@@ -81,6 +86,7 @@
     "type": "drag",
     "explanation": "Condition + modal verb.",
     "translation_en": "If you want, we can study together.",
+    "translation_ru": "Если хочешь, мы можем заниматься вместе.",
     "level": "A2"
   },
   {
@@ -90,6 +96,7 @@
     "type": "drag",
     "explanation": "Reason with 'weil'.",
     "translation_en": "Because I do not have a car, I go by bus.",
+    "translation_ru": "Поскольку у меня нет машины, я езжу на автобусе.",
     "level": "A2"
   },
   {
@@ -99,6 +106,7 @@
     "type": "drag",
     "explanation": "Indirect yes/no question with 'ob'.",
     "translation_en": "I do not know whether he is coming today.",
+    "translation_ru": "Я не знаю, придёт ли он сегодня.",
     "level": "A2"
   },
   {
@@ -108,6 +116,7 @@
     "type": "drag",
     "explanation": "Indirect question with 'wann'.",
     "translation_en": "Please tell me when you have time.",
+    "translation_ru": "Скажи мне, пожалуйста, когда у тебя будет время.",
     "level": "A2"
   },
   {
@@ -117,6 +126,7 @@
     "type": "drag",
     "explanation": "Past time with 'als'.",
     "translation_en": "When we were in Munich, we visited the museum.",
+    "translation_ru": "Когда мы были в Мюнхене, мы посетили музей.",
     "level": "A2"
   },
   {
@@ -126,6 +136,7 @@
     "type": "drag",
     "explanation": "Condition + obligation.",
     "translation_en": "If you are ill, you must stay at home.",
+    "translation_ru": "Если ты болен, тебе нужно оставаться дома.",
     "level": "A2"
   },
   {
@@ -135,6 +146,7 @@
     "type": "drag",
     "explanation": "Hope with 'dass'.",
     "translation_en": "I hope that we will see each other soon.",
+    "translation_ru": "Я надеюсь, что мы скоро увидимся.",
     "level": "A2"
   },
   {
@@ -144,6 +156,7 @@
     "type": "drag",
     "explanation": "Reason in first position.",
     "translation_en": "Because the train is delayed, I will come later.",
+    "translation_ru": "Потому что поезд задерживается, я приду позже.",
     "level": "A2"
   },
   {
@@ -153,6 +166,7 @@
     "type": "drag",
     "explanation": "Routine condition.",
     "translation_en": "When I have time, I visit my friends.",
+    "translation_ru": "Когда у меня есть время, я навещаю своих друзей.",
     "level": "A2"
   },
   {
@@ -162,6 +176,7 @@
     "type": "drag",
     "explanation": "'seit' + present for ongoing action.",
     "translation_en": "Since I have been in Germany, I speak more German.",
+    "translation_ru": "С тех пор как я живу в Германии, я больше говорю по-немецки.",
     "level": "A2"
   },
   {
@@ -171,6 +186,7 @@
     "type": "drag",
     "explanation": "Past reason + modal in main clause.",
     "translation_en": "Because it was so loud, I could not sleep.",
+    "translation_ru": "Потому что было так шумно, я не мог уснуть.",
     "level": "A2"
   },
   {
@@ -180,6 +196,7 @@
     "type": "drag",
     "explanation": "Concession in past.",
     "translation_en": "Although I was tired, I kept working.",
+    "translation_ru": "Хотя я устал, я продолжал работать.",
     "level": "A2"
   },
   {
@@ -189,6 +206,7 @@
     "type": "drag",
     "explanation": "Condition + movement.",
     "translation_en": "If the weather is nice, we go to the lake.",
+    "translation_ru": "Если погода хорошая, мы едем на озеро.",
     "level": "A2"
   },
   {
