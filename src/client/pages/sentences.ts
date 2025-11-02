@@ -10,6 +10,7 @@ const pendingLoads = new Map<string, Promise<Sentence[]>>();
 const SENTENCE_LEVELS = ["a1", "a2", "b1", "b2", "c1", "c2"] as const;
 const DEFAULT_LEVEL = "all";
 
+
 export async function showSentences(level?: string): Promise<void> {
   const lvl = (level ?? DEFAULT_LEVEL).toLowerCase();
 
@@ -68,6 +69,8 @@ export async function showSentences(level?: string): Promise<void> {
   let availableTokens = [...shuffled];
   let answerTokens: string[] = [];
 
+  let doCheck: () => void;
+
   const renderTokens = () => {
     if (!tokensDiv || !drop) return;
 
@@ -102,21 +105,19 @@ export async function showSentences(level?: string): Promise<void> {
       };
       drop.appendChild(span);
     });
+
+    if (availableTokens.length === 0 && !wasChecked) {
+      doCheck();
+    }
   };
 
-  renderTokens();
-
-  let lastCorrect = false;
-  let wasChecked = false;
-
-  const doCheck = () => {
+  doCheck = () => {
     const userStr = answerTokens.join(" ").trim();
-
     const norm = (s: string) => s.trim().replace(/[.?!]\s*$/, "");
 
     const correctStrings = [
       sent.target,
-      ...(sent.alternatives || [])
+      ...(sent.alternatives ?? [])
     ].map(norm);
 
     if (correctStrings.includes(norm(userStr))) {
@@ -135,6 +136,11 @@ export async function showSentences(level?: string): Promise<void> {
 
     wasChecked = true;
   };
+
+  renderTokens();
+
+  let lastCorrect = false;
+  let wasChecked = false;
 
   const cleanup = () => document.removeEventListener("keydown", onKey);
 

@@ -57,6 +57,7 @@ export async function showSentences(level) {
     const resultP = document.getElementById("result");
     let availableTokens = [...shuffled];
     let answerTokens = [];
+    let doCheck;
     const renderTokens = () => {
         if (!tokensDiv || !drop)
             return;
@@ -90,16 +91,16 @@ export async function showSentences(level) {
             };
             drop.appendChild(span);
         });
+        if (availableTokens.length === 0 && !wasChecked) {
+            doCheck();
+        }
     };
-    renderTokens();
-    let lastCorrect = false;
-    let wasChecked = false;
-    const doCheck = () => {
+    doCheck = () => {
         const userStr = answerTokens.join(" ").trim();
         const norm = (s) => s.trim().replace(/[.?!]\s*$/, "");
         const correctStrings = [
             sent.target,
-            ...(sent.alternatives || [])
+            ...(sent.alternatives ?? [])
         ].map(norm);
         if (correctStrings.includes(norm(userStr))) {
             resultP.textContent = "Richtig!";
@@ -117,6 +118,9 @@ export async function showSentences(level) {
         }
         wasChecked = true;
     };
+    renderTokens();
+    let lastCorrect = false;
+    let wasChecked = false;
     const cleanup = () => document.removeEventListener("keydown", onKey);
     const doNext = () => {
         cleanup();
