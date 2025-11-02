@@ -3,15 +3,26 @@ const app = document.getElementById("app");
 const sentenceCache = new Map();
 const pendingLoads = new Map();
 const SENTENCE_LEVELS = ["a1", "a2", "b1", "b2", "c1", "c2"];
+const DEFAULT_LEVEL = "all";
 export async function showSentences(level) {
-    const lvl = (level ?? "A1").toLowerCase();
+    const lvl = (level ?? DEFAULT_LEVEL).toLowerCase();
     console.log("pages/sentences.ts: showSentences called with level:", lvl);
-    const sentences = lvl === "all" ? await loadAllLevels() : await loadOneLevel(lvl);
-    if (!sentences || sentences.length === 0) {
-        app.innerHTML = `<div class="card"><h2>Saetze</h2><p>Keine Daten.</p></div>`;
+    let sentences = [];
+    try {
+        sentences = lvl === "all" ? await loadAllLevels() : await loadOneLevel(lvl);
+    }
+    catch (e) {
+        console.error("load sentences failed:", e);
+        sentences = [];
+    }
+    if (!Array.isArray(sentences) || sentences.length === 0) {
+        app.innerHTML = `<section class="sentences-screen">
+      <article class="card card-sentence">
+        <h2>Saetze</h2><p>Keine Daten.</p>
+      </article>
+    </section>`;
         return;
     }
-    console.log("pages/sentences.ts: Loaded sentences:", sentences.length);
     const sent = sentences[Math.floor(Math.random() * sentences.length)];
     const rawTokens = normalizeTokens(sent.tokens);
     const shuffled = [...rawTokens].sort(() => Math.random() - 0.5);
@@ -19,10 +30,9 @@ export async function showSentences(level) {
     <section class="sentences-screen">
       <article class="card card-sentence">
         <h2>Satz bilden</h2>
-        <p><small>Niveau: ${sent.level ?? level ?? "-"}</small></p>
+        <p><small>Niveau: ${sent.level ?? lvl}</small></p>
         ${sent.translation_en ? `<p><small><b>${sent.translation_en}</b></small></p>` : ""}
         ${sent.translation_ru ? `<p><small>${sent.translation_ru}</small></p>` : ""}
-
         <p class="sentence-text muted">${sent.explanation ?? ""}</p>
 
         <div id="drop" class="drop-zone"></div>
@@ -103,9 +113,7 @@ export async function showSentences(level) {
         }
         wasChecked = true;
     };
-    const cleanup = () => {
-        document.removeEventListener("keydown", onKey);
-    };
+    const cleanup = () => document.removeEventListener("keydown", onKey);
     const doNext = () => {
         cleanup();
         showSentences(level);
@@ -120,9 +128,6 @@ export async function showSentences(level) {
         wasChecked = false;
         resetBtn.style.display = "none";
     };
-    checkBtn.onclick = doCheck;
-    nextBtn.onclick = doNext;
-    resetBtn.onclick = doReset;
     const onKey = (e) => {
         if (e.repeat)
             return;
@@ -137,72 +142,70 @@ export async function showSentences(level) {
                 checkBtn.click();
                 return;
             }
-            if (lastCorrect) {
+            if (lastCorrect)
                 nextBtn.click();
-            }
-            else {
+            else
                 resetBtn.click();
-            }
         }
     };
+    checkBtn.onclick = doCheck;
+    nextBtn.onclick = doNext;
+    resetBtn.onclick = doReset;
     document.addEventListener("keydown", onKey);
 }
 async function loadOneLevel(lvl) {
     const key = lvl.toLowerCase();
-    if (sentenceCache.has(key)) {
+    if (sentenceCache.has(key))
         return sentenceCache.get(key);
-    }
-    if (pendingLoads.has(key)) {
+    if (pendingLoads.has(key))
         return pendingLoads.get(key);
-    }
-    const promise = fetch(url(`data/sentences-${key}.json`))
-        .then((res) => {
-        if (!res.ok)
-            throw new Error(`Failed to load sentences-${key}.json`);
-        return res.json();
-    })
-        .then((data) => {
-        sentenceCache.set(key, data);
-        return data;
-    })
-        .finally(() => {
-        pendingLoads.delete(key);
-    });
-    async function loadAllLevels() {
-        const cacheKey = "all";
-        if (sentenceCache.has(cacheKey)) {
-            return sentenceCache.get(cacheKey);
-        }
-        if (pendingLoads.has(cacheKey)) {
-            return pendingLoads.get(cacheKey);
-        }
-        const promise = Promise.all(SENTENCE_LEVELS.map((lvl) => loadOneLevel(lvl))).then((parts) => {
-            const merged = parts.flat();
-            sentenceCache.set(cacheKey, merged);
-            return merged;
-        }).finally(() => {
-            pendingLoads.delete(cacheKey);
-        });
-        pendingLoads.set(cacheKey, promise);
-        return promise;
-    }
-    function normalizeTokens(input) {
-        if (Array.isArray(input)) {
-            if (input.length === 1 && typeof input[0] === "string") {
-                return splitToWords(input[0]);
+    const p = (async () => {
+        try {
+            const res = await fetch(url(`data/sentences-${key}.json`), { cache: "no-store" });
+            if (!res.ok) {
+                console.warn(`sentences-${key}.json not found (${res.status})`);
+                return [];
             }
-            return input.map(String);
+            const data = (await res.json());
+            const arr = Array.isArray(data) ? data : [];
+            sentenceCache.set(key, arr);
+            return arr;
         }
-        if (typeof input === "string") {
-            return splitToWords(input);
+        catch (err) {
+            console.error("loadOneLevel error:", key, err);
+            return [];
         }
-        return [];
+    })();
+    pendingLoads.set(key, p);
+    return p;
+}
+async function loadAllLevels() {
+    const cacheKey = "all";
+    if (sentenceCache.has(cacheKey))
+        return sentenceCache.get(cacheKey);
+    if (pendingLoads.has(cacheKey))
+        return pendingLoads.get(cacheKey);
+    const p = Promise.allSettled(SENTENCE_LEVELS.map((lvl) => loadOneLevel(lvl)))
+        .then((results) => results.flatMap((r) => (r.status === "fulfilled" ? r.value : [])))
+        .then((merged) => {
+        sentenceCache.set(cacheKey, merged);
+        return merged;
+    })
+        .finally(() => pendingLoads.delete(cacheKey));
+    pendingLoads.set(cacheKey, p);
+    return p;
+}
+function normalizeTokens(input) {
+    if (Array.isArray(input)) {
+        if (input.length === 1 && typeof input[0] === "string") {
+            return splitToWords(input[0]);
+        }
+        return input.map(String);
     }
-    function splitToWords(s) {
-        return s
-            .replace(/,/g, " ")
-            .split(/\s+/)
-            .map((w) => w.trim())
-            .filter(Boolean);
-    }
+    if (typeof input === "string")
+        return splitToWords(input);
+    return [];
+}
+function splitToWords(s) {
+    return s.replace(/,/g, " ").split(/\s+/).map((w) => w.trim()).filter(Boolean);
 }
