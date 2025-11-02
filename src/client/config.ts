@@ -1,35 +1,50 @@
-const rootUrl = new URL("./", import.meta.url);
-const basePathWithSlash = rootUrl.pathname.endsWith("/")
-  ? rootUrl.pathname
-  : `${rootUrl.pathname}/`;
+export const IS_GH_PAGES: boolean = location.hostname.endsWith('github.io');
 
-const trimmedBase =
-  basePathWithSlash === "/" ? "" : basePathWithSlash.replace(/\/$/, "");
+function normalizePath(p: string): string {
+  return p.endsWith('/') ? p : p + '/';
+}
 
-export const basePath = trimmedBase;
+function detectBasePath(): string {
+  const baseEl = document.querySelector('base[href]') as HTMLBaseElement | null;
+  if (baseEl) {
+    const href = baseEl.getAttribute('href')!;
+    const path = new URL(href, location.origin).pathname;
+    return normalizePath(path);
+  }
+  return IS_GH_PAGES ? '/de-trainer/' : '/';
+}
+
+export const BASE: string = detectBasePath();
+
+export const ORIGIN_BASE: URL = new URL(BASE, location.origin);
+
+export function url(p: string | URL): string {
+  return new URL(p, ORIGIN_BASE).toString();
+}
 
 export function withBase(path: string): string {
-  const normalized = path.startsWith("/") ? path : `/${path}`;
-  if (!basePath) {
-    return normalized;
-  }
-  return `${basePath}${normalized}`.replace(/\/{2,}/g, "/");
+  const normalized = path.startsWith('/') ? path.slice(1) : path;
+  return (BASE + normalized).replace(/\/{2,}/g, '/');
 }
 
 export function stripBase(pathname: string): string {
-  if (!basePath) {
-    return pathname || "/";
+  if (!BASE || BASE === '/') return pathname || '/';
+  if (pathname.startsWith(BASE)) {
+    const rest = pathname.slice(BASE.length);
+    return rest ? (rest.startsWith('/') ? rest : '/' + rest) : '/';
   }
-  if (pathname.startsWith(basePath)) {
-    const stripped = pathname.slice(basePath.length);
-    if (!stripped) return "/";
-    return stripped.startsWith("/") ? stripped : `/${stripped}`;
-  }
-  return pathname || "/";
+  return pathname || '/';
 }
 
 export function assetUrl(path: string): string {
-  const trimmed = path.replace(/^\/+/, "");
-  return `${basePathWithSlash}${trimmed}`;
+  const trimmed = path.replace(/^\/+/, '');
+  return new URL(trimmed, ORIGIN_BASE).toString();
 }
-
+export function isExternal(href: string): boolean {
+  try {
+    const u = new URL(href, location.href);
+    return u.origin !== location.origin;
+  } catch {
+    return false;
+  }
+}
