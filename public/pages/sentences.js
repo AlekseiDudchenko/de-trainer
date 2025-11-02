@@ -1,4 +1,4 @@
-import { assetUrl } from "../config.js";
+import { url } from "../config.js";
 const app = document.getElementById("app");
 const sentenceCache = new Map();
 const pendingLoads = new Map();
@@ -16,19 +16,27 @@ export async function showSentences(level) {
     const rawTokens = normalizeTokens(sent.tokens);
     const shuffled = [...rawTokens].sort(() => Math.random() - 0.5);
     app.innerHTML = `
-    <div class="card">
-      <h2>Satz bilden</h2>
-      <p><small>Niveau: ${sent.level ?? level ?? "-"}</small></p>
-      ${sent.translation_en ? `<p><small><b>${sent.translation_en}</b></small></p>` : ""}
-      ${sent.translation_ru ? `<p><small>${sent.translation_ru}</small></p>` : ""}
-      <div id="tokens"></div>
-      <div id="drop" class="dropzone"></div>
-      <button id="checkSentence">Pruefen</button>
-      <button id="nextSentence">Weiter</button>
-      <button id="resetSentence" style="display:none;">Zuruecksetzen</button>
-      <p id="result"></p>
-      <p><small>${sent.explanation ?? ""}</small></p>
-    </div>
+    <section class="sentences-screen">
+      <article class="card card-sentence">
+        <h2>Satz bilden</h2>
+        <p><small>Niveau: ${sent.level ?? level ?? "-"}</small></p>
+        ${sent.translation_en ? `<p><small><b>${sent.translation_en}</b></small></p>` : ""}
+        ${sent.translation_ru ? `<p><small>${sent.translation_ru}</small></p>` : ""}
+
+        <p class="sentence-text muted">${sent.explanation ?? ""}</p>
+
+        <div id="drop" class="drop-zone"></div>
+        <div id="tokens" class="tokens"></div>
+
+        <div class="actions">
+          <button id="checkSentence" type="button">Pruefen</button>
+          <button id="nextSentence" type="button">Weiter</button>
+          <button id="resetSentence" type="button" style="display:none;">Zuruecksetzen</button>
+        </div>
+
+        <p id="result"></p>
+      </article>
+    </section>
   `;
     const tokensDiv = document.getElementById("tokens");
     const drop = document.getElementById("drop");
@@ -147,11 +155,10 @@ async function loadOneLevel(lvl) {
     if (pendingLoads.has(key)) {
         return pendingLoads.get(key);
     }
-    const promise = fetch(assetUrl(`data/sentences-${key}.json`))
+    const promise = fetch(url(`data/sentences-${key}.json`))
         .then((res) => {
-        if (!res.ok) {
+        if (!res.ok)
             throw new Error(`Failed to load sentences-${key}.json`);
-        }
         return res.json();
     })
         .then((data) => {
@@ -161,43 +168,41 @@ async function loadOneLevel(lvl) {
         .finally(() => {
         pendingLoads.delete(key);
     });
-    pendingLoads.set(key, promise);
-    return promise;
-}
-async function loadAllLevels() {
-    const cacheKey = "all";
-    if (sentenceCache.has(cacheKey)) {
-        return sentenceCache.get(cacheKey);
-    }
-    if (pendingLoads.has(cacheKey)) {
-        return pendingLoads.get(cacheKey);
-    }
-    const promise = Promise.all(SENTENCE_LEVELS.map((lvl) => loadOneLevel(lvl))).then((parts) => {
-        const merged = parts.flat();
-        sentenceCache.set(cacheKey, merged);
-        return merged;
-    }).finally(() => {
-        pendingLoads.delete(cacheKey);
-    });
-    pendingLoads.set(cacheKey, promise);
-    return promise;
-}
-function normalizeTokens(input) {
-    if (Array.isArray(input)) {
-        if (input.length === 1 && typeof input[0] === "string") {
-            return splitToWords(input[0]);
+    async function loadAllLevels() {
+        const cacheKey = "all";
+        if (sentenceCache.has(cacheKey)) {
+            return sentenceCache.get(cacheKey);
         }
-        return input.map(String);
+        if (pendingLoads.has(cacheKey)) {
+            return pendingLoads.get(cacheKey);
+        }
+        const promise = Promise.all(SENTENCE_LEVELS.map((lvl) => loadOneLevel(lvl))).then((parts) => {
+            const merged = parts.flat();
+            sentenceCache.set(cacheKey, merged);
+            return merged;
+        }).finally(() => {
+            pendingLoads.delete(cacheKey);
+        });
+        pendingLoads.set(cacheKey, promise);
+        return promise;
     }
-    if (typeof input === "string") {
-        return splitToWords(input);
+    function normalizeTokens(input) {
+        if (Array.isArray(input)) {
+            if (input.length === 1 && typeof input[0] === "string") {
+                return splitToWords(input[0]);
+            }
+            return input.map(String);
+        }
+        if (typeof input === "string") {
+            return splitToWords(input);
+        }
+        return [];
     }
-    return [];
-}
-function splitToWords(s) {
-    return s
-        .replace(/,/g, " ")
-        .split(/\s+/)
-        .map((w) => w.trim())
-        .filter(Boolean);
+    function splitToWords(s) {
+        return s
+            .replace(/,/g, " ")
+            .split(/\s+/)
+            .map((w) => w.trim())
+            .filter(Boolean);
+    }
 }

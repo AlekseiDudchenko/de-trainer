@@ -348,3 +348,130 @@ main#app > .home {
         padding: 14px;
     }
 }
+
+/* ==== Sentences (mobile-first) ========================================== */
+
+/* Обёртка страницы предложений — используй .sentences-screen (или .sentence-screen) */
+.sentences-screen .card,
+.sentence-screen .card,
+.card-sentence {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 16px;
+    padding: clamp(12px, 4vw, 18px);
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .06);
+}
+
+/* Текст предложения */
+.sentences-screen .sentence-text,
+.sentence-screen .sentence-text {
+    font-size: clamp(1rem, 2.5vw + 0.6rem, 1.25rem);
+    line-height: 1.45;
+    margin: 6px 0 12px;
+}
+
+/* Зона, куда пользователь собирает ответ */
+.sentences-screen .drop-zone,
+.sentence-screen .drop-zone {
+    min-height: 56px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    background: #fff;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+/* Список токенов для выбора */
+.sentences-screen .tokens,
+.sentence-screen .tokens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: 10px 0 14px;
+}
+
+/* Отдельный токен */
+.sentences-screen .token,
+.sentence-screen .token {
+    font-size: 16px;
+    /* >=16px, чтобы iOS не зумил */
+    line-height: 1;
+    padding: 10px 14px;
+    border-radius: 9999px;
+    background: #fff;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+    user-select: none;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform .05s ease;
+}
+
+.sentences-screen .token:active,
+.sentence-screen .token:active {
+    transform: scale(.98);
+}
+
+/* Кнопки действия */
+.sentences-screen .actions,
+.sentence-screen .actions {
+    position: sticky;
+    bottom: calc(env(safe-area-inset-bottom, 0) + 8px);
+    background: transparent;
+    padding-top: 8px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.sentences-screen .actions button,
+.sentence-screen .actions button {
+    width: 100%;
+    height: 44px;
+    font-size: 16px;
+}
+
+/* Хедер — чтобы влезал и не ломал макет */
+@media (max-width: 640px) {
+    header {
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(6px);
+        background: rgba(233, 237, 249, .85);
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    header a {
+        display: inline-block;
+        padding: 8px 10px;
+        margin-right: 8px;
+    }
+
+    main#app {
+        padding: clamp(12px, 4vw, 20px);
+    }
+}
+
+/* Десктопные мелкие улучшения */
+@media (min-width: 641px) {
+
+    .sentences-screen .actions,
+    .sentence-screen .actions {
+        display: flex;
+        gap: 12px;
+        justify-content: flex-end;
+    }
+
+    .sentences-screen .actions button,
+    .sentence-screen .actions button {
+        width: auto;
+    }
+}
