@@ -18,7 +18,7 @@ export async function showSentences(level) {
     if (!Array.isArray(sentences) || sentences.length === 0) {
         app.innerHTML = `<section class="sentences-screen">
       <article class="card card-sentence">
-        <h2>Saetze</h2>
+        <h2>Sätze</h2>
         <p>Keine Daten.</p>
       </article>
     </section>`;
@@ -34,7 +34,6 @@ export async function showSentences(level) {
         <p><small>Niveau: ${sent.level ?? lvl}</small></p>
         ${sent.translation_en ? `<p><small><b>${sent.translation_en}</b></small></p>` : ""}
         ${sent.translation_ru ? `<p><small>${sent.translation_ru}</small></p>` : ""}
-        ${sent.explanation ? `<p class="sentence-text muted">${sent.explanation}</p>` : ""}
 
         <div id="drop" class="drop-zone"></div>
         <div id="tokens" class="tokens"></div>
@@ -45,6 +44,7 @@ export async function showSentences(level) {
           <button id="resetSentence" type="button" style="display:none;">Zuruecksetzen</button>
         </div>
 
+        ${sent.explanation ? `<p class="sentence-text muted">${sent.explanation}</p>` : ""}
         <p id="result" aria-live="polite"></p>
       </article>
     </section>
