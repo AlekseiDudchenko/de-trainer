@@ -4,68 +4,63 @@ import { showSentences } from "./pages/sentences.js";
 import { showGaps } from "./pages/gaps.js";
 import { showTodo } from "./pages/todo.js";
 import { Level } from "./types.js";
-import e from "express";
+import { stripBase, withBase } from "./config.js";
 
-function matchPath(re: RegExp): RegExpMatchArray | null {
-  return location.pathname.match(re);
+const SENTENCE_LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
+
+function currentPath(): string {
+  const path = stripBase(location.pathname);
+  return path || "/";
+}
+
+function matchPath(path: string, re: RegExp): RegExpMatchArray | null {
+  return path.match(re);
 }
 
 export function navigate(to: string) {
-  if (location.pathname === to) {
+  const normalized = to.startsWith("/") ? to : `/${to}`;
+  const absolute = withBase(normalized);
+  if (location.pathname === absolute) {
     handleRoute();
-  } else {
-    history.pushState(null, "", to);
-    handleRoute();
+    return;
   }
+  history.pushState(null, "", absolute);
+  handleRoute();
 }
 
 export function handleRoute() {
-  // examples:
-  // "/"                       -> home
-  // "/words"                  -> words (default level)
-  // "/words/a1"               -> words A1 (if you support it)
-  // "/sentences"              -> sentences (all)
-  // "/sentences/a2"           -> sentences A2
-  // "/gaps"                   -> gaps
-  const p = location.pathname;
+  const p = currentPath();
   console.log("router.ts: handleRoute for path:", p);
 
-  // Home
   if (p === "/" || p === "/home") return showHome();
 
-  // Words
   if (p === "/words") return showWords();
-  const mWords = matchPath(/^\/words\/([a-z0-9]+)$/i);
+  const mWords = matchPath(p, /^\/words\/([a-z0-9]+)$/i);
   if (mWords) {
-    // If/when you support levels for words:
     const level = mWords[1].toUpperCase();
-    return showWords(); // or showTodo until implemented
+    console.warn(`Words for level ${level} not yet implemented; showing default list.`);
+    return showWords();
   }
 
-  // Sentences
   if (p === "/sentences") return showSentences("all");
-  const mSent = matchPath(/^\/sentences\/([a-z0-9]+)$/i);
+  const mSent = matchPath(p, /^\/sentences\/([a-z0-9]+)$/i);
   if (mSent && !mSent[1]) {
     return showSentences("all");
   }
 
   const raw = mSent?.[1]?.toUpperCase();
-  if (raw && ["A1","A2","B1","B2","C1","C2"].includes(raw)) {
+  if (raw && SENTENCE_LEVELS.includes(raw)) {
     return showSentences(raw as Level);
-  }
- else if (raw) {
-    return showTodo(`Sätze – Niveau ${raw} (nicht unterstützt)`);
+  } else if (raw) {
+    return showTodo(`Saetze - Niveau ${raw} (nicht unterstuetzt)`);
   }
 
-  // Grammar 
   if (p === "/grammar/b1/relativpronomen-gap") return showGaps();
-  
-  if (p === "/grammar/artikel") return showTodo("Grammatik – Artikel einsetzen");
+  if (p === "/grammar/artikel") return showTodo("Grammatik - Artikel einsetzen");
 
-  // Grammar placeholders
-  const mGram = matchPath(/^\/grammar-(.+)$/i);
-  if (mGram) return showTodo(`Grammatik – ${mGram[1]} (bald verfügbar)`);
+  const mGram = matchPath(p, /^\/grammar-(.+)$/i);
+  if (mGram) return showTodo(`Grammatik - ${mGram[1]} (bald verfuegbar)`);
 
-  // 404
   return showTodo("Seite nicht gefunden");
 }
+

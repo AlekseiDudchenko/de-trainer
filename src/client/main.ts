@@ -1,4 +1,4 @@
-import { handleRoute } from "./router.js";
+import { handleRoute, navigate } from "./router.js";
 
 function boot() {
   handleRoute();
@@ -9,23 +9,20 @@ function boot() {
   // intercept internal <a> clicks
   document.addEventListener("click", (e) => {
     const a = (e.target as HTMLElement).closest("a") as HTMLAnchorElement | null;
-    if (!a) return;
+    if (!a || a.target === "_blank") return;
 
-    const url = new URL(a.href, location.origin);
-    const sameOrigin = url.origin === location.origin;
-    const isApi = url.pathname.startsWith("/api/");
-    const isFile = url.pathname.includes(".");
-
-    if (sameOrigin && !isApi && !isFile) {
-      e.preventDefault();
-      // only navigate if path/search/hash actually changes
-      const target = url.pathname + url.search + url.hash;
-      const current = location.pathname + location.search + location.hash;
-      if (target !== current) {
-        history.pushState(null, "", target);
-        handleRoute();
-      }
+    const rawHref = a.getAttribute("href");
+    if (!rawHref) return;
+    if (rawHref.startsWith("http") || rawHref.startsWith("mailto:") || rawHref.startsWith("tel:")) {
+      return;
     }
+    if (rawHref.startsWith("#")) {
+      return;
+    }
+
+    const route = (rawHref.startsWith("/") ? rawHref : `/${rawHref}`).replace(/\/{2,}/g, "/");
+    e.preventDefault();
+    navigate(route);
   });
 }
 

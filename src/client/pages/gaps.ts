@@ -1,16 +1,46 @@
-import { Gap } from "../types";
+import { Gap } from "../types.js";
+import { assetUrl } from "../config.js";
 
 const app = document.getElementById("app") as HTMLElement;
 
+let gapsCache: Gap[] | null = null;
+let gapsPending: Promise<Gap[]> | null = null;
+
+async function loadAllGaps(): Promise<Gap[]> {
+  if (gapsCache) {
+    return gapsCache;
+  }
+  if (!gapsPending) {
+    gapsPending = fetch(assetUrl("data/gaps.json"))
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Failed to load gaps.json: ${res.status}`);
+        }
+        return res.json() as Promise<Gap[]>;
+      })
+      .then((data) => {
+        gapsCache = data;
+        return data;
+      })
+      .finally(() => {
+        gapsPending = null;
+      });
+  }
+  return gapsPending;
+}
+
+async function getRandomGap(): Promise<Gap> {
+  const gaps = await loadAllGaps();
+  if (!gaps.length) {
+    throw new Error("No gaps available");
+  }
+  return gaps[Math.floor(Math.random() * gaps.length)];
+}
+
 export async function showGaps(): Promise<void> {
   console.log("pages/gaps.ts: showGaps called");
-  const task = await loadGap();
+  const task = await getRandomGap();
   renderGap(task);
-
-  async function loadGap(): Promise<Gap> {
-    const res = await fetch("/api/gaps/one");
-    return (await res.json()) as Gap;
-  }
 
   async function renderGap(g: Gap) {
     app.innerHTML = `
@@ -47,18 +77,18 @@ export async function showGaps(): Promise<void> {
     const doCheck = () => {
       const user = input.value.trim();
       if (user.toLowerCase() === g.answer.toLowerCase()) {
-        result.textContent = "✅ Correct!";
+        result.textContent = "Correct!";
         result.className = "gap-result correct";
         lastCorrect = true;
       } else {
-        result.textContent = `❌ Wrong. Correct: ${g.answer}`;
+        result.textContent = `Wrong. Correct: ${g.answer}`;
         result.className = "gap-result wrong";
         lastCorrect = false;
       }
     };
 
     const doNext = async () => {
-      const newTask = await loadGap();
+      const newTask = await getRandomGap();
       renderGap(newTask);
     };
 
@@ -79,3 +109,4 @@ export async function showGaps(): Promise<void> {
     input.focus();
   }
 }
+

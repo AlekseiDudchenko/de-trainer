@@ -1,22 +1,20 @@
 import { Sentence } from "../types.js";
+import { assetUrl } from "../config.js";
 
 const app = document.getElementById("app") as HTMLElement;
 const sentenceCache = new Map<string, Sentence[]>();
 const pendingLoads = new Map<string, Promise<Sentence[]>>();
 
+const SENTENCE_LEVELS = ["a1", "a2", "b1", "b2", "c1", "c2"];
+
 export async function showSentences(level?: string): Promise<void> {
-  console.log("pages/sentences.ts: showSentences called with level:", level);
   const lvl = (level ?? "A1").toLowerCase();
+  console.log("pages/sentences.ts: showSentences called with level:", lvl);
 
-  console.log("pages/sentences.ts: Selected level:", lvl);
-
-  const sentences =
-    lvl === "all"
-      ? await loadAllLevels()
-      : await loadOneLevel(lvl);
+  const sentences = lvl === "all" ? await loadAllLevels() : await loadOneLevel(lvl);
 
   if (!sentences || sentences.length === 0) {
-    app.innerHTML = `<div class="card"><h2>Sätze</h2><p>Keine Daten.</p></div>`;
+    app.innerHTML = `<div class="card"><h2>Saetze</h2><p>Keine Daten.</p></div>`;
     return;
   }
 
@@ -34,9 +32,9 @@ export async function showSentences(level?: string): Promise<void> {
       ${sent.translation_ru ? `<p><small>${sent.translation_ru}</small></p>` : ""}
       <div id="tokens"></div>
       <div id="drop" class="dropzone"></div>
-      <button id="checkSentence">Prüfen</button>
+      <button id="checkSentence">Pruefen</button>
       <button id="nextSentence">Weiter</button>
-      <button id="resetSentence" style="display:none;">Zurücksetzen</button>
+      <button id="resetSentence" style="display:none;">Zuruecksetzen</button>
       <p id="result"></p>
       <p><small>${sent.explanation ?? ""}</small></p>
     </div>
@@ -49,17 +47,14 @@ export async function showSentences(level?: string): Promise<void> {
   const resetBtn = document.getElementById("resetSentence") as HTMLButtonElement;
   const resultP = document.getElementById("result") as HTMLParagraphElement;
 
-  // Track which tokens are in suggestions vs answer
   let availableTokens = [...shuffled];
   let answerTokens: string[] = [];
 
-  // Render both token areas
   const renderTokens = () => {
     if (!tokensDiv || !drop) return;
-    
-    // Clear and render available tokens
-    tokensDiv.innerHTML = '';
-    availableTokens.forEach(t => {
+
+    tokensDiv.innerHTML = "";
+    availableTokens.forEach((t) => {
       const span = document.createElement("span");
       span.textContent = t;
       span.className = "token";
@@ -74,9 +69,8 @@ export async function showSentences(level?: string): Promise<void> {
       tokensDiv.appendChild(span);
     });
 
-    // Clear and render answer tokens
-    drop.innerHTML = '';
-    answerTokens.forEach(t => {
+    drop.innerHTML = "";
+    answerTokens.forEach((t) => {
       const span = document.createElement("span");
       span.textContent = t;
       span.className = "token";
@@ -92,7 +86,6 @@ export async function showSentences(level?: string): Promise<void> {
     });
   };
 
-  // Initial render
   renderTokens();
 
   let lastCorrect = false;
@@ -104,13 +97,13 @@ export async function showSentences(level?: string): Promise<void> {
     const norm = (s: string) => s.trim().replace(/[.?!]\s*$/, "");
 
     if (norm(userStr) === norm(targetStr)) {
-      resultP.textContent = "✅ Richtig!";
+      resultP.textContent = "Richtig!";
       drop.classList.remove("wrong");
       drop.classList.add("correct");
       lastCorrect = true;
       resetBtn.style.display = "none";
     } else {
-      resultP.textContent = "❌ Nicht ganz. Richtig: " + sent.target;
+      resultP.textContent = `Nicht ganz. Richtig: ${sent.target}`;
       drop.classList.remove("correct");
       drop.classList.add("wrong");
       lastCorrect = false;
@@ -119,18 +112,20 @@ export async function showSentences(level?: string): Promise<void> {
     wasChecked = true;
   };
 
-  const doNext = () => {
+  const cleanup = () => {
     document.removeEventListener("keydown", onKey);
-    console.log("pages/sentences.ts: doNext called with level:", level);
+  };
+
+  const doNext = () => {
+    cleanup();
     showSentences(level);
   };
 
   const doReset = () => {
-    // Move all tokens back to available
     availableTokens = [...availableTokens, ...answerTokens];
     answerTokens = [];
     renderTokens();
-    
+
     drop.classList.remove("wrong", "correct");
     resultP.textContent = "";
     lastCorrect = false;
@@ -142,35 +137,29 @@ export async function showSentences(level?: string): Promise<void> {
   nextBtn.onclick = doNext;
   resetBtn.onclick = doReset;
 
-const onKey = (e: KeyboardEvent) => {
-  if (e.key === "ArrowRight") {
-    if (e.repeat) return;         
-    e.preventDefault();
-    document.removeEventListener("keydown", onKey); 
-    nextBtn.click();
-    return;
-  }
-
-
-  if (e.key === "Enter") {
-    if (e.repeat) return;          
-    e.preventDefault();
-    if (!wasChecked) {
-      checkBtn.click();
+  const onKey = (e: KeyboardEvent) => {
+    if (e.repeat) return;
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      nextBtn.click();
       return;
     }
-    if (lastCorrect) {
-      nextBtn.click();
-    } else {
-      resetBtn.click();
+    if (e.key === "Enter") {
+      e.preventDefault();
+      if (!wasChecked) {
+        checkBtn.click();
+        return;
+      }
+      if (lastCorrect) {
+        nextBtn.click();
+      } else {
+        resetBtn.click();
+      }
     }
-  }
-};
+  };
 
   document.addEventListener("keydown", onKey);
 }
-
-/* ===== helpers ===== */
 
 async function loadOneLevel(lvl: string): Promise<Sentence[]> {
   const key = lvl.toLowerCase();
@@ -182,10 +171,10 @@ async function loadOneLevel(lvl: string): Promise<Sentence[]> {
     return pendingLoads.get(key)!;
   }
 
-  const promise = fetch(`/api/sentences/${key}`)
+  const promise = fetch(assetUrl(`data/sentences-${key}.json`))
     .then((res) => {
       if (!res.ok) {
-        return [] as Sentence[];
+        throw new Error(`Failed to load sentences-${key}.json`);
       }
       return res.json() as Promise<Sentence[]>;
     })
@@ -202,28 +191,23 @@ async function loadOneLevel(lvl: string): Promise<Sentence[]> {
 }
 
 async function loadAllLevels(): Promise<Sentence[]> {
-  // какие уровни есть — жёстко задаём
-  const levels = ["a1", "a2", "b1", "b2", "c1", "c2"];
-  const key = "all";
-
-  if (sentenceCache.has(key)) {
-    return sentenceCache.get(key)!;
+  const cacheKey = "all";
+  if (sentenceCache.has(cacheKey)) {
+    return sentenceCache.get(cacheKey)!;
   }
-  if (pendingLoads.has(key)) {
-    return pendingLoads.get(key)!;
+  if (pendingLoads.has(cacheKey)) {
+    return pendingLoads.get(cacheKey)!;
   }
 
-  const promise = Promise.all(levels.map((l) => loadOneLevel(l)))
-    .then((parts) => {
-      const merged = parts.flat();
-      sentenceCache.set(key, merged);
-      return merged;
-    })
-    .finally(() => {
-      pendingLoads.delete(key);
-    });
+  const promise = Promise.all(SENTENCE_LEVELS.map((lvl) => loadOneLevel(lvl))).then((parts) => {
+    const merged = parts.flat();
+    sentenceCache.set(cacheKey, merged);
+    return merged;
+  }).finally(() => {
+    pendingLoads.delete(cacheKey);
+  });
 
-  pendingLoads.set(key, promise);
+  pendingLoads.set(cacheKey, promise);
   return promise;
 }
 
@@ -247,3 +231,7 @@ function splitToWords(s: string): string[] {
     .map((w) => w.trim())
     .filter(Boolean);
 }
+
+
+
+
