@@ -256,6 +256,7 @@
     "type": "drag",
     "explanation": "B1: time-limited offer → obligation.",
     "translation_en": "Because the offer is only valid until Friday, we have to decide today.",
+    "translation_ru": "Поскольку предложение действительно только до пятницы, мы должны принять решение сегодня.",
     "level": "B1"
   },
   {
@@ -265,6 +266,7 @@
     "type": "drag",
     "explanation": "B1: change of opinion via 'obwohl'.",
     "translation_en": "Although I was skeptical at first, in the end I liked the suggestion.",
+    "translation_ru": "Хотя я сначала был(а) скептически настроен(а), в конце концов мне понравилось это предложение.",
     "level": "B1"
   },
   {
@@ -274,6 +276,7 @@
     "type": "drag",
     "explanation": "B1: 'falls' = if / in case.",
     "translation_en": "If it does rain tomorrow, we will postpone the picnic.",
+    "translation_ru": "Если завтра всё же пойдёт дождь, мы отложим пикник.",
     "level": "B1"
   },
   {
@@ -283,6 +286,7 @@
     "type": "drag",
     "explanation": "B1: concessive clause + comparative.",
     "translation_en": "Although the route is longer, we take the nicer one.",
+    "translation_ru": "Хотя маршрут длиннее, мы выбираем более красивый.",
     "level": "B1"
   },
   {
@@ -292,6 +296,7 @@
     "type": "drag",
     "explanation": "B1: 'da' for reason + separable verb.",
     "translation_en": "Since I am leaving early tomorrow, I am packing my suitcase today.",
+    "translation_ru": "Поскольку я уезжаю завтра рано, я уже сегодня собираю свой чемодан.",
     "level": "B1"
   },
   {
@@ -301,6 +306,7 @@
     "type": "drag",
     "explanation": "B1: 'sobald' + separable verb in main clause.",
     "translation_en": "As soon as the lesson is over, I will call you.",
+    "translation_ru": "Как только урок закончится, я тебе позвоню.",
     "level": "B1"
   },
   {
@@ -310,6 +316,7 @@
     "type": "drag",
     "explanation": "B1: contrast in character description.",
     "translation_en": "Although he is very friendly, he sometimes seems distant.",
+    "translation_ru": "Хотя он очень дружелюбен, иногда он кажется отстранённым.",
     "level": "B1"
   },
   {
@@ -319,6 +326,7 @@
     "type": "drag",
     "explanation": "B1: 'während' for two parallel actions.",
     "translation_en": "While the children are playing in the garden, we prepare the food.",
+    "translation_ru": "Пока дети играют в саду, мы готовим еду.",
     "level": "B1"
   },
   {
@@ -328,6 +336,7 @@
     "type": "drag",
     "explanation": "B1: 'seitdem' + present → present result.",
     "translation_en": "Since she has had a new boss, the department works better.",
+    "translation_ru": "С тех пор как у неё новый начальник, отдел работает лучше.",
     "level": "B1"
   },
   {
@@ -337,6 +346,7 @@
     "type": "drag",
     "explanation": "B1: purpose + imperative + separable verb.",
     "translation_en": "So that you don’t forget anything, write the appointments down.",
+    "translation_ru": "Чтобы ты ничего не забыл, запиши встречи.",
     "level": "B1"
   },
   {
@@ -346,6 +356,7 @@
     "type": "drag",
     "explanation": "B1: concession with Perfekt in subclause, Präteritum main clause.",
     "translation_en": "Although we left very early, we were stuck in traffic for a long time.",
+    "translation_ru": "Хотя мы выехали очень рано, мы долго стояли в пробке.",
     "level": "B1"
   },
   {
@@ -355,6 +366,7 @@
     "type": "drag",
     "explanation": "B1: 'falls' + imperative.",
     "translation_en": "If you have problems on the way, just call me.",
+    "translation_ru": "Если у тебя возникнут проблемы по пути, просто позвони мне.",
     "level": "B1"
   },
   {
@@ -364,6 +376,7 @@
     "type": "drag",
     "explanation": "B1: 'da' + double verb structure.",
     "translation_en": "Since we are getting visitors at the weekend, I still have to go shopping.",
+    "translation_ru": "Поскольку у нас будут гости на выходных, мне всё равно нужно сходить за покупками.",
     "level": "B1"
   },
   {
@@ -373,6 +386,7 @@
     "type": "drag",
     "explanation": "B1: business context, 'sobald'.",
     "translation_en": "As soon as we have feedback from the customer, we inform the team.",
+    "translation_ru": "Как только мы получим отзыв от клиента, мы проинформируем команду.",
     "level": "B1"
   },
   {
@@ -382,6 +396,7 @@
     "type": "drag",
     "explanation": "B1: concession with Perfekt + Präteritum.",
     "translation_en": "Although she did not understand the task, she did not want any help.",
+    "translation_ru": "Хотя она не поняла задание, она не хотела помощи.",
     "level": "B1"
   },
   {
@@ -391,6 +406,7 @@
     "type": "drag",
     "explanation": "B1: 'während' + modal in main clause.",
     "translation_en": "While I write the minutes, you can answer the emails.",
+    "translation_ru": "Пока я пишу протокол, ты можешь ответить на электронные письма.",
     "level": "B1"
   },
   {
@@ -400,6 +416,7 @@
     "type": "drag",
     "explanation": "B1: reason + separable verb 'aufladen'.",
     "translation_en": "Since the battery is almost empty, I am charging the phone now.",
+    "translation_ru": "Поскольку аккумулятор почти разряжен, я сейчас заряжаю телефон.",
     "level": "B1"
   },
   {
@@ -409,6 +426,7 @@
     "type": "drag",
     "explanation": "B1: contrast in teamwork.",
     "translation_en": "Although we have different opinions, we work well together.",
+    "translation_ru": "Хотя у нас разные мнения, мы хорошо работаем вместе.",
     "level": "B1"
   },
   {
@@ -418,6 +436,7 @@
     "type": "drag",
     "explanation": "B1: 'sobald' + Perfekt in subclause.",
     "translation_en": "As soon as you have uploaded the file, I can check it.",
+    "translation_ru": "Как только ты загрузишь файл, я смогу его проверить.",
     "level": "B1"
   },
   {
@@ -427,6 +446,7 @@
     "type": "drag",
     "explanation": "B1: reason + modal recommendation.",
     "translation_en": "Since the places are limited, you should register soon.",
+    "translation_ru": "Поскольку места ограничены, тебе следует зарегистрироваться скоро.",
     "level": "B1"
   },
   {
@@ -436,6 +456,7 @@
     "type": "drag",
     "explanation": "B1: concession with Plusquamperfekt.",
     "translation_en": "Although I had prepared well, I was nervous before the interview.",
+    "translation_ru": "Хотя я хорошо подготовился, я был нервным перед интервью.",
     "level": "B1"
   },
   {
@@ -445,6 +466,7 @@
     "type": "drag",
     "explanation": "B1: 'falls' + modal.",
     "translation_en": "If you do not have time, we can postpone the appointment.",
+    "translation_ru": "Если у тебя нет времени, мы можем перенести встречу.",
     "level": "B1"
   },
   {
@@ -454,6 +476,7 @@
     "type": "drag",
     "explanation": "B1: 'während' + modal + infinitive.",
     "translation_en": "While we are waiting for the train, we can drink a coffee.",
+    "translation_ru": "Пока мы ждем поезд, мы можем выпить кофе.",
     "level": "B1"
   },
   {
@@ -463,6 +486,7 @@
     "type": "drag",
     "explanation": "B1: reason + future-related plan.",
     "translation_en": "Since I have an important appointment tomorrow, I will go to bed earlier today.",
+    "translation_ru": "Поскольку у меня завтра важная встреча, я лягу спать пораньше сегодня.", 
     "level": "B1"
   },
   {
@@ -472,6 +496,7 @@
     "type": "drag",
     "explanation": "B1: concession + 'gefallen' with Dativ.",
     "translation_en": "Although the film was very long, I liked it a lot.",
+    "translation_ru": "Хотя фильм был очень длинным, он мне очень понравился.",
     "level": "B1"
   },
   {
@@ -481,6 +506,7 @@
     "type": "drag",
     "explanation": "B1: project/business context.",
     "translation_en": "As soon as we have the results, we will send them to all colleagues.",
+    "translation_ru": "Как только у нас будут результаты, мы отправим их всем коллегам.",
     "level": "B1"
   },
   {
@@ -490,6 +516,7 @@
     "type": "drag",
     "explanation": "B1: cause in the past → present state.",
     "translation_en": "Since it got very late yesterday, I am still tired today.",
+    "translation_ru": "Поскольку вчера стало очень поздно, я все еще устал сегодня.",
     "level": "B1"
   },
   {
@@ -499,6 +526,7 @@
     "type": "drag",
     "explanation": "B1: contrast between boring content and positive result.",
     "translation_en": "Although the lecture was quite theoretical, I learned a lot from it.",
+    "translation_ru": "Хотя лекция была довольно теоретической, я многому из неё научился.",
     "level": "B1"
   },
   {
@@ -508,6 +536,7 @@
     "type": "drag",
     "explanation": "B1: 'da' + modal in subclause, Perfekt/Präteritum mix.",
     "translation_en": "Since we could not rent a car, we went by train.",
+    "translation_ru": "Поскольку мы не могли арендовать машину, мы поехали на поезде.",
     "level": "B1"
   },
   {
@@ -517,6 +546,7 @@
     "type": "drag",
     "explanation": "B1: 'sobald' + Perfekt in subclause.",
     "translation_en": "As soon as the parcel has arrived, I will inform you.",
+    "translation_ru": "Как только посылка прибудет, я сообщу тебе.",
     "level": "B1"
   },
   {
@@ -526,6 +556,7 @@
     "type": "drag",
     "explanation": "B1: polite instruction with 'falls'.",
     "translation_en": "If there are problems with the invoice, please call customer service.",
+    "translation_ru": "Если возникнут проблемы с счетом, пожалуйста, позвоните в службу поддержки.",
     "level": "B1"
   },
   {
@@ -535,6 +566,7 @@
     "type": "drag",
     "explanation": "B1: concession + Plusquamperfekt.",
     "translation_en": "Although we had booked early, the tickets were very expensive.",
+    "translation_ru": "Хотя мы забронировали билеты заранее, они были очень дорогими.",
     "level": "B1"
   },
   {
@@ -544,6 +576,7 @@
     "type": "drag",
     "explanation": "B1: purpose + modal in subclause.",
     "translation_en": "So that the children can sleep better, we close the window.",
+    "translation_ru": "Чтобы дети могли лучше спать, мы закрываем окно.",
     "level": "B1"
   },
   {
@@ -553,6 +586,7 @@
     "type": "drag",
     "explanation": "B1: 'während' + Perfekt for longer period.",
     "translation_en": "While I was studying abroad, I met many new people.",
+    "translation_ru": "Пока я учился за границей, я познакомился со многими новыми людьми.",
     "level": "B1"
   },
   {
@@ -562,6 +596,7 @@
     "type": "drag",
     "explanation": "B1: traffic reason + Präteritum.",
     "translation_en": "Since the roads were closed, we had to choose another route.",
+    "translation_ru": "Поскольку дороги были закрыты, нам пришлось выбрать другой маршрут.",
     "level": "B1"
   },
   {
@@ -571,6 +606,7 @@
     "type": "drag",
     "explanation": "B1: concession + reflexive 'sich Zeit nehmen'.",
     "translation_en": "Although I was very busy, I made time for you.",
+    "translation_ru": "Хотя я был очень занят, я нашел время для тебя.",
     "level": "B1"
   },
   {
