@@ -455,7 +455,7 @@ main#app > .home {
 /*        */
 .sentences-screen .card,
 .card-sentence {
-    width: min(680px, 100% - 24px);
+    width: 450px;
     margin: 12px auto 24px;
     border-radius: 16px;
     padding: clamp(14px, 4vw, 18px);
