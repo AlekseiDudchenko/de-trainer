@@ -111,10 +111,15 @@ export async function showSentences(level?: string): Promise<void> {
 
   const doCheck = () => {
     const userStr = answerTokens.join(" ").trim();
-    const targetStr = sent.target.trim();
-    const norm = (s: string) => s.trim().replace(/[.?!]\s*$/, "");
 
-    if (norm(userStr) === norm(targetStr)) {
+    const norm = (s) => s.trim().replace(/[.?!]\s*$/, "");
+
+    const correctStrings = [
+      sent.target,
+      ...(sent.alternatives || [])
+    ].map(norm);
+
+    if (correctStrings.includes(norm(userStr))) {
       resultP.textContent = "Richtig!";
       drop.classList.remove("wrong");
       drop.classList.add("correct");
@@ -127,6 +132,7 @@ export async function showSentences(level?: string): Promise<void> {
       lastCorrect = false;
       resetBtn.style.display = "inline-block";
     }
+
     wasChecked = true;
   };
 

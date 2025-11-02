@@ -96,9 +96,12 @@ export async function showSentences(level) {
     let wasChecked = false;
     const doCheck = () => {
         const userStr = answerTokens.join(" ").trim();
-        const targetStr = sent.target.trim();
         const norm = (s) => s.trim().replace(/[.?!]\s*$/, "");
-        if (norm(userStr) === norm(targetStr)) {
+        const correctStrings = [
+            sent.target,
+            ...(sent.alternatives || [])
+        ].map(norm);
+        if (correctStrings.includes(norm(userStr))) {
             resultP.textContent = "Richtig!";
             drop.classList.remove("wrong");
             drop.classList.add("correct");

@@ -223,6 +223,9 @@
     "id": "s_b1_23",
     "target": "Obwohl sie sehr müde war, hat sie die Präsentation noch fertig gemacht.",
     "tokens": ["Obwohl", "sie", "sehr", "müde", "war,", "hat", "sie", "die", "Präsentation", "noch", "fertig", "gemacht"],
+    "alternatives": [
+      "Obwohl sie sehr müde war, hat sie noch die Präsentation fertig gemacht."
+      ],
     "type": "drag",
     "explanation": "B1: concession + separable verb in Perfekt.",
     "translation_en": "Although she was very tired, she still finished the presentation.",
