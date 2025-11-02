@@ -268,12 +268,6 @@ main#app > .home {
     background: #fff;
 }
 
-.dropzone {
-    min-height: 50px;
-    border: 1px dashed #ccc;
-    padding: 8px;
-    margin-top: 10px;
-}
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {

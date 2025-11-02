@@ -6,12 +6,12 @@ const app = document.getElementById("app") as HTMLElement;
 const sentenceCache = new Map<string, Sentence[]>();
 const pendingLoads = new Map<string, Promise<Sentence[]>>();
 
+// уровни, для которых потенциально есть файлы
 const SENTENCE_LEVELS = ["a1", "a2", "b1", "b2", "c1", "c2"] as const;
 const DEFAULT_LEVEL = "all";
 
 export async function showSentences(level?: string): Promise<void> {
   const lvl = (level ?? DEFAULT_LEVEL).toLowerCase();
-  console.log("pages/sentences.ts: showSentences called with level:", lvl);
 
   let sentences: Sentence[] = [];
   try {
@@ -24,7 +24,8 @@ export async function showSentences(level?: string): Promise<void> {
   if (!Array.isArray(sentences) || sentences.length === 0) {
     app.innerHTML = `<section class="sentences-screen">
       <article class="card card-sentence">
-        <h2>Saetze</h2><p>Keine Daten.</p>
+        <h2>Sätze</h2>
+        <p>Keine Daten.</p>
       </article>
     </section>`;
     return;
@@ -38,10 +39,10 @@ export async function showSentences(level?: string): Promise<void> {
     <section class="sentences-screen">
       <article class="card card-sentence">
         <h2>Satz bilden</h2>
-        <p><small>Niveau: ${sent.level ?? level ?? "-"}</small></p>
+        <p><small>Niveau: ${sent.level ?? lvl}</small></p>
         ${sent.translation_en ? `<p><small><b>${sent.translation_en}</b></small></p>` : ""}
         ${sent.translation_ru ? `<p><small>${sent.translation_ru}</small></p>` : ""}
-        <p class="sentence-text muted">${sent.explanation ?? ""}</p>
+        ${sent.explanation ? `<p class="sentence-text muted">${sent.explanation}</p>` : ""}
 
         <div id="drop" class="drop-zone"></div>
         <div id="tokens" class="tokens"></div>
@@ -52,7 +53,7 @@ export async function showSentences(level?: string): Promise<void> {
           <button id="resetSentence" type="button" style="display:none;">Zuruecksetzen</button>
         </div>
 
-        <p id="result"></p>
+        <p id="result" aria-live="polite"></p>
       </article>
     </section>
   `;
@@ -163,6 +164,8 @@ export async function showSentences(level?: string): Promise<void> {
   document.addEventListener("keydown", onKey);
 }
 
+/* === загрузка данных ==================================================== */
+
 async function loadOneLevel(lvl: string): Promise<Sentence[]> {
   const key = lvl.toLowerCase();
   if (sentenceCache.has(key)) return sentenceCache.get(key)!;
@@ -195,9 +198,7 @@ async function loadAllLevels(): Promise<Sentence[]> {
   if (pendingLoads.has(cacheKey)) return pendingLoads.get(cacheKey)!;
 
   const p = Promise.allSettled(SENTENCE_LEVELS.map((lvl) => loadOneLevel(lvl)))
-    .then((results) =>
-      results.flatMap((r) => (r.status === "fulfilled" ? r.value : []))
-    )
+    .then((results) => results.flatMap((r) => (r.status === "fulfilled" ? r.value : [])))
     .then((merged) => {
       sentenceCache.set(cacheKey, merged);
       return merged;
@@ -207,6 +208,8 @@ async function loadAllLevels(): Promise<Sentence[]> {
   pendingLoads.set(cacheKey, p);
   return p;
 }
+
+/* === утилиты ============================================================ */
 
 function normalizeTokens(input: unknown): string[] {
   if (Array.isArray(input)) {
@@ -220,5 +223,9 @@ function normalizeTokens(input: unknown): string[] {
 }
 
 function splitToWords(s: string): string[] {
-  return s.replace(/,/g, " ").split(/\s+/).map((w) => w.trim()).filter(Boolean);
+  return s
+    .replace(/,/g, " ")
+    .split(/\s+/)
+    .map((w) => w.trim())
+    .filter(Boolean);
 }
