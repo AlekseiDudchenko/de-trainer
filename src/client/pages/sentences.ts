@@ -1,43 +1,60 @@
 import { Sentence } from "../types.js";
-import { assetUrl } from "../config.js";
+import { url } from "../config.js";
 
 const app = document.getElementById("app") as HTMLElement;
+
 const sentenceCache = new Map<string, Sentence[]>();
 const pendingLoads = new Map<string, Promise<Sentence[]>>();
 
-const SENTENCE_LEVELS = ["a1", "a2", "b1", "b2", "c1", "c2"];
+const SENTENCE_LEVELS = ["a1", "a2", "b1", "b2", "c1", "c2"] as const;
+const DEFAULT_LEVEL = "all";
 
 export async function showSentences(level?: string): Promise<void> {
-  const lvl = (level ?? "A1").toLowerCase();
+  const lvl = (level ?? DEFAULT_LEVEL).toLowerCase();
   console.log("pages/sentences.ts: showSentences called with level:", lvl);
 
-  const sentences = lvl === "all" ? await loadAllLevels() : await loadOneLevel(lvl);
-
-  if (!sentences || sentences.length === 0) {
-    app.innerHTML = `<div class="card"><h2>Saetze</h2><p>Keine Daten.</p></div>`;
-    return;
+  let sentences: Sentence[] = [];
+  try {
+    sentences = lvl === "all" ? await loadAllLevels() : await loadOneLevel(lvl);
+  } catch (e) {
+    console.error("load sentences failed:", e);
+    sentences = [];
   }
 
-  console.log("pages/sentences.ts: Loaded sentences:", sentences.length);
+  if (!Array.isArray(sentences) || sentences.length === 0) {
+    app.innerHTML = `<section class="sentences-screen">
+      <article class="card card-sentence">
+        <h2>Saetze</h2><p>Keine Daten.</p>
+      </article>
+    </section>`;
+    return;
+  }
 
   const sent = sentences[Math.floor(Math.random() * sentences.length)];
   const rawTokens = normalizeTokens(sent.tokens);
   const shuffled = [...rawTokens].sort(() => Math.random() - 0.5);
 
   app.innerHTML = `
-    <div class="card">
-      <h2>Satz bilden</h2>
-      <p><small>Niveau: ${sent.level ?? level ?? "-"}</small></p>
-      ${sent.translation_en ? `<p><small><b>${sent.translation_en}</b></small></p>` : ""}
-      ${sent.translation_ru ? `<p><small>${sent.translation_ru}</small></p>` : ""}
-      <div id="tokens"></div>
-      <div id="drop" class="dropzone"></div>
-      <button id="checkSentence">Pruefen</button>
-      <button id="nextSentence">Weiter</button>
-      <button id="resetSentence" style="display:none;">Zuruecksetzen</button>
-      <p id="result"></p>
-      <p><small>${sent.explanation ?? ""}</small></p>
-    </div>
+    <section class="sentences-screen">
+      <article class="card card-sentence">
+        <h2>Satz bilden</h2>
+        <p><small>Niveau: ${sent.level ?? level ?? "-"}</small></p>
+        ${sent.translation_en ? `<p><small><b>${sent.translation_en}</b></small></p>` : ""}
+        ${sent.translation_ru ? `<p><small>${sent.translation_ru}</small></p>` : ""}
+        <p class="sentence-text muted">${sent.explanation ?? ""}</p>
+
+        <div id="drop" class="drop-zone"></div>
+        <div id="tokens" class="tokens"></div>
+
+        <div class="actions">
+          <button id="checkSentence" type="button">Pruefen</button>
+          <button id="nextSentence" type="button">Weiter</button>
+          <button id="resetSentence" type="button" style="display:none;">Zuruecksetzen</button>
+        </div>
+
+        <p id="result"></p>
+      </article>
+    </section>
   `;
 
   const tokensDiv = document.getElementById("tokens") as HTMLDivElement;
@@ -112,9 +129,7 @@ export async function showSentences(level?: string): Promise<void> {
     wasChecked = true;
   };
 
-  const cleanup = () => {
-    document.removeEventListener("keydown", onKey);
-  };
+  const cleanup = () => document.removeEventListener("keydown", onKey);
 
   const doNext = () => {
     cleanup();
@@ -125,7 +140,6 @@ export async function showSentences(level?: string): Promise<void> {
     availableTokens = [...availableTokens, ...answerTokens];
     answerTokens = [];
     renderTokens();
-
     drop.classList.remove("wrong", "correct");
     resultP.textContent = "";
     lastCorrect = false;
@@ -133,82 +147,65 @@ export async function showSentences(level?: string): Promise<void> {
     resetBtn.style.display = "none";
   };
 
-  checkBtn.onclick = doCheck;
-  nextBtn.onclick = doNext;
-  resetBtn.onclick = doReset;
-
   const onKey = (e: KeyboardEvent) => {
     if (e.repeat) return;
-    if (e.key === "ArrowRight") {
-      e.preventDefault();
-      nextBtn.click();
-      return;
-    }
+    if (e.key === "ArrowRight") { e.preventDefault(); nextBtn.click(); return; }
     if (e.key === "Enter") {
       e.preventDefault();
-      if (!wasChecked) {
-        checkBtn.click();
-        return;
-      }
-      if (lastCorrect) {
-        nextBtn.click();
-      } else {
-        resetBtn.click();
-      }
+      if (!wasChecked) { checkBtn.click(); return; }
+      if (lastCorrect) nextBtn.click(); else resetBtn.click();
     }
   };
 
+  checkBtn.onclick = doCheck;
+  nextBtn.onclick = doNext;
+  resetBtn.onclick = doReset;
   document.addEventListener("keydown", onKey);
 }
 
 async function loadOneLevel(lvl: string): Promise<Sentence[]> {
   const key = lvl.toLowerCase();
+  if (sentenceCache.has(key)) return sentenceCache.get(key)!;
+  if (pendingLoads.has(key)) return pendingLoads.get(key)!;
 
-  if (sentenceCache.has(key)) {
-    return sentenceCache.get(key)!;
-  }
-  if (pendingLoads.has(key)) {
-    return pendingLoads.get(key)!;
-  }
-
-  const promise = fetch(assetUrl(`data/sentences-${key}.json`))
-    .then((res) => {
+  const p = (async () => {
+    try {
+      const res = await fetch(url(`data/sentences-${key}.json`), { cache: "no-store" });
       if (!res.ok) {
-        throw new Error(`Failed to load sentences-${key}.json`);
+        console.warn(`sentences-${key}.json not found (${res.status})`);
+        return [];
       }
-      return res.json() as Promise<Sentence[]>;
-    })
-    .then((data) => {
-      sentenceCache.set(key, data);
-      return data;
-    })
-    .finally(() => {
-      pendingLoads.delete(key);
-    });
+      const data = (await res.json()) as unknown;
+      const arr = Array.isArray(data) ? (data as Sentence[]) : [];
+      sentenceCache.set(key, arr);
+      return arr;
+    } catch (err) {
+      console.error("loadOneLevel error:", key, err);
+      return [];
+    }
+  })();
 
-  pendingLoads.set(key, promise);
-  return promise;
+  pendingLoads.set(key, p);
+  return p;
 }
 
 async function loadAllLevels(): Promise<Sentence[]> {
   const cacheKey = "all";
-  if (sentenceCache.has(cacheKey)) {
-    return sentenceCache.get(cacheKey)!;
-  }
-  if (pendingLoads.has(cacheKey)) {
-    return pendingLoads.get(cacheKey)!;
-  }
+  if (sentenceCache.has(cacheKey)) return sentenceCache.get(cacheKey)!;
+  if (pendingLoads.has(cacheKey)) return pendingLoads.get(cacheKey)!;
 
-  const promise = Promise.all(SENTENCE_LEVELS.map((lvl) => loadOneLevel(lvl))).then((parts) => {
-    const merged = parts.flat();
-    sentenceCache.set(cacheKey, merged);
-    return merged;
-  }).finally(() => {
-    pendingLoads.delete(cacheKey);
-  });
+  const p = Promise.allSettled(SENTENCE_LEVELS.map((lvl) => loadOneLevel(lvl)))
+    .then((results) =>
+      results.flatMap((r) => (r.status === "fulfilled" ? r.value : []))
+    )
+    .then((merged) => {
+      sentenceCache.set(cacheKey, merged);
+      return merged;
+    })
+    .finally(() => pendingLoads.delete(cacheKey));
 
-  pendingLoads.set(cacheKey, promise);
-  return promise;
+  pendingLoads.set(cacheKey, p);
+  return p;
 }
 
 function normalizeTokens(input: unknown): string[] {
@@ -218,20 +215,10 @@ function normalizeTokens(input: unknown): string[] {
     }
     return input.map(String);
   }
-  if (typeof input === "string") {
-    return splitToWords(input);
-  }
+  if (typeof input === "string") return splitToWords(input);
   return [];
 }
 
 function splitToWords(s: string): string[] {
-  return s
-    .replace(/,/g, " ")
-    .split(/\s+/)
-    .map((w) => w.trim())
-    .filter(Boolean);
+  return s.replace(/,/g, " ").split(/\s+/).map((w) => w.trim()).filter(Boolean);
 }
-
-
-
-

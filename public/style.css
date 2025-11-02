@@ -475,3 +475,143 @@ main#app > .home {
         width: auto;
     }
 }
+
+/* Карточка занимает почти всю ширину на мобилке */
+.sentences-screen .card,
+.card-sentence {
+    width: min(680px, 100% - 24px);
+    margin: 12px auto 24px;
+    border-radius: 16px;
+    padding: clamp(14px, 4vw, 18px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, .08);
+}
+
+/* Чуть компактнее верх */
+.sentences-screen .card h2 {
+    margin: 4px 0 6px;
+}
+
+.sentences-screen .sentence-text {
+    margin: 4px 0 10px;
+}
+
+/* Зона ответа — заметнее, с плейсхолдером когда пусто */
+.drop-zone {
+    min-height: 56px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    background: #fff;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin: 8px 0 12px;
+}
+
+.drop-zone:empty::before {
+    content: "Tap words to build the sentence";
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* Контейнер токенов — не бесконечный, скролл внутри при длинных наборах */
+.tokens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: 8px 0 12px;
+    max-height: 38vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Кнопки/чипы — удобный тап */
+.token {
+    font-size: 16px;
+    /* >=16px, чтобы iOS не зумил */
+    line-height: 1;
+    padding: 10px 14px;
+    border-radius: 9999px;
+    border: 1px solid #cbd5e1;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+    user-select: none;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform .05s ease;
+}
+
+.token:active {
+    transform: scale(.98);
+}
+
+.token:focus-visible {
+    outline: 3px solid rgba(59, 130, 246, .35);
+}
+
+/* Sticky-панель действий внизу карточки */
+.actions {
+    position: sticky;
+    bottom: calc(env(safe-area-inset-bottom, 0) + 8px);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-top: 6px;
+    background:
+        linear-gradient(#fff0, #fff 30%);
+}
+
+.actions button {
+    width: 100%;
+    height: 46px;
+    font-size: 16px;
+}
+
+/* Состояния проверки — и фон, и рамка */
+.drop-zone.correct {
+    background: #e8fbe9;
+    border-color: #86efac;
+}
+
+.drop-zone.wrong {
+    background: #ffe8e8;
+    border-color: #fca5a5;
+}
+
+/* Навбар — компактный, скроллится в одну строку */
+@media (max-width: 640px) {
+    header {
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(6px);
+        background: rgba(233, 237, 249, .85);
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 10px 12px;
+    }
+
+    header a {
+        display: inline-block;
+        padding: 8px 10px;
+        margin-right: 8px;
+    }
+
+    main#app {
+        padding: 12px;
+    }
+}
+
+/* Чуть воздушнее на планшете/десктопе */
+@media (min-width: 641px) {
+    .actions {
+        display: flex;
+        gap: 12px;
+        justify-content: flex-end;
+    }
+
+    .actions button {
+        width: auto;
+    }
+}

@@ -30,7 +30,7 @@ export async function showSentences(level) {
     <section class="sentences-screen">
       <article class="card card-sentence">
         <h2>Satz bilden</h2>
-        <p><small>Niveau: ${sent.level ?? lvl}</small></p>
+        <p><small>Niveau: ${sent.level ?? level ?? "-"}</small></p>
         ${sent.translation_en ? `<p><small><b>${sent.translation_en}</b></small></p>` : ""}
         ${sent.translation_ru ? `<p><small>${sent.translation_ru}</small></p>` : ""}
         <p class="sentence-text muted">${sent.explanation ?? ""}</p>
