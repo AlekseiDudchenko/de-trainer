@@ -14,20 +14,33 @@ export async function showGaps(): Promise<void> {
 
   async function renderGap(g: Gap) {
     app.innerHTML = `
-      <div class="card">
-        <h2>Type missing word</h2>
-        <p>${g.sentence}</p>
-        <input id="gapInput" type="text" placeholder="type the word" />
-        <button id="checkGap">Check</button>
-        <button id="nextGapBtn">Next</button>
-        <p id="gapResult"></p>
-      </div>
+      <section class="gaps-screen">
+        <article class="card card-gap">
+          <div class="card-gap__header">
+            <h2>Type missing word</h2>
+            <p class="card-gap__sentence">${g.sentence}</p>
+          </div>
+
+          <div class="card-gap__input">
+            <input id="gapInput" type="text" placeholder="Type the word" autocomplete="off" />
+          </div>
+
+          <div class="card-gap__actions">
+            <button id="checkGap" type="button">Check</button>
+            <button id="nextGapBtn" type="button">Next</button>
+          </div>
+
+          <p id="gapResult" class="gap-result"></p>
+        </article>
+      </section>
     `;
 
     const input = document.getElementById("gapInput") as HTMLInputElement;
     const checkBtn = document.getElementById("checkGap") as HTMLButtonElement;
     const nextBtn = document.getElementById("nextGapBtn") as HTMLButtonElement;
     const result = document.getElementById("gapResult") as HTMLParagraphElement;
+    result.className = "gap-result";
+    result.textContent = "";
 
     let lastCorrect = false;
 
@@ -35,11 +48,11 @@ export async function showGaps(): Promise<void> {
       const user = input.value.trim();
       if (user.toLowerCase() === g.answer.toLowerCase()) {
         result.textContent = "✅ Correct!";
-        result.className = "correct";
+        result.className = "gap-result correct";
         lastCorrect = true;
       } else {
         result.textContent = `❌ Wrong. Correct: ${g.answer}`;
-        result.className = "wrong";
+        result.className = "gap-result wrong";
         lastCorrect = false;
       }
     };
