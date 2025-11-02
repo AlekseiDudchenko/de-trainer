@@ -13,11 +13,6 @@ build/
 # TS
 *.tsbuildinfo
 
-# Our project artifacts
-public/*.js
-public/*/*.js
-public/*.js.map
-
 # Env
 .env
 .env.local
