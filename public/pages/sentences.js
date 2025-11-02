@@ -2,11 +2,11 @@ import { url } from "../config.js";
 const app = document.getElementById("app");
 const sentenceCache = new Map();
 const pendingLoads = new Map();
+// уровни, для которых потенциально есть файлы
 const SENTENCE_LEVELS = ["a1", "a2", "b1", "b2", "c1", "c2"];
 const DEFAULT_LEVEL = "all";
 export async function showSentences(level) {
     const lvl = (level ?? DEFAULT_LEVEL).toLowerCase();
-    console.log("pages/sentences.ts: showSentences called with level:", lvl);
     let sentences = [];
     try {
         sentences = lvl === "all" ? await loadAllLevels() : await loadOneLevel(lvl);
@@ -18,7 +18,8 @@ export async function showSentences(level) {
     if (!Array.isArray(sentences) || sentences.length === 0) {
         app.innerHTML = `<section class="sentences-screen">
       <article class="card card-sentence">
-        <h2>Saetze</h2><p>Keine Daten.</p>
+        <h2>Saetze</h2>
+        <p>Keine Daten.</p>
       </article>
     </section>`;
         return;
@@ -30,10 +31,10 @@ export async function showSentences(level) {
     <section class="sentences-screen">
       <article class="card card-sentence">
         <h2>Satz bilden</h2>
-        <p><small>Niveau: ${sent.level ?? level ?? "-"}</small></p>
+        <p><small>Niveau: ${sent.level ?? lvl}</small></p>
         ${sent.translation_en ? `<p><small><b>${sent.translation_en}</b></small></p>` : ""}
         ${sent.translation_ru ? `<p><small>${sent.translation_ru}</small></p>` : ""}
-        <p class="sentence-text muted">${sent.explanation ?? ""}</p>
+        ${sent.explanation ? `<p class="sentence-text muted">${sent.explanation}</p>` : ""}
 
         <div id="drop" class="drop-zone"></div>
         <div id="tokens" class="tokens"></div>
@@ -44,7 +45,7 @@ export async function showSentences(level) {
           <button id="resetSentence" type="button" style="display:none;">Zuruecksetzen</button>
         </div>
 
-        <p id="result"></p>
+        <p id="result" aria-live="polite"></p>
       </article>
     </section>
   `;
@@ -153,6 +154,7 @@ export async function showSentences(level) {
     resetBtn.onclick = doReset;
     document.addEventListener("keydown", onKey);
 }
+/* === загрузка данных ==================================================== */
 async function loadOneLevel(lvl) {
     const key = lvl.toLowerCase();
     if (sentenceCache.has(key))
@@ -195,6 +197,7 @@ async function loadAllLevels() {
     pendingLoads.set(cacheKey, p);
     return p;
 }
+/* === утилиты ============================================================ */
 function normalizeTokens(input) {
     if (Array.isArray(input)) {
         if (input.length === 1 && typeof input[0] === "string") {
@@ -207,5 +210,9 @@ function normalizeTokens(input) {
     return [];
 }
 function splitToWords(s) {
-    return s.replace(/,/g, " ").split(/\s+/).map((w) => w.trim()).filter(Boolean);
+    return s
+        .replace(/,/g, " ")
+        .split(/\s+/)
+        .map((w) => w.trim())
+        .filter(Boolean);
 }
