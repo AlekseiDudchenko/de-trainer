@@ -305,7 +305,7 @@ main#app > .home {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 420px) {
     body {
         background: #f2f4fd;
     }
@@ -323,23 +323,25 @@ main#app > .home {
         padding: 0;
     }
 
-    .card {
-        padding: 20px;
-        border-radius: 18px;
-    }
-
     .gaps-screen {
         border-radius: 0;
-        padding: 16px;
+        padding: 16px 16px;
         box-shadow: none;
+        margin: 0;
         background: linear-gradient(160deg, #f3f5ff 0%, #ffffff 100%);
     }
 
-    .card-gap {
+    .card {
+        padding: 20px;
         border-radius: 18px;
-        padding: 24px;
+        max-width: 100%;
+        margin: 0 0;
+    }
+
+    .card-gap {
         box-shadow: none;
         min-height: auto;
+      
     }
 
     .card-gap__sentence {
