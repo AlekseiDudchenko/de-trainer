@@ -12,6 +12,7 @@ export type Word = {
 export type Sentence = {
   id: string;
   target: string;
+  alternatives?: string[];
   tokens: string[];
   type: "drag";
   explanation?: string;

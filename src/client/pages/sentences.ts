@@ -112,7 +112,7 @@ export async function showSentences(level?: string): Promise<void> {
   const doCheck = () => {
     const userStr = answerTokens.join(" ").trim();
 
-    const norm = (s) => s.trim().replace(/[.?!]\s*$/, "");
+    const norm = (s: string) => s.trim().replace(/[.?!]\s*$/, "");
 
     const correctStrings = [
       sent.target,
