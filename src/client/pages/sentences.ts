@@ -46,10 +46,10 @@ export async function showSentences(level?: string): Promise<void> {
         <div id="drop" class="drop-zone"></div>
         <div id="tokens" class="tokens"></div>
 
-        <div class="actions">
-          <button id="checkSentence" type="button">Pruefen</button>
-          <button id="nextSentence" type="button">Weiter</button>
-          <button id="resetSentence" type="button" style="display:none;">Zuruecksetzen</button>
+        <div class="sentence-actions">
+          <button id="checkSentence" type="button">Check</button>
+          <button id="nextSentence" type="button">Next</button>
+          <button id="resetSentence" type="button" style="display:none;">Reset</button>
         </div>
 
         ${sent.explanation ? `<p class="sentence-text muted">${sent.explanation}</p>` : ""}

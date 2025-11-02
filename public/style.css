@@ -1,4 +1,4 @@
-﻿html,
+html,
 body {
     height: 100%;
 }
@@ -178,7 +178,8 @@ main#app > .home {
     gap: 12px;
 }
 
-.card-gap__actions {
+.card-gap__actions,
+.sentence-actions {
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -193,19 +194,12 @@ main#app > .home {
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-#gapInput:focus {
-    outline: none;
-    border-color: rgba(99, 102, 241, 0.6);
-    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.25);
-}
-
-#checkGap,
-#nextGapBtn {
+.card-gap__actions button,
+.sentence-actions button {
     width: 100%;
     box-sizing: border-box;
     font-size: 1.25rem;
     padding: 16px 18px;
-    margin-top: 0;
     border-radius: 14px;
     font-weight: 700;
     letter-spacing: 0.02em;
@@ -214,18 +208,34 @@ main#app > .home {
     transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-#checkGap {
+#gapInput:focus {
+    outline: none;
+    border-color: rgba(99, 102, 241, 0.6);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.25);
+}
+
+#checkGap,
+#checkSentence {
     background: linear-gradient(135deg, #0f172a 0%, #1f2937 100%);
     color: #ffffff;
 }
 
-#nextGapBtn {
+#nextGapBtn,
+#nextSentence {
     background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
     color: #ffffff;
 }
 
+#resetSentence {
+    background: linear-gradient(135deg, #e2e8f0 0%, #cbd5f5 100%);
+    color: #1f2937;
+}
+
 #checkGap:hover,
-#nextGapBtn:hover {
+#nextGapBtn:hover,
+#checkSentence:hover,
+#nextSentence:hover,
+#resetSentence:hover {
     transform: translateY(-2px);
     box-shadow: 0 16px 32px rgba(15, 23, 42, 0.15);
 }
@@ -345,7 +355,7 @@ main#app > .home {
 
 /* ==== Sentences (mobile-first) ========================================== */
 
-/* Обёртка страницы предложений — используй .sentences-screen (или .sentence-screen) */
+/*      .sentences-screen ( .sentence-screen) */
 .sentences-screen .card,
 .sentence-screen .card,
 .card-sentence {
@@ -358,7 +368,7 @@ main#app > .home {
     box-shadow: 0 1px 3px rgba(0, 0, 0, .06);
 }
 
-/* Текст предложения */
+/*   */
 .sentences-screen .sentence-text,
 .sentence-screen .sentence-text {
     font-size: clamp(1rem, 2.5vw + 0.6rem, 1.25rem);
@@ -366,7 +376,7 @@ main#app > .home {
     margin: 6px 0 12px;
 }
 
-/* Зона, куда пользователь собирает ответ */
+/* ,     */
 .sentences-screen .drop-zone,
 .sentence-screen .drop-zone {
     min-height: 56px;
@@ -381,7 +391,7 @@ main#app > .home {
     margin-bottom: 14px;
 }
 
-/* Список токенов для выбора */
+/*     */
 .sentences-screen .tokens,
 .sentence-screen .tokens {
     display: flex;
@@ -391,11 +401,11 @@ main#app > .home {
     margin: 10px 0 14px;
 }
 
-/* Отдельный токен */
+/*   */
 .sentences-screen .token,
 .sentence-screen .token {
     font-size: 16px;
-    /* >=16px, чтобы iOS не зумил */
+    /* >=16px,  iOS   */
     line-height: 1;
     padding: 10px 14px;
     border-radius: 9999px;
@@ -413,26 +423,10 @@ main#app > .home {
     transform: scale(.98);
 }
 
-/* Кнопки действия */
-.sentences-screen .actions,
-.sentence-screen .actions {
-    position: sticky;
-    bottom: calc(env(safe-area-inset-bottom, 0) + 8px);
-    background: transparent;
-    padding-top: 8px;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-}
+/*   */
 
-.sentences-screen .actions button,
-.sentence-screen .actions button {
-    width: 100%;
-    height: 44px;
-    font-size: 16px;
-}
 
-/* Хедер — чтобы влезал и не ломал макет */
+/*         */
 @media (max-width: 640px) {
     header {
         position: sticky;
@@ -454,23 +448,9 @@ main#app > .home {
     }
 }
 
-/* Десктопные мелкие улучшения */
-@media (min-width: 641px) {
+/*    */
 
-    .sentences-screen .actions,
-    .sentence-screen .actions {
-        display: flex;
-        gap: 12px;
-        justify-content: flex-end;
-    }
-
-    .sentences-screen .actions button,
-    .sentence-screen .actions button {
-        width: auto;
-    }
-}
-
-/* Карточка занимает почти всю ширину на мобилке */
+/*        */
 .sentences-screen .card,
 .card-sentence {
     width: min(680px, 100% - 24px);
@@ -480,7 +460,7 @@ main#app > .home {
     box-shadow: 0 8px 18px rgba(15, 23, 42, .08);
 }
 
-/* Чуть компактнее верх */
+/*    */
 .sentences-screen .card h2 {
     margin: 4px 0 6px;
 }
@@ -489,7 +469,7 @@ main#app > .home {
     margin: 4px 0 10px;
 }
 
-/* Зона ответа — заметнее, с плейсхолдером когда пусто */
+/*    ,     */
 .drop-zone {
     min-height: 56px;
     border: 2px dashed #cbd5e1;
@@ -509,7 +489,7 @@ main#app > .home {
     font-size: 14px;
 }
 
-/* Контейнер токенов — не бесконечный, скролл внутри при длинных наборах */
+/*     ,      */
 .tokens {
     display: flex;
     flex-wrap: wrap;
@@ -521,10 +501,10 @@ main#app > .home {
     -webkit-overflow-scrolling: touch;
 }
 
-/* Кнопки/чипы — удобный тап */
+/* /    */
 .token {
     font-size: 16px;
-    /* >=16px, чтобы iOS не зумил */
+    /* >=16px,  iOS   */
     line-height: 1;
     padding: 10px 14px;
     border-radius: 9999px;
@@ -545,25 +525,8 @@ main#app > .home {
     outline: 3px solid rgba(59, 130, 246, .35);
 }
 
-/* Sticky-панель действий внизу карточки */
-.actions {
-    position: sticky;
-    bottom: calc(env(safe-area-inset-bottom, 0) + 8px);
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding-top: 6px;
-    background:
-        linear-gradient(#fff0, #fff 30%);
-}
-
-.actions button {
-    width: 100%;
-    height: 46px;
-    font-size: 16px;
-}
-
-/* Состояния проверки — и фон, и рамка */
+/* Sticky-    */
+/*     ,   */
 .drop-zone.correct {
     background: #e8fbe9;
     border-color: #86efac;
@@ -574,7 +537,7 @@ main#app > .home {
     border-color: #fca5a5;
 }
 
-/* Навбар — компактный, скроллится в одну строку */
+/*   ,     */
 @media (max-width: 640px) {
     header {
         position: sticky;
@@ -597,15 +560,4 @@ main#app > .home {
     }
 }
 
-/* Чуть воздушнее на планшете/десктопе */
-@media (min-width: 641px) {
-    .actions {
-        display: flex;
-        gap: 12px;
-        justify-content: flex-end;
-    }
-
-    .actions button {
-        width: auto;
-    }
-}
+/*    / */
