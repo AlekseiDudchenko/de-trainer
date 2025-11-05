@@ -71,40 +71,41 @@ export async function showSentences(level?: string): Promise<void> {
 
   let doCheck: () => void;
 
+  function moveToken(token: string, from: string[], to: string[], fromDiv: HTMLDivElement, toDiv: HTMLDivElement) {
+    const idx = from.indexOf(token);
+    if (idx >= 0) {
+      from.splice(idx, 1);
+      to.push(token);
+
+      // Move the token element in the DOM
+      const tokenElem = Array.from(fromDiv.children).find((el) => el.textContent === token);
+      if (tokenElem) {
+        toDiv.appendChild(tokenElem);
+      }
+    }
+  }
+
   const renderTokens = () => {
     if (!tokensDiv || !drop) return;
 
-    tokensDiv.innerHTML = "";
-    availableTokens.forEach((t) => {
-      const span = document.createElement("span");
-      span.textContent = t;
-      span.className = "token";
-      span.onclick = () => {
-        const idx = availableTokens.indexOf(t);
-        if (idx >= 0) {
-          availableTokens.splice(idx, 1);
-          answerTokens.push(t);
-          renderTokens();
-        }
-      };
-      tokensDiv.appendChild(span);
-    });
+    // Initial render only if empty
+    if (tokensDiv.children.length === 0 && drop.children.length === 0) {
+      availableTokens.forEach((t) => {
+        const span = document.createElement("span");
+        span.textContent = t;
+        span.className = "token";
+        span.onclick = () => moveToken(t, availableTokens, answerTokens, tokensDiv, drop);
+        tokensDiv.appendChild(span);
+      });
 
-    drop.innerHTML = "";
-    answerTokens.forEach((t) => {
-      const span = document.createElement("span");
-      span.textContent = t;
-      span.className = "token";
-      span.onclick = () => {
-        const idx = answerTokens.indexOf(t);
-        if (idx >= 0) {
-          answerTokens.splice(idx, 1);
-          availableTokens.push(t);
-          renderTokens();
-        }
-      };
-      drop.appendChild(span);
-    });
+      answerTokens.forEach((t) => {
+        const span = document.createElement("span");
+        span.textContent = t;
+        span.className = "token";
+        span.onclick = () => moveToken(t, answerTokens, availableTokens, drop, tokensDiv);
+        drop.appendChild(span);
+      });
+    }
 
     if (availableTokens.length === 0 && !wasChecked) {
       doCheck();
