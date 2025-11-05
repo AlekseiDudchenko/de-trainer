@@ -514,12 +514,12 @@
   },
   {
     "id": "s_b1_52",
-    "target": "Da es gestern sehr spät geworden ist, bin ich heute noch müde.",
-    "tokens": ["Da", "es", "gestern", "sehr", "spät", "geworden", "ist,", "bin", "ich", "heute", "noch", "müde"],
+    "target": "Sobald die Kinder Ferien haben, fahren wir zu meinen Eltern.",
+    "tokens": ["Sobald", "die", "Kinder", "Ferien", "haben,", "fahren", "wir", "zu", "meinen", "Eltern"],
     "type": "drag",
-    "explanation": "B1: cause in the past → present state.",
-    "translation_en": "Since it got very late yesterday, I am still tired today.",
-    "translation_ru": "Поскольку вчера стало очень поздно, я все еще устал сегодня.",
+    "explanation": "B1: family planning with 'sobald'.",
+    "translation_en": "As soon as the children have holidays, we will go to my parents.",
+    "translation_ru": "Как только у детей будут каникулы, мы поедем к моим родителям.",
     "level": "B1"
   },
   {
@@ -1011,17 +1011,5 @@
     "translation_en": "Although he is very talented, he keeps practising every day.",
     "translation_ru": "Хотя он очень талантлив, он продолжает практиковаться каждый день.",
     "level": "B1"
-  },
-  {
-    "id": "s_b1_102",
-    "target": "Sobald die Kinder Ferien haben, fahren wir zu meinen Eltern.",
-    "tokens": ["Sobald", "die", "Kinder", "Ferien", "haben,", "fahren", "wir", "zu", "meinen", "Eltern"],
-    "type": "drag",
-    "explanation": "B1: family planning with 'sobald'.",
-    "translation_en": "As soon as the children have holidays, we will go to my parents.",
-    "translation_ru": "Как только у детей будут каникулы, мы поедем к моим родителям.",
-    "level": "B1"
   }
 ]
-
-
