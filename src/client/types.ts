@@ -19,6 +19,7 @@ export type Sentence = {
   translation_en?: string;
   translation_ru?: string;
   level?: string;
+  tags?: string[];
 };
 
 export type Gap = {

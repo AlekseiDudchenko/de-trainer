@@ -4,6 +4,7 @@
   "scripts": {
     "build": "tsc --project tsconfig.client.json",
     "watch": "tsc --project tsconfig.client.json --watch",
+    "start": "node dev-server.mjs",
     "serve": "npx serve public"
   },
   "devDependencies": {

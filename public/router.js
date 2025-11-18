@@ -25,8 +25,10 @@ export function navigate(to) {
 export function handleRoute() {
     const p = currentPath();
     console.log("router.ts: handleRoute for path:", p);
+    // Home
     if (p === "/" || p === "/home")
         return showHome();
+    // Wörter
     if (p === "/words")
         return showWords();
     const mWords = matchPath(p, /^\/words\/([a-z0-9]+)$/i);
@@ -35,19 +37,40 @@ export function handleRoute() {
         console.warn(`Words for level ${level} not yet implemented; showing default list.`);
         return showWords();
     }
+    // ===== Sätze =====
+    // /sentences -> all levels, no tag
     if (p === "/sentences")
         return showSentences("all");
-    const mSent = matchPath(p, /^\/sentences\/([a-z0-9]+)$/i);
-    if (mSent && !mSent[1]) {
-        return showSentences("all");
+    // /sentences/tag/konjunktiv_ii_perfekt -> all levels, given tag
+    const mSentTagOnly = matchPath(p, /^\/sentences\/tag\/([a-z0-9_]+)$/i);
+    if (mSentTagOnly) {
+        const tag = mSentTagOnly[1].toLowerCase();
+        return showSentences("all", tag);
     }
-    const raw = mSent?.[1]?.toUpperCase();
-    if (raw && SENTENCE_LEVELS.includes(raw)) {
-        return showSentences(raw);
+    // /sentences/b1/tag/konjunktiv_ii_perfekt -> level + tag
+    const mSentLevelTag = matchPath(p, /^\/sentences\/([a-z0-9]+)\/tag\/([a-z0-9_]+)$/i);
+    if (mSentLevelTag) {
+        const levelRaw = mSentLevelTag[1].toUpperCase();
+        const tag = mSentLevelTag[2].toLowerCase();
+        if (SENTENCE_LEVELS.includes(levelRaw)) {
+            return showSentences(levelRaw, tag);
+        }
+        else {
+            return showTodo(`Saetze - Niveau ${levelRaw} mit Tag ${tag} (nicht unterstuetzt)`);
+        }
     }
-    else if (raw) {
-        return showTodo(`Saetze - Niveau ${raw} (nicht unterstuetzt)`);
+    // /sentences/b1
+    const mSentLevel = matchPath(p, /^\/sentences\/([a-z0-9]+)$/i);
+    if (mSentLevel) {
+        const levelRaw = mSentLevel[1].toUpperCase();
+        if (SENTENCE_LEVELS.includes(levelRaw)) {
+            return showSentences(levelRaw);
+        }
+        else {
+            return showTodo(`Saetze - Niveau ${levelRaw} (nicht unterstuetzt)`);
+        }
     }
+    // ===== Grammatik =====
     if (p === "/grammar/b1/relativpronomen-gap")
         return showGaps();
     if (p === "/grammar/artikel")
@@ -55,5 +78,6 @@ export function handleRoute() {
     const mGram = matchPath(p, /^\/grammar-(.+)$/i);
     if (mGram)
         return showTodo(`Grammatik - ${mGram[1]} (bald verfuegbar)`);
+    // 404
     return showTodo("Seite nicht gefunden");
 }

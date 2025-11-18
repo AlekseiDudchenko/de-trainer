@@ -2,10 +2,23 @@ import { url } from "../config.js";
 const app = document.getElementById("app");
 const sentenceCache = new Map();
 const pendingLoads = new Map();
-// уровни, для которых потенциально есть файлы
+// levels available for sentences
 const SENTENCE_LEVELS = ["a1", "a2", "b1", "b2", "c1", "c2"];
 const DEFAULT_LEVEL = "all";
-export async function showSentences(level) {
+export async function getTagsForLevel(level) {
+    const lvl = level.toLowerCase();
+    const sentences = lvl === "all" ? await loadAllLevels() : await loadOneLevel(lvl);
+    const set = new Set();
+    for (const s of sentences) {
+        if (!Array.isArray(s.tags))
+            continue;
+        for (const t of s.tags) {
+            set.add(t);
+        }
+    }
+    return Array.from(set);
+}
+export async function showSentences(level, tag) {
     const lvl = (level ?? DEFAULT_LEVEL).toLowerCase();
     let sentences = [];
     try {
@@ -15,11 +28,16 @@ export async function showSentences(level) {
         console.error("load sentences failed:", e);
         sentences = [];
     }
+    if (tag) {
+        const tagLower = tag.toLowerCase();
+        sentences = sentences.filter((s) => Array.isArray(s.tags) && s.tags.some((t) => t.toLowerCase() === tagLower));
+    }
     if (!Array.isArray(sentences) || sentences.length === 0) {
+        const tagPart = tag ? ` (Tag: ${formatTagLabel(tag)})` : "";
         app.innerHTML = `<section class="sentences-screen">
       <article class="card card-sentence">
         <h2>Sätze</h2>
-        <p>Keine Daten.</p>
+        <p>Keine Daten${tagPart}.</p>
       </article>
     </section>`;
         return;
@@ -27,11 +45,12 @@ export async function showSentences(level) {
     const sent = sentences[Math.floor(Math.random() * sentences.length)];
     const rawTokens = normalizeTokens(sent.tokens);
     const shuffled = [...rawTokens].sort(() => Math.random() - 0.5);
+    const tagInfo = tag ? `, Thema: ${formatTagLabel(tag)}` : "";
     app.innerHTML = `
     <section class="sentences-screen">
       <article class="card card-sentence">
         <h2>Satz bilden</h2>
-        <p><small>Niveau: ${sent.level ?? lvl}</small></p>
+        <p><small>Niveau: ${sent.level ?? lvl}${tagInfo}</small></p>
         ${sent.translation_en ? `<p><small><b>${sent.translation_en}</b></small></p>` : ""}
         ${sent.translation_ru ? `<p><small>${sent.translation_ru}</small></p>` : ""}
 
@@ -58,39 +77,36 @@ export async function showSentences(level) {
     let availableTokens = [...shuffled];
     let answerTokens = [];
     let doCheck;
+    function moveToken(token, from, to, fromDiv, toDiv) {
+        const idx = from.indexOf(token);
+        if (idx >= 0) {
+            from.splice(idx, 1);
+            to.push(token);
+            const tokenElem = Array.from(fromDiv.children).find((el) => el.textContent === token);
+            if (tokenElem) {
+                toDiv.appendChild(tokenElem);
+            }
+        }
+    }
     const renderTokens = () => {
         if (!tokensDiv || !drop)
             return;
-        tokensDiv.innerHTML = "";
-        availableTokens.forEach((t) => {
-            const span = document.createElement("span");
-            span.textContent = t;
-            span.className = "token";
-            span.onclick = () => {
-                const idx = availableTokens.indexOf(t);
-                if (idx >= 0) {
-                    availableTokens.splice(idx, 1);
-                    answerTokens.push(t);
-                    renderTokens();
-                }
-            };
-            tokensDiv.appendChild(span);
-        });
-        drop.innerHTML = "";
-        answerTokens.forEach((t) => {
-            const span = document.createElement("span");
-            span.textContent = t;
-            span.className = "token";
-            span.onclick = () => {
-                const idx = answerTokens.indexOf(t);
-                if (idx >= 0) {
-                    answerTokens.splice(idx, 1);
-                    availableTokens.push(t);
-                    renderTokens();
-                }
-            };
-            drop.appendChild(span);
-        });
+        if (tokensDiv.children.length === 0 && drop.children.length === 0) {
+            availableTokens.forEach((t) => {
+                const span = document.createElement("span");
+                span.textContent = t;
+                span.className = "token";
+                span.onclick = () => moveToken(t, availableTokens, answerTokens, tokensDiv, drop);
+                tokensDiv.appendChild(span);
+            });
+            answerTokens.forEach((t) => {
+                const span = document.createElement("span");
+                span.textContent = t;
+                span.className = "token";
+                span.onclick = () => moveToken(t, answerTokens, availableTokens, drop, tokensDiv);
+                drop.appendChild(span);
+            });
+        }
         if (availableTokens.length === 0 && !wasChecked) {
             doCheck();
         }
@@ -98,10 +114,7 @@ export async function showSentences(level) {
     doCheck = () => {
         const userStr = answerTokens.join(" ").trim();
         const norm = (s) => s.trim().replace(/[.?!]\s*$/, "");
-        const correctStrings = [
-            sent.target,
-            ...(sent.alternatives ?? [])
-        ].map(norm);
+        const correctStrings = [sent.target, ...(sent.alternatives ?? [])].map(norm);
         if (correctStrings.includes(norm(userStr))) {
             resultP.textContent = "Richtig!";
             drop.classList.remove("wrong");
@@ -118,24 +131,9 @@ export async function showSentences(level) {
         }
         wasChecked = true;
     };
-    renderTokens();
     let lastCorrect = false;
     let wasChecked = false;
-    const cleanup = () => document.removeEventListener("keydown", onKey);
-    const doNext = () => {
-        cleanup();
-        showSentences(level);
-    };
-    const doReset = () => {
-        availableTokens = [...availableTokens, ...answerTokens];
-        answerTokens = [];
-        renderTokens();
-        drop.classList.remove("wrong", "correct");
-        resultP.textContent = "";
-        lastCorrect = false;
-        wasChecked = false;
-        resetBtn.style.display = "none";
-    };
+    renderTokens();
     const onKey = (e) => {
         if (e.repeat)
             return;
@@ -155,6 +153,23 @@ export async function showSentences(level) {
             else
                 resetBtn.click();
         }
+    };
+    const cleanup = () => {
+        document.removeEventListener("keydown", onKey);
+    };
+    const doNext = () => {
+        cleanup();
+        void showSentences(level, tag);
+    };
+    const doReset = () => {
+        availableTokens = [...availableTokens, ...answerTokens];
+        answerTokens = [];
+        renderTokens();
+        drop.classList.remove("wrong", "correct");
+        resultP.textContent = "";
+        lastCorrect = false;
+        wasChecked = false;
+        resetBtn.style.display = "none";
     };
     checkBtn.onclick = doCheck;
     nextBtn.onclick = doNext;
@@ -222,4 +237,15 @@ function splitToWords(s) {
         .split(/\s+/)
         .map((w) => w.trim())
         .filter(Boolean);
+}
+function formatTagLabel(tag) {
+    return tag
+        .split("_")
+        .map((part) => {
+        const lower = part.toLowerCase();
+        if (lower === "ii")
+            return "II";
+        return part.charAt(0).toUpperCase() + part.slice(1);
+    })
+        .join(" ");
 }
