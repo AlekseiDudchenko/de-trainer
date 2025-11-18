@@ -60,40 +60,44 @@ export function showHome() {
 
         <!-- B1 -->
         <section class="level">
-          <details>
-            <summary class="level-summary">
-              <span class="level-badge">B1</span>
-              <span class="level-title">Selbstständige Sprachverwendung</span>
-              <span class="level-hint">Komplexere Sätze & Grammatik</span>
-            </summary>
-            <div class="level-cards">
-              <a class="card-link" href="words/b1">
-                <div class="card small muted">
-                  <h3>B1 Wortschatz</h3>
-                  <p>Bald verfügbar.</p>
-                </div>
-              </a>
-              <a class="card-link" href="sentences/b1">
-                <div class="card small">
-                  <h3>B1 Sätze bauen</h3>
-                  <p>Nebensätze mit obwohl, damit, usw.</p>
-                </div>
-              </a>
-              <a class="card-link" href="grammar/b1/relativpronomen-gap">
-                <div class="card small">
-                  <h3>Artikel im Relativsatz</h3>
-                  <p>Lücke mit der/die/das/den ... füllen</p>
-                </div>
-              </a>
-              <a class="card-link" href="grammar/artikel">
-                <div class="card small">
-                  <h3>Artikel einsetzen</h3>
-                  <p>der / die / das auswählen</p>
-                </div>
-              </a>
-            </div>
-          </details>
-        </section>
+  <details id="level-b1">
+    <summary class="level-summary">
+      <span class="level-badge">B1</span>
+      <span class="level-title">Selbstständige Sprachverwendung</span>
+      <span class="level-hint">Komplexere Sätze & Grammatik</span>
+    </summary>
+    <div class="level-cards" id="b1-cards">
+      <!-- фиксированные карточки -->
+      <a class="card-link" href="words/b1">
+        <div class="card small muted">
+          <h3>B1 Wortschatz</h3>
+          <p>Bald verfügbar.</p>
+        </div>
+      </a>
+      <a class="card-link" href="sentences/b1">
+        <div class="card small">
+          <h3>B1 Sätze bauen</h3>
+          <p>Nebensätze mit obwohl, damit, usw.</p>
+        </div>
+      </a>
+      <a class="card-link" href="grammar/b1/relativpronomen-gap">
+        <div class="card small">
+          <h3>Artikel im Relativsatz</h3>
+          <p>Lücke mit der/die/das/den ... füllen</p>
+        </div>
+      </a>
+      <a class="card-link" href="grammar/artikel">
+        <div class="card small">
+          <h3>Artikel einsetzen</h3>
+          <p>der / die / das auswählen</p>
+        </div>
+      </a>
+      <!-- сюда мы динамически ДОБАВИМ ещё карточки по тегам -->
+    </div>
+  </details>
+</section>
+
+ 
 
         <!-- B2 -->
         <section class="level">

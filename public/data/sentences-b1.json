@@ -1,8 +1,21 @@
 [
-   {
+  {
     "id": "s_b1_1",
     "target": "Obwohl das Projekt komplizierter war als gedacht, konnten wir es rechtzeitig abschließen.",
-    "tokens": ["Obwohl", "das", "Projekt", "komplizierter", "war", "als", "gedacht,", "konnten", "wir", "es", "rechtzeitig", "abschließen"],
+    "tokens": [
+      "Obwohl",
+      "das",
+      "Projekt",
+      "komplizierter",
+      "war",
+      "als",
+      "gedacht,",
+      "konnten",
+      "wir",
+      "es",
+      "rechtzeitig",
+      "abschließen"
+    ],
     "type": "drag",
     "explanation": "B1: concessive clause + Vergleich ('als gedacht') + Präteritum/Modal in main clause.",
     "translation_en": "Although the project was more complicated than expected, we were able to finish it on time.",
@@ -12,7 +25,20 @@
   {
     "id": "s_b1_2",
     "target": "Seitdem ich in diesem Unternehmen arbeite, habe ich viel über Teamarbeit gelernt.",
-    "tokens": ["Seitdem", "ich", "in", "diesem", "Unternehmen", "arbeite,", "habe", "ich", "viel", "über", "Teamarbeit", "gelernt"],
+    "tokens": [
+      "Seitdem",
+      "ich",
+      "in",
+      "diesem",
+      "Unternehmen",
+      "arbeite,",
+      "habe",
+      "ich",
+      "viel",
+      "über",
+      "Teamarbeit",
+      "gelernt"
+    ],
     "type": "drag",
     "explanation": "B1: temporal 'seitdem' + Perfekt in main clause + Präpositionalobjekt.",
     "translation_en": "Since I have been working in this company, I have learned a lot about teamwork.",
@@ -22,7 +48,19 @@
   {
     "id": "s_b1_3",
     "target": "Da ich gestern Überstunden machen musste, habe ich das Training verpasst.",
-    "tokens": ["Da", "ich", "gestern", "Überstunden", "machen", "musste,", "habe", "ich", "das", "Training", "verpasst"],
+    "tokens": [
+      "Da",
+      "ich",
+      "gestern",
+      "Überstunden",
+      "machen",
+      "musste,",
+      "habe",
+      "ich",
+      "das",
+      "Training",
+      "verpasst"
+    ],
     "type": "drag",
     "explanation": "B1: causal 'da' + modal in subclause, Perfekt in main clause.",
     "translation_en": "Since I had to work overtime yesterday, I missed the training.",
@@ -32,7 +70,22 @@
   {
     "id": "s_b1_4",
     "target": "Wenn du mir die Unterlagen rechtzeitig schickst, kann ich den Bericht heute noch schreiben.",
-    "tokens": ["Wenn", "du", "mir", "die", "Unterlagen", "rechtzeitig", "schickst,", "kann", "ich", "den", "Bericht", "heute", "noch", "schreiben"],
+    "tokens": [
+      "Wenn",
+      "du",
+      "mir",
+      "die",
+      "Unterlagen",
+      "rechtzeitig",
+      "schickst,",
+      "kann",
+      "ich",
+      "den",
+      "Bericht",
+      "heute",
+      "noch",
+      "schreiben"
+    ],
     "type": "drag",
     "explanation": "B1: conditional with time adverbials and modal.",
     "translation_en": "If you send me the documents on time, I can still write the report today.",
@@ -42,7 +95,21 @@
   {
     "id": "s_b1_5",
     "target": "Obwohl er noch nicht so lange Deutsch lernt, spricht er schon ziemlich flüssig.",
-    "tokens": ["Obwohl", "er", "noch", "nicht", "so", "lange", "Deutsch", "lernt,", "spricht", "er", "schon", "ziemlich", "flüssig"],
+    "tokens": [
+      "Obwohl",
+      "er",
+      "noch",
+      "nicht",
+      "so",
+      "lange",
+      "Deutsch",
+      "lernt,",
+      "spricht",
+      "er",
+      "schon",
+      "ziemlich",
+      "flüssig"
+    ],
     "type": "drag",
     "explanation": "B1: contrast between learning time and level.",
     "translation_en": "Although he hasn’t been learning German for long, he already speaks quite fluently.",
@@ -52,7 +119,20 @@
   {
     "id": "s_b1_6",
     "target": "Seitdem wir umgezogen sind, haben wir viel mehr Platz für die Kinder.",
-    "tokens": ["Seitdem", "wir", "umgezogen", "sind,", "haben", "wir", "viel", "mehr", "Platz", "für", "die", "Kinder"],
+    "tokens": [
+      "Seitdem",
+      "wir",
+      "umgezogen",
+      "sind,",
+      "haben",
+      "wir",
+      "viel",
+      "mehr",
+      "Platz",
+      "für",
+      "die",
+      "Kinder"
+    ],
     "type": "drag",
     "explanation": "B1: 'seitdem' + Perfekt in subclause.",
     "translation_en": "Since we moved, we have had much more space for the kids.",
@@ -62,7 +142,16 @@
   {
     "id": "s_b1_7",
     "target": "Damit wir pünktlich ankommen, sollten wir früher losfahren.",
-    "tokens": ["Damit", "wir", "pünktlich", "ankommen,", "sollten", "wir", "früher", "losfahren"],
+    "tokens": [
+      "Damit",
+      "wir",
+      "pünktlich",
+      "ankommen,",
+      "sollten",
+      "wir",
+      "früher",
+      "losfahren"
+    ],
     "type": "drag",
     "explanation": "B1: purpose with 'damit' + modal 'sollten'.",
     "translation_en": "So that we arrive on time, we should leave earlier.",
@@ -72,7 +161,20 @@
   {
     "id": "s_b1_8",
     "target": "Obwohl die Wohnung sehr klein ist, gefällt sie mir wegen der Lage.",
-    "tokens": ["Obwohl", "die", "Wohnung", "sehr", "klein", "ist,", "gefällt", "sie", "mir", "wegen", "der", "Lage"],
+    "tokens": [
+      "Obwohl",
+      "die",
+      "Wohnung",
+      "sehr",
+      "klein",
+      "ist,",
+      "gefällt",
+      "sie",
+      "mir",
+      "wegen",
+      "der",
+      "Lage"
+    ],
     "type": "drag",
     "explanation": "B1: 'obwohl' + reason with 'wegen'.",
     "translation_en": "Although the flat is very small, I like it because of the location.",
@@ -82,7 +184,17 @@
   {
     "id": "s_b1_9",
     "target": "Wenn der Kurs ausfällt, bekommen alle Teilnehmer eine E-Mail.",
-    "tokens": ["Wenn", "der", "Kurs", "ausfällt,", "bekommen", "alle", "Teilnehmer", "eine", "E-Mail"],
+    "tokens": [
+      "Wenn",
+      "der",
+      "Kurs",
+      "ausfällt,",
+      "bekommen",
+      "alle",
+      "Teilnehmer",
+      "eine",
+      "E-Mail"
+    ],
     "type": "drag",
     "explanation": "B1: condition + passive-like info flow.",
     "translation_en": "If the course is cancelled, all participants will receive an email.",
@@ -92,7 +204,20 @@
   {
     "id": "s_b1_10",
     "target": "Da das Wetter morgen schlecht werden soll, nehmen wir lieber den Zug.",
-    "tokens": ["Da", "das", "Wetter", "morgen", "schlecht", "werden", "soll,", "nehmen", "wir", "lieber", "den", "Zug"],
+    "tokens": [
+      "Da",
+      "das",
+      "Wetter",
+      "morgen",
+      "schlecht",
+      "werden",
+      "soll,",
+      "nehmen",
+      "wir",
+      "lieber",
+      "den",
+      "Zug"
+    ],
     "type": "drag",
     "explanation": "B1: 'da' + Futurabsicht with 'sollen'.",
     "translation_en": "Since the weather is supposed to be bad tomorrow, we will rather take the train.",
@@ -102,7 +227,19 @@
   {
     "id": "s_b1_11",
     "target": "Weil ich meinen Pass verloren habe, musste ich einen neuen beantragen.",
-    "tokens": ["Weil", "ich", "meinen", "Pass", "verloren", "habe,", "musste", "ich", "einen", "neuen", "beantragen"],
+    "tokens": [
+      "Weil",
+      "ich",
+      "meinen",
+      "Pass",
+      "verloren",
+      "habe,",
+      "musste",
+      "ich",
+      "einen",
+      "neuen",
+      "beantragen"
+    ],
     "type": "drag",
     "explanation": "B1: 'weil' + Perfekt, main clause in Präteritum with modal.",
     "translation_en": "Because I lost my passport, I had to apply for a new one.",
@@ -112,7 +249,18 @@
   {
     "id": "s_b1_12",
     "target": "Sobald ich die Bestätigung bekomme, schicke ich sie dir weiter.",
-    "tokens": ["Sobald", "ich", "die", "Bestätigung", "bekomme,", "schicke", "ich", "sie", "dir", "weiter"],
+    "tokens": [
+      "Sobald",
+      "ich",
+      "die",
+      "Bestätigung",
+      "bekomme,",
+      "schicke",
+      "ich",
+      "sie",
+      "dir",
+      "weiter"
+    ],
     "type": "drag",
     "explanation": "B1: temporal 'sobald' for near future.",
     "translation_en": "As soon as I get the confirmation, I will forward it to you.",
@@ -122,7 +270,16 @@
   {
     "id": "s_b1_13",
     "target": "Bevor wir anfangen, sollten wir die Aufgaben verteilen.",
-    "tokens": ["Bevor", "wir", "anfangen,", "sollten", "wir", "die", "Aufgaben", "verteilen"],
+    "tokens": [
+      "Bevor",
+      "wir",
+      "anfangen,",
+      "sollten",
+      "wir",
+      "die",
+      "Aufgaben",
+      "verteilen"
+    ],
     "type": "drag",
     "explanation": "B1: 'bevor' + planning with modal.",
     "translation_en": "Before we start, we should divide the tasks.",
@@ -132,7 +289,18 @@
   {
     "id": "s_b1_14",
     "target": "Seitdem er im Homeoffice arbeitet, ist er viel flexibler geworden.",
-    "tokens": ["Seitdem", "er", "im", "Homeoffice", "arbeitet,", "ist", "er", "viel", "flexibler", "geworden"],
+    "tokens": [
+      "Seitdem",
+      "er",
+      "im",
+      "Homeoffice",
+      "arbeitet,",
+      "ist",
+      "er",
+      "viel",
+      "flexibler",
+      "geworden"
+    ],
     "type": "drag",
     "explanation": "B1: change of state with 'geworden'.",
     "translation_en": "Since he has been working from home, he has become much more flexible.",
@@ -142,7 +310,20 @@
   {
     "id": "s_b1_15",
     "target": "Obwohl wir uns nicht kannten, haben wir schnell ein gutes Gespräch gefunden.",
-    "tokens": ["Obwohl", "wir", "uns", "nicht", "kannten,", "haben", "wir", "schnell", "ein", "gutes", "Gespräch", "gefunden"],
+    "tokens": [
+      "Obwohl",
+      "wir",
+      "uns",
+      "nicht",
+      "kannten,",
+      "haben",
+      "wir",
+      "schnell",
+      "ein",
+      "gutes",
+      "Gespräch",
+      "gefunden"
+    ],
     "type": "drag",
     "explanation": "B1: concession + Perfekt.",
     "translation_en": "Although we didn’t know each other, we quickly had a good conversation.",
@@ -152,7 +333,18 @@
   {
     "id": "s_b1_16",
     "target": "Damit wir nicht alles doppelt kaufen, mache ich eine Einkaufsliste.",
-    "tokens": ["Damit", "wir", "nicht", "alles", "doppelt", "kaufen,", "mache", "ich", "eine", "Einkaufsliste"],
+    "tokens": [
+      "Damit",
+      "wir",
+      "nicht",
+      "alles",
+      "doppelt",
+      "kaufen,",
+      "mache",
+      "ich",
+      "eine",
+      "Einkaufsliste"
+    ],
     "type": "drag",
     "explanation": "B1: purpose + negation in subclause.",
     "translation_en": "So that we don’t buy everything twice, I am making a shopping list.",
@@ -162,7 +354,20 @@
   {
     "id": "s_b1_17",
     "target": "Wenn ich gewusst hätte, dass du kommst, hätte ich einen Kuchen gebacken.",
-    "tokens": ["Wenn", "ich", "gewusst", "hätte,", "dass", "du", "kommst,", "hätte", "ich", "einen", "Kuchen", "gebacken"],
+    "tokens": [
+      "Wenn",
+      "ich",
+      "gewusst",
+      "hätte,",
+      "dass",
+      "du",
+      "kommst,",
+      "hätte",
+      "ich",
+      "einen",
+      "Kuchen",
+      "gebacken"
+    ],
     "type": "drag",
     "explanation": "B1: irreale Bedingung Vergangenheit (Konjunktiv II Perfekt).",
     "translation_en": "If I had known that you were coming, I would have baked a cake.",
@@ -172,7 +377,21 @@
   {
     "id": "s_b1_18",
     "target": "Da die Miete so hoch ist, teilen wir uns die Wohnung zu dritt.",
-    "tokens": ["Da", "die", "Miete", "so", "hoch", "ist,", "teilen", "wir", "uns", "die", "Wohnung", "zu", "dritt"],
+    "tokens": [
+      "Da",
+      "die",
+      "Miete",
+      "so",
+      "hoch",
+      "ist,",
+      "teilen",
+      "wir",
+      "uns",
+      "die",
+      "Wohnung",
+      "zu",
+      "dritt"
+    ],
     "type": "drag",
     "explanation": "B1: financial reason + reflexive 'uns teilen'.",
     "translation_en": "Since the rent is so high, we share the flat between three people.",
@@ -182,7 +401,18 @@
   {
     "id": "s_b1_19",
     "target": "Obwohl der Test schwer war, haben viele gute Noten bekommen.",
-    "tokens": ["Obwohl", "der", "Test", "schwer", "war,", "haben", "viele", "gute", "Noten", "bekommen"],
+    "tokens": [
+      "Obwohl",
+      "der",
+      "Test",
+      "schwer",
+      "war,",
+      "haben",
+      "viele",
+      "gute",
+      "Noten",
+      "bekommen"
+    ],
     "type": "drag",
     "explanation": "B1: contrast exam difficulty vs result.",
     "translation_en": "Although the test was difficult, many got good marks.",
@@ -192,7 +422,18 @@
   {
     "id": "s_b1_20",
     "target": "Wenn du dich rechtzeitig anmeldest, bekommst du einen günstigeren Preis.",
-    "tokens": ["Wenn", "du", "dich", "rechtzeitig", "anmeldest,", "bekommst", "du", "einen", "günstigeren", "Preis"],
+    "tokens": [
+      "Wenn",
+      "du",
+      "dich",
+      "rechtzeitig",
+      "anmeldest,",
+      "bekommst",
+      "du",
+      "einen",
+      "günstigeren",
+      "Preis"
+    ],
     "type": "drag",
     "explanation": "B1: condition + comparative adjective.",
     "translation_en": "If you register in time, you will get a cheaper price.",
@@ -202,7 +443,18 @@
   {
     "id": "s_b1_21",
     "target": "Seitdem wir ein Auto haben, sind die Einkäufe viel einfacher.",
-    "tokens": ["Seitdem", "wir", "ein", "Auto", "haben,", "sind", "die", "Einkäufe", "viel", "einfacher"],
+    "tokens": [
+      "Seitdem",
+      "wir",
+      "ein",
+      "Auto",
+      "haben,",
+      "sind",
+      "die",
+      "Einkäufe",
+      "viel",
+      "einfacher"
+    ],
     "type": "drag",
     "explanation": "B1: consequence of possession.",
     "translation_en": "Since we have a car, shopping has become much easier.",
@@ -212,7 +464,20 @@
   {
     "id": "s_b1_22",
     "target": "Da der Chef heute nicht da ist, können wir etwas früher gehen.",
-    "tokens": ["Da", "der", "Chef", "heute", "nicht", "da", "ist,", "können", "wir", "etwas", "früher", "gehen"],
+    "tokens": [
+      "Da",
+      "der",
+      "Chef",
+      "heute",
+      "nicht",
+      "da",
+      "ist,",
+      "können",
+      "wir",
+      "etwas",
+      "früher",
+      "gehen"
+    ],
     "type": "drag",
     "explanation": "B1: casual office situation with 'da'.",
     "translation_en": "Since the boss is not here today, we can leave a bit earlier.",
@@ -222,10 +487,23 @@
   {
     "id": "s_b1_23",
     "target": "Obwohl sie sehr müde war, hat sie die Präsentation noch fertig gemacht.",
-    "tokens": ["Obwohl", "sie", "sehr", "müde", "war,", "hat", "sie", "die", "Präsentation", "noch", "fertig", "gemacht"],
+    "tokens": [
+      "Obwohl",
+      "sie",
+      "sehr",
+      "müde",
+      "war,",
+      "hat",
+      "sie",
+      "die",
+      "Präsentation",
+      "noch",
+      "fertig",
+      "gemacht"
+    ],
     "alternatives": [
       "Obwohl sie sehr müde war, hat sie noch die Präsentation fertig gemacht."
-      ],
+    ],
     "type": "drag",
     "explanation": "B1: concession + separable verb in Perfekt.",
     "translation_en": "Although she was very tired, she still finished the presentation.",
@@ -235,7 +513,17 @@
   {
     "id": "s_b1_24",
     "target": "Sobald ich Urlaub habe, möchte ich meine Familie besuchen.",
-    "tokens": ["Sobald", "ich", "Urlaub", "habe,", "möchte", "ich", "meine", "Familie", "besuchen"],
+    "tokens": [
+      "Sobald",
+      "ich",
+      "Urlaub",
+      "habe,",
+      "möchte",
+      "ich",
+      "meine",
+      "Familie",
+      "besuchen"
+    ],
     "type": "drag",
     "explanation": "B1: 'sobald' + modal wish.",
     "translation_en": "As soon as I have vacation, I would like to visit my family.",
@@ -245,7 +533,18 @@
   {
     "id": "s_b1_25",
     "target": "Damit wir die Prüfung bestehen, sollten wir regelmäßig zusammen üben.",
-    "tokens": ["Damit", "wir", "die", "Prüfung", "bestehen,", "sollten", "wir", "regelmäßig", "zusammen", "üben"],
+    "tokens": [
+      "Damit",
+      "wir",
+      "die",
+      "Prüfung",
+      "bestehen,",
+      "sollten",
+      "wir",
+      "regelmäßig",
+      "zusammen",
+      "üben"
+    ],
     "type": "drag",
     "explanation": "B1: purpose + study context.",
     "translation_en": "So that we pass the exam, we should practise together regularly.",
@@ -255,7 +554,20 @@
   {
     "id": "s_b1_26",
     "target": "Weil das Angebot nur bis Freitag gilt, müssen wir uns heute entscheiden.",
-    "tokens": ["Weil", "das", "Angebot", "nur", "bis", "Freitag", "gilt,", "müssen", "wir", "uns", "heute", "entscheiden"],
+    "tokens": [
+      "Weil",
+      "das",
+      "Angebot",
+      "nur",
+      "bis",
+      "Freitag",
+      "gilt,",
+      "müssen",
+      "wir",
+      "uns",
+      "heute",
+      "entscheiden"
+    ],
     "type": "drag",
     "explanation": "B1: time-limited offer → obligation.",
     "translation_en": "Because the offer is only valid until Friday, we have to decide today.",
@@ -265,7 +577,20 @@
   {
     "id": "s_b1_27",
     "target": "Obwohl ich zuerst skeptisch war, hat mir der Vorschlag am Ende gefallen.",
-    "tokens": ["Obwohl", "ich", "zuerst", "skeptisch", "war,", "hat", "mir", "der", "Vorschlag", "am", "Ende", "gefallen"],
+    "tokens": [
+      "Obwohl",
+      "ich",
+      "zuerst",
+      "skeptisch",
+      "war,",
+      "hat",
+      "mir",
+      "der",
+      "Vorschlag",
+      "am",
+      "Ende",
+      "gefallen"
+    ],
     "type": "drag",
     "explanation": "B1: change of opinion via 'obwohl'.",
     "translation_en": "Although I was skeptical at first, in the end I liked the suggestion.",
@@ -275,7 +600,17 @@
   {
     "id": "s_b1_28",
     "target": "Falls es morgen doch regnet, verschieben wir das Picknick.",
-    "tokens": ["Falls", "es", "morgen", "doch", "regnet,", "verschieben", "wir", "das", "Picknick"],
+    "tokens": [
+      "Falls",
+      "es",
+      "morgen",
+      "doch",
+      "regnet,",
+      "verschieben",
+      "wir",
+      "das",
+      "Picknick"
+    ],
     "type": "drag",
     "explanation": "B1: 'falls' = if / in case.",
     "translation_en": "If it does rain tomorrow, we will postpone the picnic.",
@@ -285,7 +620,18 @@
   {
     "id": "s_b1_29",
     "target": "Obwohl die Strecke länger ist, nehmen wir die schönere Route.",
-    "tokens": ["Obwohl", "die", "Strecke", "länger", "ist,", "nehmen", "wir", "die", "schönere", "Route"],
+    "tokens": [
+      "Obwohl",
+      "die",
+      "Strecke",
+      "länger",
+      "ist,",
+      "nehmen",
+      "wir",
+      "die",
+      "schönere",
+      "Route"
+    ],
     "type": "drag",
     "explanation": "B1: concessive clause + comparative.",
     "translation_en": "Although the route is longer, we take the nicer one.",
@@ -295,7 +641,19 @@
   {
     "id": "s_b1_30",
     "target": "Da ich morgen früh wegfahre, packe ich heute schon meinen Koffer.",
-    "tokens": ["Da", "ich", "morgen", "früh", "wegfahre,", "packe", "ich", "heute", "schon", "meinen", "Koffer"],
+    "tokens": [
+      "Da",
+      "ich",
+      "morgen",
+      "früh",
+      "wegfahre,",
+      "packe",
+      "ich",
+      "heute",
+      "schon",
+      "meinen",
+      "Koffer"
+    ],
     "type": "drag",
     "explanation": "B1: 'da' for reason + separable verb.",
     "translation_en": "Since I am leaving early tomorrow, I am packing my suitcase today.",
@@ -305,7 +663,18 @@
   {
     "id": "s_b1_31",
     "target": "Sobald der Unterricht zu Ende ist, rufe ich dich an.",
-    "tokens": ["Sobald", "der", "Unterricht", "zu", "Ende", "ist,", "rufe", "ich", "dich", "an"],
+    "tokens": [
+      "Sobald",
+      "der",
+      "Unterricht",
+      "zu",
+      "Ende",
+      "ist,",
+      "rufe",
+      "ich",
+      "dich",
+      "an"
+    ],
     "type": "drag",
     "explanation": "B1: 'sobald' + separable verb in main clause.",
     "translation_en": "As soon as the lesson is over, I will call you.",
@@ -315,7 +684,17 @@
   {
     "id": "s_b1_32",
     "target": "Obwohl er sehr freundlich ist, wirkt er manchmal distanziert.",
-    "tokens": ["Obwohl", "er", "sehr", "freundlich", "ist,", "wirkt", "er", "manchmal", "distanziert"],
+    "tokens": [
+      "Obwohl",
+      "er",
+      "sehr",
+      "freundlich",
+      "ist,",
+      "wirkt",
+      "er",
+      "manchmal",
+      "distanziert"
+    ],
     "type": "drag",
     "explanation": "B1: contrast in character description.",
     "translation_en": "Although he is very friendly, he sometimes seems distant.",
@@ -325,7 +704,19 @@
   {
     "id": "s_b1_33",
     "target": "Während die Kinder im Garten spielen, bereiten wir das Essen vor.",
-    "tokens": ["Während", "die", "Kinder", "im", "Garten", "spielen,", "bereiten", "wir", "das", "Essen", "vor"],
+    "tokens": [
+      "Während",
+      "die",
+      "Kinder",
+      "im",
+      "Garten",
+      "spielen,",
+      "bereiten",
+      "wir",
+      "das",
+      "Essen",
+      "vor"
+    ],
     "type": "drag",
     "explanation": "B1: 'während' for two parallel actions.",
     "translation_en": "While the children are playing in the garden, we prepare the food.",
@@ -335,7 +726,18 @@
   {
     "id": "s_b1_34",
     "target": "Seitdem sie eine neue Chefin hat, läuft die Abteilung besser.",
-    "tokens": ["Seitdem", "sie", "eine", "neue", "Chefin", "hat,", "läuft", "die", "Abteilung", "besser"],
+    "tokens": [
+      "Seitdem",
+      "sie",
+      "eine",
+      "neue",
+      "Chefin",
+      "hat,",
+      "läuft",
+      "die",
+      "Abteilung",
+      "besser"
+    ],
     "type": "drag",
     "explanation": "B1: 'seitdem' + present → present result.",
     "translation_en": "Since she has had a new boss, the department works better.",
@@ -345,7 +747,17 @@
   {
     "id": "s_b1_35",
     "target": "Damit du nichts vergisst, schreibe dir die Termine auf.",
-    "tokens": ["Damit", "du", "nichts", "vergisst,", "schreibe", "dir", "die", "Termine", "auf"],
+    "tokens": [
+      "Damit",
+      "du",
+      "nichts",
+      "vergisst,",
+      "schreibe",
+      "dir",
+      "die",
+      "Termine",
+      "auf"
+    ],
     "type": "drag",
     "explanation": "B1: purpose + imperative + separable verb.",
     "translation_en": "So that you don’t forget anything, write the appointments down.",
@@ -355,7 +767,19 @@
   {
     "id": "s_b1_36",
     "target": "Obwohl wir sehr früh losgefahren sind, standen wir lange im Stau.",
-    "tokens": ["Obwohl", "wir", "sehr", "früh", "losgefahren", "sind,", "standen", "wir", "lange", "im", "Stau"],
+    "tokens": [
+      "Obwohl",
+      "wir",
+      "sehr",
+      "früh",
+      "losgefahren",
+      "sind,",
+      "standen",
+      "wir",
+      "lange",
+      "im",
+      "Stau"
+    ],
     "type": "drag",
     "explanation": "B1: concession with Perfekt in subclause, Präteritum main clause.",
     "translation_en": "Although we left very early, we were stuck in traffic for a long time.",
@@ -365,7 +789,17 @@
   {
     "id": "s_b1_37",
     "target": "Falls du unterwegs Probleme hast, ruf mich einfach an.",
-    "tokens": ["Falls", "du", "unterwegs", "Probleme", "hast,", "ruf", "mich", "einfach", "an"],
+    "tokens": [
+      "Falls",
+      "du",
+      "unterwegs",
+      "Probleme",
+      "hast,",
+      "ruf",
+      "mich",
+      "einfach",
+      "an"
+    ],
     "type": "drag",
     "explanation": "B1: 'falls' + imperative.",
     "translation_en": "If you have problems on the way, just call me.",
@@ -375,7 +809,19 @@
   {
     "id": "s_b1_38",
     "target": "Da wir am Wochenende Besuch bekommen, muss ich noch einkaufen gehen.",
-    "tokens": ["Da", "wir", "am", "Wochenende", "Besuch", "bekommen,", "muss", "ich", "noch", "einkaufen", "gehen"],
+    "tokens": [
+      "Da",
+      "wir",
+      "am",
+      "Wochenende",
+      "Besuch",
+      "bekommen,",
+      "muss",
+      "ich",
+      "noch",
+      "einkaufen",
+      "gehen"
+    ],
     "type": "drag",
     "explanation": "B1: 'da' + double verb structure.",
     "translation_en": "Since we are getting visitors at the weekend, I still have to go shopping.",
@@ -385,7 +831,19 @@
   {
     "id": "s_b1_39",
     "target": "Sobald wir eine Rückmeldung vom Kunden haben, informieren wir das Team.",
-    "tokens": ["Sobald", "wir", "eine", "Rückmeldung", "vom", "Kunden", "haben,", "informieren", "wir", "das", "Team"],
+    "tokens": [
+      "Sobald",
+      "wir",
+      "eine",
+      "Rückmeldung",
+      "vom",
+      "Kunden",
+      "haben,",
+      "informieren",
+      "wir",
+      "das",
+      "Team"
+    ],
     "type": "drag",
     "explanation": "B1: business context, 'sobald'.",
     "translation_en": "As soon as we have feedback from the customer, we inform the team.",
@@ -395,7 +853,19 @@
   {
     "id": "s_b1_40",
     "target": "Obwohl sie die Aufgabe nicht verstanden hat, wollte sie keine Hilfe.",
-    "tokens": ["Obwohl", "sie", "die", "Aufgabe", "nicht", "verstanden", "hat,", "wollte", "sie", "keine", "Hilfe"],
+    "tokens": [
+      "Obwohl",
+      "sie",
+      "die",
+      "Aufgabe",
+      "nicht",
+      "verstanden",
+      "hat,",
+      "wollte",
+      "sie",
+      "keine",
+      "Hilfe"
+    ],
     "type": "drag",
     "explanation": "B1: concession with Perfekt + Präteritum.",
     "translation_en": "Although she did not understand the task, she did not want any help.",
@@ -405,7 +875,18 @@
   {
     "id": "s_b1_41",
     "target": "Während ich das Protokoll schreibe, kannst du die E-Mails beantworten.",
-    "tokens": ["Während", "ich", "das", "Protokoll", "schreibe,", "kannst", "du", "die", "E-Mails", "beantworten"],
+    "tokens": [
+      "Während",
+      "ich",
+      "das",
+      "Protokoll",
+      "schreibe,",
+      "kannst",
+      "du",
+      "die",
+      "E-Mails",
+      "beantworten"
+    ],
     "type": "drag",
     "explanation": "B1: 'während' + modal in main clause.",
     "translation_en": "While I write the minutes, you can answer the emails.",
@@ -415,7 +896,20 @@
   {
     "id": "s_b1_42",
     "target": "Da der Akku fast leer ist, lade ich das Handy jetzt auf.",
-    "tokens": ["Da", "der", "Akku", "fast", "leer", "ist,", "lade", "ich", "das", "Handy", "jetzt", "auf"],
+    "tokens": [
+      "Da",
+      "der",
+      "Akku",
+      "fast",
+      "leer",
+      "ist,",
+      "lade",
+      "ich",
+      "das",
+      "Handy",
+      "jetzt",
+      "auf"
+    ],
     "type": "drag",
     "explanation": "B1: reason + separable verb 'aufladen'.",
     "translation_en": "Since the battery is almost empty, I am charging the phone now.",
@@ -425,7 +919,17 @@
   {
     "id": "s_b1_43",
     "target": "Obwohl wir verschiedene Meinungen haben, arbeiten wir gut zusammen.",
-    "tokens": ["Obwohl", "wir", "verschiedene", "Meinungen", "haben,", "arbeiten", "wir", "gut", "zusammen"],
+    "tokens": [
+      "Obwohl",
+      "wir",
+      "verschiedene",
+      "Meinungen",
+      "haben,",
+      "arbeiten",
+      "wir",
+      "gut",
+      "zusammen"
+    ],
     "type": "drag",
     "explanation": "B1: contrast in teamwork.",
     "translation_en": "Although we have different opinions, we work well together.",
@@ -435,7 +939,18 @@
   {
     "id": "s_b1_44",
     "target": "Sobald du die Datei hochgeladen hast, kann ich sie prüfen.",
-    "tokens": ["Sobald", "du", "die", "Datei", "hochgeladen", "hast,", "kann", "ich", "sie", "prüfen"],
+    "tokens": [
+      "Sobald",
+      "du",
+      "die",
+      "Datei",
+      "hochgeladen",
+      "hast,",
+      "kann",
+      "ich",
+      "sie",
+      "prüfen"
+    ],
     "type": "drag",
     "explanation": "B1: 'sobald' + Perfekt in subclause.",
     "translation_en": "As soon as you have uploaded the file, I can check it.",
@@ -445,7 +960,18 @@
   {
     "id": "s_b1_45",
     "target": "Da die Plätze begrenzt sind, solltest du dich bald anmelden.",
-    "tokens": ["Da", "die", "Plätze", "begrenzt", "sind,", "solltest", "du", "dich", "bald", "anmelden"],
+    "tokens": [
+      "Da",
+      "die",
+      "Plätze",
+      "begrenzt",
+      "sind,",
+      "solltest",
+      "du",
+      "dich",
+      "bald",
+      "anmelden"
+    ],
     "type": "drag",
     "explanation": "B1: reason + modal recommendation.",
     "translation_en": "Since the places are limited, you should register soon.",
@@ -455,7 +981,20 @@
   {
     "id": "s_b1_46",
     "target": "Obwohl ich mich gut vorbereitet hatte, war ich vor dem Gespräch nervös.",
-    "tokens": ["Obwohl", "ich", "mich", "gut", "vorbereitet", "hatte,", "war", "ich", "vor", "dem", "Gespräch", "nervös"],
+    "tokens": [
+      "Obwohl",
+      "ich",
+      "mich",
+      "gut",
+      "vorbereitet",
+      "hatte,",
+      "war",
+      "ich",
+      "vor",
+      "dem",
+      "Gespräch",
+      "nervös"
+    ],
     "type": "drag",
     "explanation": "B1: concession with Plusquamperfekt.",
     "translation_en": "Although I had prepared well, I was nervous before the interview.",
@@ -465,7 +1004,18 @@
   {
     "id": "s_b1_47",
     "target": "Falls du keine Zeit hast, können wir den Termin verschieben.",
-    "tokens": ["Falls", "du", "keine", "Zeit", "hast,", "können", "wir", "den", "Termin", "verschieben"],
+    "tokens": [
+      "Falls",
+      "du",
+      "keine",
+      "Zeit",
+      "hast,",
+      "können",
+      "wir",
+      "den",
+      "Termin",
+      "verschieben"
+    ],
     "type": "drag",
     "explanation": "B1: 'falls' + modal.",
     "translation_en": "If you do not have time, we can postpone the appointment.",
@@ -475,7 +1025,19 @@
   {
     "id": "s_b1_48",
     "target": "Während wir auf den Zug warten, können wir einen Kaffee trinken.",
-    "tokens": ["Während", "wir", "auf", "den", "Zug", "warten,", "können", "wir", "einen", "Kaffee", "trinken"],
+    "tokens": [
+      "Während",
+      "wir",
+      "auf",
+      "den",
+      "Zug",
+      "warten,",
+      "können",
+      "wir",
+      "einen",
+      "Kaffee",
+      "trinken"
+    ],
     "type": "drag",
     "explanation": "B1: 'während' + modal + infinitive.",
     "translation_en": "While we are waiting for the train, we can drink a coffee.",
@@ -485,17 +1047,43 @@
   {
     "id": "s_b1_49",
     "target": "Da ich morgen einen wichtigen Termin habe, gehe ich heute früher ins Bett.",
-    "tokens": ["Da", "ich", "morgen", "einen", "wichtigen", "Termin", "habe,", "gehe", "ich", "heute", "früher", "ins", "Bett"],
+    "tokens": [
+      "Da",
+      "ich",
+      "morgen",
+      "einen",
+      "wichtigen",
+      "Termin",
+      "habe,",
+      "gehe",
+      "ich",
+      "heute",
+      "früher",
+      "ins",
+      "Bett"
+    ],
     "type": "drag",
     "explanation": "B1: reason + future-related plan.",
     "translation_en": "Since I have an important appointment tomorrow, I will go to bed earlier today.",
-    "translation_ru": "Поскольку у меня завтра важная встреча, я лягу спать пораньше сегодня.", 
+    "translation_ru": "Поскольку у меня завтра важная встреча, я лягу спать пораньше сегодня.",
     "level": "B1"
   },
   {
     "id": "s_b1_50",
     "target": "Obwohl der Film sehr lang war, hat er mir gut gefallen.",
-    "tokens": ["Obwohl", "der", "Film", "sehr", "lang", "war,", "hat", "er", "mir", "gut", "gefallen"],
+    "tokens": [
+      "Obwohl",
+      "der",
+      "Film",
+      "sehr",
+      "lang",
+      "war,",
+      "hat",
+      "er",
+      "mir",
+      "gut",
+      "gefallen"
+    ],
     "type": "drag",
     "explanation": "B1: concession + 'gefallen' with Dativ.",
     "translation_en": "Although the film was very long, I liked it a lot.",
@@ -505,7 +1093,19 @@
   {
     "id": "s_b1_51",
     "target": "Sobald wir die Ergebnisse haben, schicken wir sie an alle Kollegen.",
-    "tokens": ["Sobald", "wir", "die", "Ergebnisse", "haben,", "schicken", "wir", "sie", "an", "alle", "Kollegen"],
+    "tokens": [
+      "Sobald",
+      "wir",
+      "die",
+      "Ergebnisse",
+      "haben,",
+      "schicken",
+      "wir",
+      "sie",
+      "an",
+      "alle",
+      "Kollegen"
+    ],
     "type": "drag",
     "explanation": "B1: project/business context.",
     "translation_en": "As soon as we have the results, we will send them to all colleagues.",
@@ -515,7 +1115,18 @@
   {
     "id": "s_b1_52",
     "target": "Sobald die Kinder Ferien haben, fahren wir zu meinen Eltern.",
-    "tokens": ["Sobald", "die", "Kinder", "Ferien", "haben,", "fahren", "wir", "zu", "meinen", "Eltern"],
+    "tokens": [
+      "Sobald",
+      "die",
+      "Kinder",
+      "Ferien",
+      "haben,",
+      "fahren",
+      "wir",
+      "zu",
+      "meinen",
+      "Eltern"
+    ],
     "type": "drag",
     "explanation": "B1: family planning with 'sobald'.",
     "translation_en": "As soon as the children have holidays, we will go to my parents.",
@@ -525,7 +1136,19 @@
   {
     "id": "s_b1_53",
     "target": "Obwohl der Vortrag ziemlich theoretisch war, habe ich viel daraus gelernt.",
-    "tokens": ["Obwohl", "der", "Vortrag", "ziemlich", "theoretisch", "war,", "habe", "ich", "viel", "daraus", "gelernt"],
+    "tokens": [
+      "Obwohl",
+      "der",
+      "Vortrag",
+      "ziemlich",
+      "theoretisch",
+      "war,",
+      "habe",
+      "ich",
+      "viel",
+      "daraus",
+      "gelernt"
+    ],
     "type": "drag",
     "explanation": "B1: contrast between boring content and positive result.",
     "translation_en": "Although the lecture was quite theoretical, I learned a lot from it.",
@@ -535,7 +1158,20 @@
   {
     "id": "s_b1_54",
     "target": "Da wir kein Auto mieten konnten, sind wir mit dem Zug gefahren.",
-    "tokens": ["Da", "wir", "kein", "Auto", "mieten", "konnten,", "sind", "wir", "mit", "dem", "Zug", "gefahren"],
+    "tokens": [
+      "Da",
+      "wir",
+      "kein",
+      "Auto",
+      "mieten",
+      "konnten,",
+      "sind",
+      "wir",
+      "mit",
+      "dem",
+      "Zug",
+      "gefahren"
+    ],
     "type": "drag",
     "explanation": "B1: 'da' + modal in subclause, Perfekt/Präteritum mix.",
     "translation_en": "Since we could not rent a car, we went by train.",
@@ -545,7 +1181,16 @@
   {
     "id": "s_b1_55",
     "target": "Sobald das Paket angekommen ist, informiere ich dich.",
-    "tokens": ["Sobald", "das", "Paket", "angekommen", "ist,", "informiere", "ich", "dich"],
+    "tokens": [
+      "Sobald",
+      "das",
+      "Paket",
+      "angekommen",
+      "ist,",
+      "informiere",
+      "ich",
+      "dich"
+    ],
     "type": "drag",
     "explanation": "B1: 'sobald' + Perfekt in subclause.",
     "translation_en": "As soon as the parcel has arrived, I will inform you.",
@@ -555,7 +1200,21 @@
   {
     "id": "s_b1_56",
     "target": "Falls es Probleme mit der Rechnung gibt, rufen Sie bitte den Kundenservice an.",
-    "tokens": ["Falls", "es", "Probleme", "mit", "der", "Rechnung", "gibt,", "rufen", "Sie", "bitte", "den", "Kundenservice", "an"],
+    "tokens": [
+      "Falls",
+      "es",
+      "Probleme",
+      "mit",
+      "der",
+      "Rechnung",
+      "gibt,",
+      "rufen",
+      "Sie",
+      "bitte",
+      "den",
+      "Kundenservice",
+      "an"
+    ],
     "type": "drag",
     "explanation": "B1: polite instruction with 'falls'.",
     "translation_en": "If there are problems with the invoice, please call customer service.",
@@ -565,7 +1224,18 @@
   {
     "id": "s_b1_57",
     "target": "Obwohl wir früh gebucht hatten, waren die Tickets sehr teuer.",
-    "tokens": ["Obwohl", "wir", "früh", "gebucht", "hatten,", "waren", "die", "Tickets", "sehr", "teuer"],
+    "tokens": [
+      "Obwohl",
+      "wir",
+      "früh",
+      "gebucht",
+      "hatten,",
+      "waren",
+      "die",
+      "Tickets",
+      "sehr",
+      "teuer"
+    ],
     "type": "drag",
     "explanation": "B1: concession + Plusquamperfekt.",
     "translation_en": "Although we had booked early, the tickets were very expensive.",
@@ -575,7 +1245,19 @@
   {
     "id": "s_b1_58",
     "target": "Damit die Kinder besser schlafen können, machen wir das Fenster zu.",
-    "tokens": ["Damit", "die", "Kinder", "besser", "schlafen", "können,", "machen", "wir", "das", "Fenster", "zu"],
+    "tokens": [
+      "Damit",
+      "die",
+      "Kinder",
+      "besser",
+      "schlafen",
+      "können,",
+      "machen",
+      "wir",
+      "das",
+      "Fenster",
+      "zu"
+    ],
     "type": "drag",
     "explanation": "B1: purpose + modal in subclause.",
     "translation_en": "So that the children can sleep better, we close the window.",
@@ -585,7 +1267,20 @@
   {
     "id": "s_b1_59",
     "target": "Während ich im Ausland studiert habe, habe ich viele neue Leute kennengelernt.",
-    "tokens": ["Während", "ich", "im", "Ausland", "studiert", "habe,", "habe", "ich", "viele", "neue", "Leute", "kennengelernt"],
+    "tokens": [
+      "Während",
+      "ich",
+      "im",
+      "Ausland",
+      "studiert",
+      "habe,",
+      "habe",
+      "ich",
+      "viele",
+      "neue",
+      "Leute",
+      "kennengelernt"
+    ],
     "type": "drag",
     "explanation": "B1: 'während' + Perfekt for longer period.",
     "translation_en": "While I was studying abroad, I met many new people.",
@@ -595,7 +1290,19 @@
   {
     "id": "s_b1_60",
     "target": "Da die Straßen gesperrt waren, mussten wir eine andere Route wählen.",
-    "tokens": ["Da", "die", "Straßen", "gesperrt", "waren,", "mussten", "wir", "eine", "andere", "Route", "wählen"],
+    "tokens": [
+      "Da",
+      "die",
+      "Straßen",
+      "gesperrt",
+      "waren,",
+      "mussten",
+      "wir",
+      "eine",
+      "andere",
+      "Route",
+      "wählen"
+    ],
     "type": "drag",
     "explanation": "B1: traffic reason + Präteritum.",
     "translation_en": "Since the roads were closed, we had to choose another route.",
@@ -605,7 +1312,21 @@
   {
     "id": "s_b1_61",
     "target": "Obwohl ich viel zu tun hatte, habe ich mir Zeit für dich genommen.",
-    "tokens": ["Obwohl", "ich", "viel", "zu", "tun", "hatte,", "habe", "ich", "mir", "Zeit", "für", "dich", "genommen"],
+    "tokens": [
+      "Obwohl",
+      "ich",
+      "viel",
+      "zu",
+      "tun",
+      "hatte,",
+      "habe",
+      "ich",
+      "mir",
+      "Zeit",
+      "für",
+      "dich",
+      "genommen"
+    ],
     "type": "drag",
     "explanation": "B1: concession + reflexive 'sich Zeit nehmen'.",
     "translation_en": "Although I was very busy, I made time for you.",
@@ -615,7 +1336,20 @@
   {
     "id": "s_b1_62",
     "target": "Sobald die Kinder im Bett sind, schauen wir uns den Film an.",
-    "tokens": ["Sobald", "die", "Kinder", "im", "Bett", "sind,", "schauen", "wir", "uns", "den", "Film", "an"],
+    "tokens": [
+      "Sobald",
+      "die",
+      "Kinder",
+      "im",
+      "Bett",
+      "sind,",
+      "schauen",
+      "wir",
+      "uns",
+      "den",
+      "Film",
+      "an"
+    ],
     "type": "drag",
     "explanation": "B1: 'sobald' + reflexive + separable verb.",
     "translation_en": "As soon as the kids are in bed, we will watch the film.",
@@ -625,7 +1359,19 @@
   {
     "id": "s_b1_63",
     "target": "Da ich morgen eine Prüfung schreibe, wiederhole ich heute alle Themen.",
-    "tokens": ["Da", "ich", "morgen", "eine", "Prüfung", "schreibe,", "wiederhole", "ich", "heute", "alle", "Themen"],
+    "tokens": [
+      "Da",
+      "ich",
+      "morgen",
+      "eine",
+      "Prüfung",
+      "schreibe,",
+      "wiederhole",
+      "ich",
+      "heute",
+      "alle",
+      "Themen"
+    ],
     "type": "drag",
     "explanation": "B1: study context with 'da'.",
     "translation_en": "Since I have an exam tomorrow, I am revising all topics today.",
@@ -635,7 +1381,19 @@
   {
     "id": "s_b1_64",
     "target": "Obwohl er zugesagt hatte, ist er am Ende doch nicht gekommen.",
-    "tokens": ["Obwohl", "er", "zugesagt", "hatte,", "ist", "er", "am", "Ende", "doch", "nicht", "gekommen"],
+    "tokens": [
+      "Obwohl",
+      "er",
+      "zugesagt",
+      "hatte,",
+      "ist",
+      "er",
+      "am",
+      "Ende",
+      "doch",
+      "nicht",
+      "gekommen"
+    ],
     "type": "drag",
     "explanation": "B1: broken promise → Plusquamperfekt.",
     "translation_en": "Although he had confirmed, in the end he did not come.",
@@ -645,7 +1403,19 @@
   {
     "id": "s_b1_65",
     "target": "Falls du unterwegs bist, kann ich das Paket für dich annehmen.",
-    "tokens": ["Falls", "du", "unterwegs", "bist,", "kann", "ich", "das", "Paket", "für", "dich", "annehmen"],
+    "tokens": [
+      "Falls",
+      "du",
+      "unterwegs",
+      "bist,",
+      "kann",
+      "ich",
+      "das",
+      "Paket",
+      "für",
+      "dich",
+      "annehmen"
+    ],
     "type": "drag",
     "explanation": "B1: offer with condition.",
     "translation_en": "If you are on the way, I can receive the parcel for you.",
@@ -655,7 +1425,17 @@
   {
     "id": "s_b1_66",
     "target": "Seitdem ich regelmäßig Sport mache, habe ich weniger Rückenschmerzen.",
-    "tokens": ["Seitdem", "ich", "regelmäßig", "Sport", "mache,", "habe", "ich", "weniger", "Rückenschmerzen"],
+    "tokens": [
+      "Seitdem",
+      "ich",
+      "regelmäßig",
+      "Sport",
+      "mache,",
+      "habe",
+      "ich",
+      "weniger",
+      "Rückenschmerzen"
+    ],
     "type": "drag",
     "explanation": "B1: 'seitdem' + positive health result.",
     "translation_en": "Since I have been doing sport regularly, I have less back pain.",
@@ -665,7 +1445,20 @@
   {
     "id": "s_b1_67",
     "target": "Damit wir alle Informationen haben, frage ich noch einmal beim Kunden nach.",
-    "tokens": ["Damit", "wir", "alle", "Informationen", "haben,", "frage", "ich", "noch", "einmal", "beim", "Kunden", "nach"],
+    "tokens": [
+      "Damit",
+      "wir",
+      "alle",
+      "Informationen",
+      "haben,",
+      "frage",
+      "ich",
+      "noch",
+      "einmal",
+      "beim",
+      "Kunden",
+      "nach"
+    ],
     "type": "drag",
     "explanation": "B1: purpose + separable 'nachfragen'.",
     "translation_en": "So that we have all the information, I will ask the customer again.",
@@ -675,7 +1468,19 @@
   {
     "id": "s_b1_68",
     "target": "Obwohl der Preis gestiegen ist, wollen viele das Produkt trotzdem kaufen.",
-    "tokens": ["Obwohl", "der", "Preis", "gestiegen", "ist,", "wollen", "viele", "das", "Produkt", "trotzdem", "kaufen"],
+    "tokens": [
+      "Obwohl",
+      "der",
+      "Preis",
+      "gestiegen",
+      "ist,",
+      "wollen",
+      "viele",
+      "das",
+      "Produkt",
+      "trotzdem",
+      "kaufen"
+    ],
     "type": "drag",
     "explanation": "B1: concession + 'trotzdem'.",
     "translation_en": "Although the price has increased, many still want to buy the product.",
@@ -685,7 +1490,19 @@
   {
     "id": "s_b1_69",
     "target": "Sobald du deinen Vertrag unterschrieben hast, kannst du anfangen zu arbeiten.",
-    "tokens": ["Sobald", "du", "deinen", "Vertrag", "unterschrieben", "hast,", "kannst", "du", "anfangen", "zu", "arbeiten"],
+    "tokens": [
+      "Sobald",
+      "du",
+      "deinen",
+      "Vertrag",
+      "unterschrieben",
+      "hast,",
+      "kannst",
+      "du",
+      "anfangen",
+      "zu",
+      "arbeiten"
+    ],
     "type": "drag",
     "explanation": "B1: 'sobald' + zu-Infinitiv.",
     "translation_en": "As soon as you have signed your contract, you can start working.",
@@ -695,7 +1512,18 @@
   {
     "id": "s_b1_70",
     "target": "Da der Aufzug nicht funktioniert, müssen wir die Treppe nehmen.",
-    "tokens": ["Da", "der", "Aufzug", "nicht", "funktioniert,", "müssen", "wir", "die", "Treppe", "nehmen"],
+    "tokens": [
+      "Da",
+      "der",
+      "Aufzug",
+      "nicht",
+      "funktioniert,",
+      "müssen",
+      "wir",
+      "die",
+      "Treppe",
+      "nehmen"
+    ],
     "type": "drag",
     "explanation": "B1: everyday problem + solution.",
     "translation_en": "Since the elevator is not working, we have to take the stairs.",
@@ -705,7 +1533,20 @@
   {
     "id": "s_b1_71",
     "target": "Obwohl sie sehr gut vorbereitet war, war sie vor der Prüfung nervös.",
-    "tokens": ["Obwohl", "sie", "sehr", "gut", "vorbereitet", "war,", "war", "sie", "vor", "der", "Prüfung", "nervös"],
+    "tokens": [
+      "Obwohl",
+      "sie",
+      "sehr",
+      "gut",
+      "vorbereitet",
+      "war,",
+      "war",
+      "sie",
+      "vor",
+      "der",
+      "Prüfung",
+      "nervös"
+    ],
     "type": "drag",
     "explanation": "B1: concession in exam context.",
     "translation_en": "Although she was very well prepared, she was nervous before the exam.",
@@ -715,7 +1556,19 @@
   {
     "id": "s_b1_72",
     "target": "Falls du die Adresse nicht findest, schicke ich dir den Standort.",
-    "tokens": ["Falls", "du", "die", "Adresse", "nicht", "findest,", "schicke", "ich", "dir", "den", "Standort"],
+    "tokens": [
+      "Falls",
+      "du",
+      "die",
+      "Adresse",
+      "nicht",
+      "findest,",
+      "schicke",
+      "ich",
+      "dir",
+      "den",
+      "Standort"
+    ],
     "type": "drag",
     "explanation": "B1: condition + offer.",
     "translation_en": "If you cannot find the address, I will send you the location.",
@@ -725,7 +1578,21 @@
   {
     "id": "s_b1_73",
     "target": "Da wir noch auf die Lieferung warten, können wir den Auftrag nicht abschließen.",
-    "tokens": ["Da", "wir", "noch", "auf", "die", "Lieferung", "warten,", "können", "wir", "den", "Auftrag", "nicht", "abschließen"],
+    "tokens": [
+      "Da",
+      "wir",
+      "noch",
+      "auf",
+      "die",
+      "Lieferung",
+      "warten,",
+      "können",
+      "wir",
+      "den",
+      "Auftrag",
+      "nicht",
+      "abschließen"
+    ],
     "type": "drag",
     "explanation": "B1: business delay reason.",
     "translation_en": "Since we are still waiting for the delivery, we cannot complete the order.",
@@ -735,7 +1602,19 @@
   {
     "id": "s_b1_74",
     "target": "Obwohl das Restaurant voll war, haben wir noch einen Tisch bekommen.",
-    "tokens": ["Obwohl", "das", "Restaurant", "voll", "war,", "haben", "wir", "noch", "einen", "Tisch", "bekommen"],
+    "tokens": [
+      "Obwohl",
+      "das",
+      "Restaurant",
+      "voll",
+      "war,",
+      "haben",
+      "wir",
+      "noch",
+      "einen",
+      "Tisch",
+      "bekommen"
+    ],
     "type": "drag",
     "explanation": "B1: concession in real-life situation.",
     "translation_en": "Although the restaurant was full, we still got a table.",
@@ -745,7 +1624,20 @@
   {
     "id": "s_b1_75",
     "target": "Sobald die Präsentation fertig ist, lade ich sie in den Ordner hoch.",
-    "tokens": ["Sobald", "die", "Präsentation", "fertig", "ist,", "lade", "ich", "sie", "in", "den", "Ordner", "hoch"],
+    "tokens": [
+      "Sobald",
+      "die",
+      "Präsentation",
+      "fertig",
+      "ist,",
+      "lade",
+      "ich",
+      "sie",
+      "in",
+      "den",
+      "Ordner",
+      "hoch"
+    ],
     "type": "drag",
     "explanation": "B1: 'sobald' + separable 'hochladen'.",
     "translation_en": "As soon as the presentation is ready, I will upload it to the folder.",
@@ -755,7 +1647,19 @@
   {
     "id": "s_b1_76",
     "target": "Da ich noch einkaufen muss, komme ich etwas später zum Treffen.",
-    "tokens": ["Da", "ich", "noch", "einkaufen", "muss,", "komme", "ich", "etwas", "später", "zum", "Treffen"],
+    "tokens": [
+      "Da",
+      "ich",
+      "noch",
+      "einkaufen",
+      "muss,",
+      "komme",
+      "ich",
+      "etwas",
+      "später",
+      "zum",
+      "Treffen"
+    ],
     "type": "drag",
     "explanation": "B1: reason + time adverb.",
     "translation_en": "Since I still have to go shopping, I will come a bit later to the meeting.",
@@ -765,7 +1669,19 @@
   {
     "id": "s_b1_77",
     "target": "Obwohl wir uns beeilt haben, haben wir den Zug knapp verpasst.",
-    "tokens": ["Obwohl", "wir", "uns", "beeilt", "haben,", "haben", "wir", "den", "Zug", "knapp", "verpasst"],
+    "tokens": [
+      "Obwohl",
+      "wir",
+      "uns",
+      "beeilt",
+      "haben,",
+      "haben",
+      "wir",
+      "den",
+      "Zug",
+      "knapp",
+      "verpasst"
+    ],
     "type": "drag",
     "explanation": "B1: concession + reflexive.",
     "translation_en": "Although we hurried, we just missed the train.",
@@ -775,7 +1691,19 @@
   {
     "id": "s_b1_78",
     "target": "Falls du heute nicht mehr arbeiten kannst, machen wir morgen weiter.",
-    "tokens": ["Falls", "du", "heute", "nicht", "mehr", "arbeiten", "kannst,", "machen", "wir", "morgen", "weiter"],
+    "tokens": [
+      "Falls",
+      "du",
+      "heute",
+      "nicht",
+      "mehr",
+      "arbeiten",
+      "kannst,",
+      "machen",
+      "wir",
+      "morgen",
+      "weiter"
+    ],
     "type": "drag",
     "explanation": "B1: conditional solution.",
     "translation_en": "If you cannot work anymore today, we will continue tomorrow.",
@@ -785,7 +1713,18 @@
   {
     "id": "s_b1_79",
     "target": "Seitdem mein Bruder in München lebt, sehen wir uns seltener.",
-    "tokens": ["Seitdem", "mein", "Bruder", "in", "München", "lebt,", "sehen", "wir", "uns", "seltener"],
+    "tokens": [
+      "Seitdem",
+      "mein",
+      "Bruder",
+      "in",
+      "München",
+      "lebt,",
+      "sehen",
+      "wir",
+      "uns",
+      "seltener"
+    ],
     "type": "drag",
     "explanation": "B1: 'seitdem' + reflexive 'uns sehen'.",
     "translation_en": "Since my brother has been living in Munich, we see each other less often.",
@@ -795,7 +1734,18 @@
   {
     "id": "s_b1_80",
     "target": "Damit wir die Frist einhalten können, müssen alle pünktlich abgeben.",
-    "tokens": ["Damit", "wir", "die", "Frist", "einhalten", "können,", "müssen", "alle", "pünktlich", "abgeben"],
+    "tokens": [
+      "Damit",
+      "wir",
+      "die",
+      "Frist",
+      "einhalten",
+      "können,",
+      "müssen",
+      "alle",
+      "pünktlich",
+      "abgeben"
+    ],
     "type": "drag",
     "explanation": "B1: purpose + modal + separable in main clause.",
     "translation_en": "So that we can meet the deadline, everyone has to submit on time.",
@@ -805,7 +1755,19 @@
   {
     "id": "s_b1_81",
     "target": "Obwohl es nur eine kleine Firma ist, arbeitet sie sehr professionell.",
-    "tokens": ["Obwohl", "es", "nur", "eine", "kleine", "Firma", "ist,", "arbeitet", "sie", "sehr", "professionell"],
+    "tokens": [
+      "Obwohl",
+      "es",
+      "nur",
+      "eine",
+      "kleine",
+      "Firma",
+      "ist,",
+      "arbeitet",
+      "sie",
+      "sehr",
+      "professionell"
+    ],
     "type": "drag",
     "explanation": "B1: concession with 'nur'.",
     "translation_en": "Although it is only a small company, it works very professionally.",
@@ -815,7 +1777,20 @@
   {
     "id": "s_b1_82",
     "target": "Da wir heute früher fertig geworden sind, können wir noch einkaufen gehen.",
-    "tokens": ["Da", "wir", "heute", "früher", "fertig", "geworden", "sind,", "können", "wir", "noch", "einkaufen", "gehen"],
+    "tokens": [
+      "Da",
+      "wir",
+      "heute",
+      "früher",
+      "fertig",
+      "geworden",
+      "sind,",
+      "können",
+      "wir",
+      "noch",
+      "einkaufen",
+      "gehen"
+    ],
     "type": "drag",
     "explanation": "B1: past result → present option.",
     "translation_en": "Since we finished earlier today, we can still go shopping.",
@@ -825,7 +1800,19 @@
   {
     "id": "s_b1_83",
     "target": "Obwohl die Aufgabe recht komplex klingt, ist sie gut zu lösen.",
-    "tokens": ["Obwohl", "die", "Aufgabe", "recht", "komplex", "klingt,", "ist", "sie", "gut", "zu", "lösen"],
+    "tokens": [
+      "Obwohl",
+      "die",
+      "Aufgabe",
+      "recht",
+      "komplex",
+      "klingt,",
+      "ist",
+      "sie",
+      "gut",
+      "zu",
+      "lösen"
+    ],
     "type": "drag",
     "explanation": "B1: concession + 'zu' + Infinitiv.",
     "translation_en": "Although the task sounds quite complex, it is easy to solve.",
@@ -835,7 +1822,20 @@
   {
     "id": "s_b1_84",
     "target": "Sobald ich die Adresse gefunden habe, schicke ich sie dir per Chat.",
-    "tokens": ["Sobald", "ich", "die", "Adresse", "gefunden", "habe,", "schicke", "ich", "sie", "dir", "per", "Chat"],
+    "tokens": [
+      "Sobald",
+      "ich",
+      "die",
+      "Adresse",
+      "gefunden",
+      "habe,",
+      "schicke",
+      "ich",
+      "sie",
+      "dir",
+      "per",
+      "Chat"
+    ],
     "type": "drag",
     "explanation": "B1: 'sobald' + send via channel.",
     "translation_en": "As soon as I have found the address, I will send it to you via chat.",
@@ -845,7 +1845,22 @@
   {
     "id": "s_b1_85",
     "target": "Da das Meeting länger gedauert hat, bin ich erst um acht zu Hause gewesen.",
-    "tokens": ["Da", "das", "Meeting", "länger", "gedauert", "hat,", "bin", "ich", "erst", "um", "acht", "zu", "Hause", "gewesen"],
+    "tokens": [
+      "Da",
+      "das",
+      "Meeting",
+      "länger",
+      "gedauert",
+      "hat,",
+      "bin",
+      "ich",
+      "erst",
+      "um",
+      "acht",
+      "zu",
+      "Hause",
+      "gewesen"
+    ],
     "type": "drag",
     "explanation": "B1: 'da' + Perfekt → Perfekt main clause.",
     "translation_en": "Since the meeting took longer, I was only home at eight.",
@@ -855,7 +1870,20 @@
   {
     "id": "s_b1_86",
     "target": "Obwohl wir uns gut verstanden haben, sind wir beruflich verschiedene Wege gegangen.",
-    "tokens": ["Obwohl", "wir", "uns", "gut", "verstanden", "haben,", "sind", "wir", "beruflich", "verschiedene", "Wege", "gegangen"],
+    "tokens": [
+      "Obwohl",
+      "wir",
+      "uns",
+      "gut",
+      "verstanden",
+      "haben,",
+      "sind",
+      "wir",
+      "beruflich",
+      "verschiedene",
+      "Wege",
+      "gegangen"
+    ],
     "type": "drag",
     "explanation": "B1: concession + perfect + movement.",
     "translation_en": "Although we got along well, we went different professional ways.",
@@ -865,7 +1893,18 @@
   {
     "id": "s_b1_87",
     "target": "Falls du Fragen zum Vertrag hast, kannst du jederzeit anrufen.",
-    "tokens": ["Falls", "du", "Fragen", "zum", "Vertrag", "hast,", "kannst", "du", "jederzeit", "anrufen"],
+    "tokens": [
+      "Falls",
+      "du",
+      "Fragen",
+      "zum",
+      "Vertrag",
+      "hast,",
+      "kannst",
+      "du",
+      "jederzeit",
+      "anrufen"
+    ],
     "type": "drag",
     "explanation": "B1: 'falls' + modal + generic time adverb.",
     "translation_en": "If you have questions about the contract, you can call anytime.",
@@ -875,7 +1914,19 @@
   {
     "id": "s_b1_88",
     "target": "Seitdem ich meine Ernährung umgestellt habe, fühle ich mich viel fitter.",
-    "tokens": ["Seitdem", "ich", "meine", "Ernährung", "umgestellt", "habe,", "fühle", "ich", "mich", "viel", "fitter"],
+    "tokens": [
+      "Seitdem",
+      "ich",
+      "meine",
+      "Ernährung",
+      "umgestellt",
+      "habe,",
+      "fühle",
+      "ich",
+      "mich",
+      "viel",
+      "fitter"
+    ],
     "type": "drag",
     "explanation": "B1: lifestyle change → present result.",
     "translation_en": "Since I changed my diet, I feel much fitter.",
@@ -885,7 +1936,15 @@
   {
     "id": "s_b1_89",
     "target": "Damit wir nicht durcheinanderkommen, sprechen wir nacheinander.",
-    "tokens": ["Damit", "wir", "nicht", "durcheinanderkommen,", "sprechen", "wir", "nacheinander"],
+    "tokens": [
+      "Damit",
+      "wir",
+      "nicht",
+      "durcheinanderkommen,",
+      "sprechen",
+      "wir",
+      "nacheinander"
+    ],
     "type": "drag",
     "explanation": "B1: purpose + adverb 'nacheinander'.",
     "translation_en": "So that we do not get confused, we speak one after another.",
@@ -895,7 +1954,18 @@
   {
     "id": "s_b1_90",
     "target": "Obwohl der Kunde sehr ungeduldig war, blieb die Mitarbeiterin freundlich.",
-    "tokens": ["Obwohl", "der", "Kunde", "sehr", "ungeduldig", "war,", "blieb", "die", "Mitarbeiterin", "freundlich"],
+    "tokens": [
+      "Obwohl",
+      "der",
+      "Kunde",
+      "sehr",
+      "ungeduldig",
+      "war,",
+      "blieb",
+      "die",
+      "Mitarbeiterin",
+      "freundlich"
+    ],
     "type": "drag",
     "explanation": "B1: service context with concession.",
     "translation_en": "Although the customer was very impatient, the employee remained friendly.",
@@ -905,7 +1975,18 @@
   {
     "id": "s_b1_91",
     "target": "Da das Angebot nur heute gilt, sollten wir gleich bestellen.",
-    "tokens": ["Da", "das", "Angebot", "nur", "heute", "gilt,", "sollten", "wir", "gleich", "bestellen"],
+    "tokens": [
+      "Da",
+      "das",
+      "Angebot",
+      "nur",
+      "heute",
+      "gilt,",
+      "sollten",
+      "wir",
+      "gleich",
+      "bestellen"
+    ],
     "type": "drag",
     "explanation": "B1: time pressure + suggestion.",
     "translation_en": "Since the offer is valid only today, we should order right away.",
@@ -915,7 +1996,19 @@
   {
     "id": "s_b1_92",
     "target": "Obwohl ich keine Erfahrung in diesem Bereich hatte, wurde ich eingestellt.",
-    "tokens": ["Obwohl", "ich", "keine", "Erfahrung", "in", "diesem", "Bereich", "hatte,", "wurde", "ich", "eingestellt"],
+    "tokens": [
+      "Obwohl",
+      "ich",
+      "keine",
+      "Erfahrung",
+      "in",
+      "diesem",
+      "Bereich",
+      "hatte,",
+      "wurde",
+      "ich",
+      "eingestellt"
+    ],
     "type": "drag",
     "explanation": "B1: concession + passive.",
     "translation_en": "Although I had no experience in this field, I was hired.",
@@ -925,7 +2018,18 @@
   {
     "id": "s_b1_93",
     "target": "Sobald wir die Bestätigung vom Vermieter bekommen, können wir umziehen.",
-    "tokens": ["Sobald", "wir", "die", "Bestätigung", "vom", "Vermieter", "bekommen,", "können", "wir", "umziehen"],
+    "tokens": [
+      "Sobald",
+      "wir",
+      "die",
+      "Bestätigung",
+      "vom",
+      "Vermieter",
+      "bekommen,",
+      "können",
+      "wir",
+      "umziehen"
+    ],
     "type": "drag",
     "explanation": "B1: housing context.",
     "translation_en": "As soon as we get the confirmation from the landlord, we can move.",
@@ -935,7 +2039,20 @@
   {
     "id": "s_b1_94",
     "target": "Da mein Deutsch noch nicht perfekt ist, lese ich jeden Tag Zeitung.",
-    "tokens": ["Da", "mein", "Deutsch", "noch", "nicht", "perfekt", "ist,", "lese", "ich", "jeden", "Tag", "Zeitung"],
+    "tokens": [
+      "Da",
+      "mein",
+      "Deutsch",
+      "noch",
+      "nicht",
+      "perfekt",
+      "ist,",
+      "lese",
+      "ich",
+      "jeden",
+      "Tag",
+      "Zeitung"
+    ],
     "type": "drag",
     "explanation": "B1: learning strategy as consequence.",
     "translation_en": "Since my German is not perfect yet, I read the newspaper every day.",
@@ -945,7 +2062,19 @@
   {
     "id": "s_b1_95",
     "target": "Obwohl wir gestern lange gefeiert haben, bin ich heute erstaunlich fit.",
-    "tokens": ["Obwohl", "wir", "gestern", "lange", "gefeiert", "haben,", "bin", "ich", "heute", "erstaunlich", "fit"],
+    "tokens": [
+      "Obwohl",
+      "wir",
+      "gestern",
+      "lange",
+      "gefeiert",
+      "haben,",
+      "bin",
+      "ich",
+      "heute",
+      "erstaunlich",
+      "fit"
+    ],
     "type": "drag",
     "explanation": "B1: contrast party vs fitness.",
     "translation_en": "Although we partied for a long time yesterday, I am surprisingly fit today.",
@@ -955,7 +2084,19 @@
   {
     "id": "s_b1_96",
     "target": "Falls du noch eine Bescheinigung brauchst, kann ich dir eine schreiben.",
-    "tokens": ["Falls", "du", "noch", "eine", "Bescheinigung", "brauchst,", "kann", "ich", "dir", "eine", "schreiben"],
+    "tokens": [
+      "Falls",
+      "du",
+      "noch",
+      "eine",
+      "Bescheinigung",
+      "brauchst,",
+      "kann",
+      "ich",
+      "dir",
+      "eine",
+      "schreiben"
+    ],
     "type": "drag",
     "explanation": "B1: offer with 'falls'.",
     "translation_en": "If you still need a certificate, I can write one for you.",
@@ -965,7 +2106,18 @@
   {
     "id": "s_b1_97",
     "target": "Seitdem wir im Team besser kommunizieren, gibt es weniger Missverständnisse.",
-    "tokens": ["Seitdem", "wir", "im", "Team", "besser", "kommunizieren,", "gibt", "es", "weniger", "Missverständnisse"],
+    "tokens": [
+      "Seitdem",
+      "wir",
+      "im",
+      "Team",
+      "besser",
+      "kommunizieren,",
+      "gibt",
+      "es",
+      "weniger",
+      "Missverständnisse"
+    ],
     "type": "drag",
     "explanation": "B1: company/team context.",
     "translation_en": "Since we communicate better in the team, there are fewer misunderstandings.",
@@ -975,7 +2127,20 @@
   {
     "id": "s_b1_98",
     "target": "Damit wir nicht durstig werden, nehme ich ein paar Flaschen Wasser mit.",
-    "tokens": ["Damit", "wir", "nicht", "durstig", "werden,", "nehme", "ich", "ein", "paar", "Flaschen", "Wasser", "mit"],
+    "tokens": [
+      "Damit",
+      "wir",
+      "nicht",
+      "durstig",
+      "werden,",
+      "nehme",
+      "ich",
+      "ein",
+      "paar",
+      "Flaschen",
+      "Wasser",
+      "mit"
+    ],
     "type": "drag",
     "explanation": "B1: purpose + separable 'mitnehmen'.",
     "translation_en": "So that we do not get thirsty, I will take a few bottles of water with me.",
@@ -985,7 +2150,17 @@
   {
     "id": "s_b1_99",
     "target": "Obwohl der Termin sehr kurzfristig war, konnten alle kommen.",
-    "tokens": ["Obwohl", "der", "Termin", "sehr", "kurzfristig", "war,", "konnten", "alle", "kommen"],
+    "tokens": [
+      "Obwohl",
+      "der",
+      "Termin",
+      "sehr",
+      "kurzfristig",
+      "war,",
+      "konnten",
+      "alle",
+      "kommen"
+    ],
     "type": "drag",
     "explanation": "B1: concession + modal.",
     "translation_en": "Although the appointment was very short notice, everyone was able to come.",
@@ -995,7 +2170,18 @@
   {
     "id": "s_b1_100",
     "target": "Da das Büro gerade renoviert wird, arbeiten wir im Homeoffice.",
-    "tokens": ["Da", "das", "Büro", "gerade", "renoviert", "wird,", "arbeiten", "wir", "im", "Homeoffice"],
+    "tokens": [
+      "Da",
+      "das",
+      "Büro",
+      "gerade",
+      "renoviert",
+      "wird,",
+      "arbeiten",
+      "wir",
+      "im",
+      "Homeoffice"
+    ],
     "type": "drag",
     "explanation": "B1: passive present + reason.",
     "translation_en": "Since the office is currently being renovated, we are working from home.",
@@ -1005,11 +2191,411 @@
   {
     "id": "s_b1_101",
     "target": "Obwohl er sehr talentiert ist, übt er jeden Tag weiter.",
-    "tokens": ["Obwohl", "er", "sehr", "talentiert", "ist,", "übt", "er", "jeden", "Tag", "weiter"],
+    "tokens": [
+      "Obwohl",
+      "er",
+      "sehr",
+      "talentiert",
+      "ist,",
+      "übt",
+      "er",
+      "jeden",
+      "Tag",
+      "weiter"
+    ],
     "type": "drag",
     "explanation": "B1: contrast ability vs effort.",
     "translation_en": "Although he is very talented, he keeps practising every day.",
     "translation_ru": "Хотя он очень талантлив, он продолжает практиковаться каждый день.",
     "level": "B1"
+  },
+  {
+    "id": "s_b1_k2perf_1",
+    "target": "Wenn ich mehr Zeit gehabt hätte, hätte ich das Projekt früher abgeschlossen.",
+    "tokens": [
+      "Wenn",
+      "ich",
+      "mehr",
+      "Zeit",
+      "gehabt",
+      "hätte,",
+      "hätte",
+      "ich",
+      "das",
+      "Projekt",
+      "früher",
+      "abgeschlossen"
+    ],
+    "type": "drag",
+    "explanation": "B1: Konjunktiv II Perfekt für irreale Bedingung in der Vergangenheit.",
+    "translation_en": "If I had had more time, I would have finished the project earlier.",
+    "translation_ru": "Если бы у меня было больше времени, я бы завершил(а) проект раньше.",
+    "level": "B1",
+    "tags": [
+      "konjunktiv_ii_perfekt",
+      "irrealis",
+      "bedingung"
+    ]
+  },
+  {
+    "id": "s_b1_k2perf_2",
+    "target": "Wenn du mir früher geschrieben hättest, hätte ich dir helfen können.",
+    "tokens": [
+      "Wenn",
+      "du",
+      "mir",
+      "früher",
+      "geschrieben",
+      "hättest,",
+      "hätte",
+      "ich",
+      "dir",
+      "helfen",
+      "können"
+    ],
+    "type": "drag",
+    "explanation": "Irreale Vergangenheit + Doppelinfinitiv mit Modalverb.",
+    "translation_en": "If you had written to me earlier, I could have helped you.",
+    "translation_ru": "Если бы ты написал(а) мне раньше, я бы смог(ла) тебе помочь.",
+    "level": "B1",
+    "tags": [
+      "konjunktiv_ii_perfekt",
+      "modal",
+      "bedingung"
+    ]
+  },
+  {
+    "id": "s_b1_k2perf_3",
+    "target": "Wenn er nicht krank gewesen wäre, wäre er mitgekommen.",
+    "tokens": [
+      "Wenn",
+      "er",
+      "nicht",
+      "krank",
+      "gewesen",
+      "wäre,",
+      "wäre",
+      "er",
+      "mitgekommen"
+    ],
+    "type": "drag",
+    "explanation": "Bewegungsverben nehmen 'sein' im Perfekt → Konjunktiv II Perfekt mit 'wäre'.",
+    "translation_en": "If he had not been ill, he would have come along.",
+    "translation_ru": "Если бы он не был болен, он бы поехал с нами.",
+    "level": "B1",
+    "tags": [
+      "konjunktiv_ii_perfekt",
+      "sein-aux"
+    ]
+  },
+  {
+    "id": "s_b1_k2perf_4",
+    "target": "Wäre ich gestern früher losgefahren, hätte ich nicht so lange im Stau gestanden.",
+    "tokens": [
+      "Wäre",
+      "ich",
+      "gestern",
+      "früher",
+      "losgefahren,",
+      "hätte",
+      "ich",
+      "nicht",
+      "so",
+      "lange",
+      "im",
+      "Stau",
+      "gestanden"
+    ],
+    "type": "drag",
+    "explanation": "Inversionsform ohne 'wenn' + Konjunktiv II Perfekt.",
+    "translation_en": "Had I set off earlier yesterday, I would not have stood in traffic for so long.",
+    "translation_ru": "Если бы я вчера выехал(а) пораньше, я бы не простоял(а) так долго в пробке.",
+    "level": "B1",
+    "tags": [
+      "konjunktiv_ii_perfekt",
+      "inversion"
+    ]
+  },
+  {
+    "id": "s_b1_k2perf_5",
+    "target": "Wenn sie die Anleitung gelesen hätte, wäre nichts schiefgegangen.",
+    "tokens": [
+      "Wenn",
+      "sie",
+      "die",
+      "Anleitung",
+      "gelesen",
+      "hätte,",
+      "wäre",
+      "nichts",
+      "schiefgegangen"
+    ],
+    "type": "drag",
+    "explanation": "Verb 'schiefgehen' bildet Perfekt mit 'sein' → 'wäre schiefgegangen'.",
+    "translation_en": "If she had read the instructions, nothing would have gone wrong.",
+    "translation_ru": "Если бы она прочитала инструкцию, ничего бы не пошло наперекосяк.",
+    "level": "B1",
+    "tags": [
+      "konjunktiv_ii_perfekt"
+    ]
+  },
+  {
+    "id": "s_b1_k2perf_6",
+    "target": "Hättest du mich angerufen, hätte ich dir den Weg erklärt.",
+    "tokens": [
+      "Hättest",
+      "du",
+      "mich",
+      "angerufen,",
+      "hätte",
+      "ich",
+      "dir",
+      "den",
+      "Weg",
+      "erklärt"
+    ],
+    "type": "drag",
+    "explanation": "Elliptischer Konditionalsatz mit Inversion (ohne 'wenn').",
+    "translation_en": "If you had called me, I would have explained the way to you.",
+    "translation_ru": "Если бы ты мне позвонил(а), я бы объяснил(а) тебе дорогу.",
+    "level": "B1",
+    "tags": [
+      "konjunktiv_ii_perfekt",
+      "inversion"
+    ]
+  },
+  {
+    "id": "s_b1_k2perf_7",
+    "target": "Wenn wir die Tickets früher gekauft hätten, hätten wir Geld gespart.",
+    "tokens": [
+      "Wenn",
+      "wir",
+      "die",
+      "Tickets",
+      "früher",
+      "gekauft",
+      "hätten,",
+      "hätten",
+      "wir",
+      "Geld",
+      "gespart"
+    ],
+    "type": "drag",
+    "explanation": "Konditionalsatz Vergangenheit mit Spar-Ergebnis.",
+    "translation_en": "If we had bought the tickets earlier, we would have saved money.",
+    "translation_ru": "Если бы мы купили билеты раньше, мы бы сэкономили деньги.",
+    "level": "B1",
+    "tags": [
+      "konjunktiv_ii_perfekt"
+    ]
+  },
+  {
+    "id": "s_b1_k2perf_8",
+    "target": "Wäre das Wetter besser gewesen, hätten wir draußen gesessen.",
+    "tokens": [
+      "Wäre",
+      "das",
+      "Wetter",
+      "besser",
+      "gewesen,",
+      "hätten",
+      "wir",
+      "draußen",
+      "gesessen"
+    ],
+    "type": "drag",
+    "explanation": "Zustandsverb 'sein' → 'wäre gewesen' im Konjunktiv II Perfekt.",
+    "translation_en": "If the weather had been better, we would have sat outside.",
+    "translation_ru": "Если бы погода была лучше, мы бы сидели на улице.",
+    "level": "B1",
+    "tags": [
+      "konjunktiv_ii_perfekt",
+      "sein-aux"
+    ]
+  },
+  {
+    "id": "s_b1_k2perf_9",
+    "target": "Wenn ihr mehr geübt hättet, hättet ihr die Prüfung bestanden.",
+    "tokens": [
+      "Wenn",
+      "ihr",
+      "mehr",
+      "geübt",
+      "hättet,",
+      "hättet",
+      "ihr",
+      "die",
+      "Prüfung",
+      "bestanden"
+    ],
+    "type": "drag",
+    "explanation": "Irreale Vergangenheit im Plural ('ihr').",
+    "translation_en": "If you had practiced more, you would have passed the exam.",
+    "translation_ru": "Если бы вы больше занимались, вы бы сдали экзамен.",
+    "level": "B1",
+    "tags": [
+      "konjunktiv_ii_perfekt",
+      "plural"
+    ]
+  },
+  {
+    "id": "s_b1_k2perf_10",
+    "target": "Hätte der Zug keine Verspätung gehabt, wären wir pünktlich angekommen.",
+    "tokens": [
+      "Hätte",
+      "der",
+      "Zug",
+      "keine",
+      "Verspätung",
+      "gehabt,",
+      "wären",
+      "wir",
+      "pünktlich",
+      "angekommen"
+    ],
+    "type": "drag",
+    "explanation": "Zwei Teilsätze: 'hätte gehabt' + Bewegungsverb 'wären angekommen'.",
+    "translation_en": "If the train had not been delayed, we would have arrived on time.",
+    "translation_ru": "Если бы у поезда не было задержки, мы бы прибыли вовремя.",
+    "level": "B1",
+    "tags": [
+      "konjunktiv_ii_perfekt",
+      "sein-aux"
+    ]
+  },
+  {
+    "id": "s_b1_k2perf_11",
+    "target": "Wäre die Datei rechtzeitig hochgeladen worden, hätte der Kunde sie gestern gesehen.",
+    "tokens": [
+      "Wäre",
+      "die",
+      "Datei",
+      "rechtzeitig",
+      "hochgeladen",
+      "worden,",
+      "hätte",
+      "der",
+      "Kunde",
+      "sie",
+      "gestern",
+      "gesehen"
+    ],
+    "type": "drag",
+    "explanation": "Passiv im Konjunktiv II Perfekt: 'wäre … hochgeladen worden'.",
+    "translation_en": "If the file had been uploaded on time, the client would have seen it yesterday.",
+    "translation_ru": "Если бы файл был загружен вовремя, клиент увидел бы его вчера.",
+    "level": "B1",
+    "tags": [
+      "konjunktiv_ii_perfekt",
+      "passiv"
+    ]
+  },
+  {
+    "id": "s_b1_k2perf_12",
+    "target": "Wenn das Paket früher angekommen wäre, hätten wir den Auftrag gestern abgeschlossen.",
+    "tokens": [
+      "Wenn",
+      "das",
+      "Paket",
+      "früher",
+      "angekommen",
+      "wäre,",
+      "hätten",
+      "wir",
+      "den",
+      "Auftrag",
+      "gestern",
+      "abgeschlossen"
+    ],
+    "type": "drag",
+    "explanation": "Bedingung mit Bewegungsverb 'ankommen' → 'wäre angekommen'.",
+    "translation_en": "If the parcel had arrived earlier, we would have completed the order yesterday.",
+    "translation_ru": "Если бы посылка пришла раньше, мы бы завершили заказ вчера.",
+    "level": "B1",
+    "tags": [
+      "konjunktiv_ii_perfekt"
+    ]
+  },
+  {
+    "id": "s_b1_k2perf_13",
+    "target": "Hätte ich gewusst, dass du in der Stadt bist, hätte ich dich getroffen.",
+    "tokens": [
+      "Hätte",
+      "ich",
+      "gewusst,",
+      "dass",
+      "du",
+      "in",
+      "der",
+      "Stadt",
+      "bist,",
+      "hätte",
+      "ich",
+      "dich",
+      "getroffen"
+    ],
+    "type": "drag",
+    "explanation": "Konjunktiv II Perfekt + 'dass'-Satz im Nebensatz.",
+    "translation_en": "If I had known that you were in town, I would have met you.",
+    "translation_ru": "Если бы я знал(а), что ты в городе, я бы встретился(встретилась) с тобой.",
+    "level": "B1",
+    "tags": [
+      "konjunktiv_ii_perfekt",
+      "dass-satz"
+    ]
+  },
+  {
+    "id": "s_b1_k2perf_14",
+    "target": "Wäre das Problem früher erkannt worden, hätte man es leichter lösen können.",
+    "tokens": [
+      "Wäre",
+      "das",
+      "Problem",
+      "früher",
+      "erkannt",
+      "worden,",
+      "hätte",
+      "man",
+      "es",
+      "leichter",
+      "lösen",
+      "können"
+    ],
+    "type": "drag",
+    "explanation": "Passiv im Konditionalsatz + Modalverb im Hauptsatz (Doppelinfinitiv).",
+    "translation_en": "If the problem had been recognized earlier, it could have been solved more easily.",
+    "translation_ru": "Если бы проблему распознали раньше, её можно было бы решить легче.",
+    "level": "B1",
+    "tags": [
+      "konjunktiv_ii_perfekt",
+      "passiv",
+      "modal"
+    ]
+  },
+  {
+    "id": "s_b1_k2perf_15",
+    "target": "Wenn sie nicht abgelenkt gewesen wären, hätten sie den Fehler bemerkt.",
+    "tokens": [
+      "Wenn",
+      "sie",
+      "nicht",
+      "abgelenkt",
+      "gewesen",
+      "wären,",
+      "hätten",
+      "sie",
+      "den",
+      "Fehler",
+      "bemerkt"
+    ],
+    "type": "drag",
+    "explanation": "Plural mit 'wären gewesen' (Zustand) + Ergebnis im Konjunktiv II Perfekt.",
+    "translation_en": "If they had not been distracted, they would have noticed the mistake.",
+    "translation_ru": "Если бы они не были отвлечены, они бы заметили ошибку.",
+    "level": "B1",
+    "tags": [
+      "konjunktiv_ii_perfekt",
+      "plural"
+    ]
   }
 ]
