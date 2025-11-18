@@ -562,7 +562,6 @@ main#app > .home {
     }
 }
 
-/* Обёртка для всех уровней */
 .levels {
     display: flex;
     flex-direction: column;
@@ -570,7 +569,7 @@ main#app > .home {
     margin-top: 24px;
 }
 
-/* Один уровень аккордеона */
+/* Level container */
 .level details {
     background: #ffffff;
     border-radius: 18px;
@@ -578,7 +577,7 @@ main#app > .home {
     box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
 }
 
-/* Заголовок уровня (summary) */
+/* Header of the level */
 .level-summary {
     display: flex;
     flex-wrap: wrap;
@@ -609,7 +608,7 @@ main#app > .home {
     color: #64748b;
 }
 
-/* СЕТКА с карточками внутри уровня */
+/* Grid of level cards */
 .level-cards {
     margin-top: 14px;
     display: grid;
@@ -617,14 +616,14 @@ main#app > .home {
     gap: 12px;
 }
 
-/* Ссылки-карточки растягиваются на всю ячейку */
+/* Link around card */
 .level-cards .card-link {
     text-decoration: none;
     color: inherit;
     display: block;
 }
 
-/* Базовая карточка — подправим чуть-чуть если нужно */
+/* Basic card styles for small cards */
 .card.small {
     padding: 10px 12px;
     border-radius: 14px;
@@ -639,7 +638,7 @@ main#app > .home {
     background: #ffffff;
 }
 
-/* "Заглушки" (muted) */
+/* Muted (disabled) card styles */
 .card.small.muted {
     opacity: 0.7;
     cursor: default;
@@ -649,6 +648,42 @@ main#app > .home {
     transform: none;
     box-shadow: none;
     background: #f8fafc;
+}
+
+
+.sublevels {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sublevel details {
+    background: #f8fafc;
+    border-radius: 14px;
+    padding: 8px 10px 10px;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
+}
+
+.sublevel-summary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+    cursor: pointer;
+}
+
+.sublevel-summary::-webkit-details-marker {
+    display: none;
+}
+
+.sublevel-title {
+    font-weight: 600;
+}
+
+.sublevel-hint {
+    font-size: 0.85rem;
+    color: #64748b;
 }
 
 
