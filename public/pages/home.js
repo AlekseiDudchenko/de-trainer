@@ -10,7 +10,7 @@ export function showHome() {
 
         <!-- A1 -->
         <section class="level">
-          <details open>
+          <details>
             <summary class="level-summary">
               <span class="level-badge">A1</span>
               <span class="level-title">Erste Schritte</span>
@@ -60,7 +60,7 @@ export function showHome() {
 
         <!-- B1 -->
         <section class="level">
-          <details id="level-b1">
+          <details id="level-b1" open>
             <summary class="level-summary">
               <span class="level-badge">B1</span>
               <span class="level-title">Selbstständige Sprachverwendung</span>
@@ -71,7 +71,7 @@ export function showHome() {
 
               <!-- B1: Wörter -->
               <section class="sublevel">
-                <details open>
+                <details>
                   <summary class="sublevel-summary">
                     <span class="sublevel-title">Wörter</span>
                     <span class="sublevel-hint">Bald nach Themen (Tags)</span>
@@ -108,7 +108,7 @@ export function showHome() {
 
               <!-- B1: Grammatik -->
               <section class="sublevel">
-                <details>
+                <details open>
                   <summary class="sublevel-summary">
                     <span class="sublevel-title">Grammatik</span>
                     <span class="sublevel-hint">Strukturen & Artikel</span>
@@ -233,7 +233,7 @@ async function renderB1SentenceTagCards() {
         // /sentences/b1/tag/<tag>
         a.href = `sentences/b1/tag/${tag}`;
         const card = document.createElement("div");
-        card.className = "card small muted";
+        card.className = "card small";
         card.innerHTML = `
       <h3>${prettyTagName(tag)}</h3>
       <p>Sätze bauen nur mit diesem Thema.</p>
